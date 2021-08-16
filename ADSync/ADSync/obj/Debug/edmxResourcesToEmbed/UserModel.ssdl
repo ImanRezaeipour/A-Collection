@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AtlasModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="AtlasModelStoreContainer">
+    <EntitySet Name="TA_Person" EntityType="AtlasModel.Store.TA_Person" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TA_SecurityUser" EntityType="AtlasModel.Store.TA_SecurityUser" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_TA_SecurityUser_TA_Person" Association="AtlasModel.Store.FK_TA_SecurityUser_TA_Person">
+      <End Role="TA_Person" EntitySet="TA_Person" />
+      <End Role="TA_SecurityUser" EntitySet="TA_SecurityUser" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="TA_Person">
+    <Key>
+      <PropertyRef Name="Prs_ID" />
+    </Key>
+    <Property Name="Prs_ID" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Prs_Barcode" Type="nvarchar" MaxLength="50" />
+    <Property Name="Prs__Param" Type="int" />
+    <Property Name="Prs_Active" Type="bit" />
+    <Property Name="Prs_CardNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="Prs_DepartmentId" Type="numeric" />
+    <Property Name="Prs_EmploymentNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="Prs_EmploymentDate" Type="datetime" />
+    <Property Name="Prs_ControlStationId" Type="numeric" />
+    <Property Name="Prs_EndEmploymentDate" Type="datetime" />
+    <Property Name="Prs_EmployId" Type="numeric" />
+    <Property Name="Prs_Sex" Type="bit" />
+    <Property Name="Prs_Education" Type="nvarchar" MaxLength="50" />
+    <Property Name="Prs_FirstName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Prs_MaritalStatus" Type="int" />
+    <Property Name="Prs_LastName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Prs_PrsDtlID" Type="numeric" />
+    <Property Name="Prs_UIValidationGroupID" Type="numeric" />
+    <Property Name="prs_IsDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="TA_SecurityUser">
+    <Key>
+      <PropertyRef Name="user_ID" />
+    </Key>
+    <Property Name="user_ID" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="user_PersonID" Type="numeric" />
+    <Property Name="user_RoleID" Type="numeric" />
+    <Property Name="user_DomainID" Type="numeric" />
+    <Property Name="user_UserName" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="user_Password" Type="nvarchar" MaxLength="200" />
+    <Property Name="user_Active" Type="bit" Nullable="false" />
+    <Property Name="user_LastActivityDate" Type="datetime" />
+    <Property Name="user_IsADAuthenticateActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_TA_SecurityUser_TA_Person">
+    <End Role="TA_Person" Type="AtlasModel.Store.TA_Person" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TA_SecurityUser" Type="AtlasModel.Store.TA_SecurityUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TA_Person">
+        <PropertyRef Name="Prs_ID" />
+      </Principal>
+      <Dependent Role="TA_SecurityUser">
+        <PropertyRef Name="user_PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

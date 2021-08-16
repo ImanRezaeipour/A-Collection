@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ReportModelStoreContainer" CdmEntityContainer="ReportEntities">
+    <EntitySetMapping Name="TA_Report">
+      <EntityTypeMapping TypeName="ReportModel.TA_Report">
+        <MappingFragment StoreEntitySet="TA_Report">
+          <ScalarProperty Name="Report_ID" ColumnName="Report_ID" />
+          <ScalarProperty Name="Report_Name" ColumnName="Report_Name" />
+          <ScalarProperty Name="Report_ParentId" ColumnName="Report_ParentId" />
+          <ScalarProperty Name="Report_ReportFileId" ColumnName="Report_ReportFileId" />
+          <ScalarProperty Name="Report_IsReport" ColumnName="Report_IsReport" />
+          <ScalarProperty Name="Report_ParentPath" ColumnName="Report_ParentPath" />
+          <ScalarProperty Name="Report_Order" ColumnName="Report_Order" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TA_ReportFile">
+      <EntityTypeMapping TypeName="ReportModel.TA_ReportFile">
+        <MappingFragment StoreEntitySet="TA_ReportFile">
+          <ScalarProperty Name="ReportFile_ID" ColumnName="ReportFile_ID" />
+          <ScalarProperty Name="ReportFile_Name" ColumnName="ReportFile_Name" />
+          <ScalarProperty Name="ReportFile_File" ColumnName="ReportFile_File" />
+          <ScalarProperty Name="ReportFile_Description" ColumnName="ReportFile_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TA_ReportParameter">
+      <EntityTypeMapping TypeName="ReportModel.TA_ReportParameter">
+        <MappingFragment StoreEntitySet="TA_ReportParameter">
+          <ScalarProperty Name="ReportParameter_ID" ColumnName="ReportParameter_ID" />
+          <ScalarProperty Name="ReportParameter_RptUIParamId" ColumnName="ReportParameter_RptUIParamId" />
+          <ScalarProperty Name="ReportParameter_Name" ColumnName="ReportParameter_Name" />
+          <ScalarProperty Name="ReportParameter_RptFileId" ColumnName="ReportParameter_RptFileId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TA_ReportUIParameter">
+      <EntityTypeMapping TypeName="ReportModel.TA_ReportUIParameter">
+        <MappingFragment StoreEntitySet="TA_ReportUIParameter">
+          <ScalarProperty Name="RptUIParameter_ID" ColumnName="RptUIParameter_ID" />
+          <ScalarProperty Name="RptUIParameter_Name" ColumnName="RptUIParameter_Name" />
+          <ScalarProperty Name="RptUIParameter_Key" ColumnName="RptUIParameter_Key" />
+          <ScalarProperty Name="RptUIParameter_fnName" ColumnName="RptUIParameter_fnName" />
+          <ScalarProperty Name="RptUIParameter_EnName" ColumnName="RptUIParameter_EnName" />
+          <ScalarProperty Name="RptUIParameter_ParameterOrder" ColumnName="RptUIParameter_ParameterOrder" />
+          <ScalarProperty Name="RptUIParameter_ActionId" ColumnName="RptUIParameter_ActionId" />
+          <ScalarProperty Name="RptUIParameter_ShowInDialog" ColumnName="RptUIParameter_ShowInDialog" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

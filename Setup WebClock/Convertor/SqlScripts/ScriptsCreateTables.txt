@@ -1,0 +1,336 @@
+
+/****** Object:  Table [dbo].[NW_agree]    Script Date: 05/29/2013 14:56:10 ******/
+SET ANSI_NULLS ON
+
+SET QUOTED_IDENTIFIER ON
+
+IF  not EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[NW_agree]'))
+CREATE TABLE [dbo].[NW_agree](
+	[PishCard_No] [smallint] NULL,
+	[p_status] [smallint] NULL,
+	[WebPassId] [numeric](18, 0) NULL
+) ON [PRIMARY]
+
+/****** Object:  Table [dbo].[NW_webpasspersons]    Script Date: 05/29/2013 14:56:10 ******/
+SET ANSI_NULLS ON
+
+SET QUOTED_IDENTIFIER ON
+
+IF  not EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[NW_webpasspersons]'))
+CREATE TABLE [dbo].[NW_webpasspersons](
+	[ID] [numeric](18, 0) IDENTITY(1,1) NOT NULL,
+	[PersonBarCode] [nvarchar](255) NOT NULL,
+	[isKarkardfrm] [bit] NULL,
+	[isRequestfrm] [bit] NULL,
+	[isOperatorfrm] [bit] NULL,
+	[isKeeperfrm] [bit] NULL,
+	[isOverTimefrm] [bit] NULL,
+	[isPerson] [bit] NULL,
+	[isPart] [bit] NULL,
+	[isSubPart] [bit] NULL,
+	[AccessType] [bit] NULL,
+	[WebPassId] [numeric](18, 0) NULL,
+ CONSTRAINT [PK_NW_webpasspersons] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+/****** Object:  Table [dbo].[NW_webpass]    Script Date: 05/29/2013 14:56:10 ******/
+SET ANSI_NULLS ON
+
+SET QUOTED_IDENTIFIER ON
+
+IF  not EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[NW_webpass]'))
+CREATE TABLE [dbo].[NW_webpass](
+	[ID] [numeric](18, 0) IDENTITY(1,1) NOT NULL,
+	[p_barcode] [nvarchar](8) NULL,
+	[PersonPost] [nvarchar](150) NULL,
+	[p_pass] [nvarchar](15) NULL,
+	[p_status] [smallint] NULL,
+	[p_part1] [smallint] NULL,
+	[p_part2] [smallint] NULL,
+	[p_part3] [smallint] NULL,
+	[p_part4] [smallint] NULL,
+	[Haspart] [bit] NULL,
+	[Hasperson] [bit] NULL,
+	[TopMan] [numeric](18, 0) NULL,
+	[MaxTimeReq] [smallint] NULL,
+	[MaxOverTime] [int] NULL,
+	[AgreeAddWork] [bit] NULL,
+	[AgreeOverTime] [bit] NULL,
+	[HasMailServer] [bit] NULL,
+	[HostName] [nvarchar](30) NULL,
+	[UserName] [nvarchar](40) NULL,
+	[Password] [nvarchar](25) NULL,
+	[Port] [smallint] NULL,
+	[HasInsteadMan] [bit] NULL,
+	[InsteadMan] [nvarchar](8) NULL,
+	[isSaveAccept] [bit] NULL,
+	[isAcceptOwner] [bit] NULL,
+	[FinalManager] [bit] NULL,
+	[FromDateIman] [date] NULL,
+	[ToDateIman] [date] NULL,
+ CONSTRAINT [PK_NW_webpass] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+/****** Object:  Table [dbo].[NW_webNavbar]    Script Date: 05/29/2013 14:56:10 ******/
+SET ANSI_NULLS ON
+
+SET QUOTED_IDENTIFIER ON
+
+IF  not EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[NW_webNavbar]'))
+CREATE TABLE [dbo].[NW_webNavbar](
+	[navbar_ID] [numeric](18, 0) IDENTITY(1,1) NOT NULL,
+	[navbar_Name] [nvarchar](200) NULL,
+	[navbar_Title] [nvarchar](150) NULL,
+	[navbar_ParentName] [nvarchar](150) NULL,
+ CONSTRAINT [PK_NW_webNavbar] PRIMARY KEY CLUSTERED 
+(
+	[navbar_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+/****** Object:  Table [dbo].[NW_webLogin]    Script Date: 05/29/2013 14:56:10 ******/
+SET ANSI_NULLS ON
+
+SET QUOTED_IDENTIFIER ON
+
+IF  not EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[NW_webLogin]'))
+CREATE TABLE [dbo].[NW_webLogin](
+	[ID] [numeric](18, 0) IDENTITY(1,1) NOT NULL,
+	[lgn_barcode] [nvarchar](8) NOT NULL,
+	[lgn_UserName] [nvarchar](50) NOT NULL,
+	[lgn_Password] [nvarchar](20) NULL,
+ CONSTRAINT [PK_NW_webLogin] PRIMARY KEY CLUSTERED 
+(
+	[lgn_UserName] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+/****** Object:  Table [dbo].[NW_WebControl]    Script Date: 05/29/2013 14:56:10 ******/
+SET ANSI_NULLS ON
+
+SET QUOTED_IDENTIFIER ON
+
+IF  not EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[NW_WebControl]'))
+CREATE TABLE [dbo].[NW_WebControl](
+	[Ctrl_ID] [numeric](18, 0) IDENTITY(1,1) NOT NULL,
+	[Ctrl_Name] [nvarchar](200) NOT NULL,
+	[Ctrl_Title] [nvarchar](150) NULL,
+	[Ctrl_NavbarName] [nvarchar](200) NOT NULL,
+ CONSTRAINT [PK_NW_WebControl] PRIMARY KEY CLUSTERED 
+(
+	[Ctrl_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+/****** Object:  Table [dbo].[NW_WebColor]    Script Date: 05/29/2013 14:56:10 ******/
+SET ANSI_NULLS ON
+
+SET QUOTED_IDENTIFIER ON
+
+IF  not EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[NW_WebColor]'))
+CREATE TABLE [dbo].[NW_WebColor](
+	[WebColor_id] [numeric](18, 0) IDENTITY(1,1) NOT NULL,
+	[WebColor_ColumnName] [nvarchar](50) NOT NULL,
+	[WebColor_Color] [nchar](10) NOT NULL,
+	[WebColor_Order] [numeric](18, 0) NULL,
+	[WebColor_Active] [bit] NULL,
+ CONSTRAINT [PK_NW_WebColor] PRIMARY KEY CLUSTERED 
+(
+	[WebColor_id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+/****** Object:  Table [dbo].[NW_webAssignRoleNavbar]    Script Date: 05/29/2013 14:56:10 ******/
+SET ANSI_NULLS ON
+
+SET QUOTED_IDENTIFIER ON
+
+IF  not EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[NW_webAssignRoleNavbar]'))
+CREATE TABLE [dbo].[NW_webAssignRoleNavbar](
+	[ID] [numeric](18, 0) IDENTITY(1,1) NOT NULL,
+	[role_Name] [nvarchar](200) NULL,
+	[navbar_Name] [nvarchar](200) NULL,
+ CONSTRAINT [PK_NW_webAssignRoleNavbar] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+/****** Object:  Table [dbo].[NW_Requests]    Script Date: 05/29/2013 14:56:10 ******/
+SET ANSI_NULLS ON
+
+SET QUOTED_IDENTIFIER ON
+
+SET ANSI_PADDING ON
+
+IF  not EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[NW_Requests]'))
+CREATE TABLE [dbo].[NW_Requests](
+	[Clock_Date] [varchar](10) NOT NULL,
+	[Clock_SendDate] [varchar](10) NULL,
+	[Clock_AgreeDate] [varchar](31) NULL,
+	[Clock_Time] [smallint] NOT NULL,
+	[Clock_eTime] [smallint] NULL,
+	[Clock_RdrCode] [smallint] NULL,
+	[Clock_Chg] [smallint] NULL,
+	[Clock_RecState] [smallint] NOT NULL,
+	[Clock_User] [varchar](15) NULL,
+	[Clock_RecDes] [nvarchar](1000) NULL,
+	[Clock_FirstlyAgree] [smallint] NULL,
+	[Clock_SeconderyAgree] [smallint] NULL,
+	[Clock_FirstlyAgree_BarCode] [varchar](24) NULL,
+	[Clock_FinallyAgree] [smallint] NULL,
+	[Id_PK] [numeric](18, 0) IDENTITY(1,1) NOT NULL,
+	[WebPassId] [numeric](18, 0) NULL,
+	[timeValue] [smallint] NULL,
+ CONSTRAINT [PK_NW_Requests] PRIMARY KEY CLUSTERED 
+(
+	[Id_PK] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+SET ANSI_PADDING OFF
+
+/****** Object:  Table [dbo].[NW_ReportParameterType]    Script Date: 05/29/2013 14:56:10 ******/
+SET ANSI_NULLS ON
+
+SET QUOTED_IDENTIFIER ON
+
+IF  not EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[NW_ReportParameterType]'))
+CREATE TABLE [dbo].[NW_ReportParameterType](
+	[ReportParameterType_ID] [numeric](18, 0) IDENTITY(1,1) NOT NULL,
+	[ReportParameterType_Value] [nvarchar](150) NULL,
+ CONSTRAINT [PK_NW_ReportParameterType] PRIMARY KEY CLUSTERED 
+(
+	[ReportParameterType_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+/****** Object:  Table [dbo].[NW_Report]    Script Date: 05/29/2013 14:56:10 ******/
+SET ANSI_NULLS ON
+
+SET QUOTED_IDENTIFIER ON
+
+IF  not EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[NW_Report]'))
+CREATE TABLE [dbo].[NW_Report](
+	[Report_ID] [numeric](18, 0) IDENTITY(1,1) NOT NULL,
+	[Report_Name] [nvarchar](200) NULL,
+	[Report_FileAddress] [nvarchar](200) NOT NULL,
+	[Report_IsCalculate] [bit] NOT NULL,
+ CONSTRAINT [PK_NW_Report] PRIMARY KEY CLUSTERED 
+(
+	[Report_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+/****** Object:  Table [dbo].[NW_log]    Script Date: 05/29/2013 14:56:10 ******/
+SET ANSI_NULLS ON
+
+SET QUOTED_IDENTIFIER ON
+
+IF  not EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[NW_log]'))
+CREATE TABLE [dbo].[NW_log](
+	[ID] [numeric](18, 0) IDENTITY(1,1) NOT NULL,
+	[UserName] [nvarchar](50) NOT NULL,
+	[UserWebPassID] [numeric](18, 0) NULL,
+	[p_barcode] [nvarchar](8) NULL,
+	[Action] [nvarchar](50) NOT NULL,
+	[Status] [bit] NOT NULL,
+	[date] [datetime] NOT NULL,
+	[Comment] [nvarchar](max) NOT NULL,
+	[LayerName] [nvarchar](100) NULL,
+	[MethodName] [nvarchar](100) NULL,
+ CONSTRAINT [PK_NW_login] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+/****** Object:  Table [dbo].[NW_Help]    Script Date: 05/29/2013 14:56:10 ******/
+SET ANSI_NULLS ON
+
+SET QUOTED_IDENTIFIER ON
+
+IF  not EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[NW_Help]'))
+CREATE TABLE [dbo].[NW_Help](
+	[Help_ID] [numeric](18, 0) IDENTITY(1,1) NOT NULL,
+	[Help_ParantID] [numeric](18, 0) NULL,
+	[Help_FaName] [nvarchar](50) NOT NULL,
+	[Help_EnName] [nvarchar](50) NULL,
+	[Help_FaHTMLContent] [nvarchar](max) NULL,
+	[Help_EnHTMLContent] [nvarchar](max) NULL,
+	[Help_FormKey] [nvarchar](100) NULL,
+	[Help_LevelOrder] [int] NULL,
+ CONSTRAINT [PK_TA_Help_1] PRIMARY KEY CLUSTERED 
+(
+	[Help_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+/****** Object:  Table [dbo].[NW_AssignReportParameter]    Script Date: 05/29/2013 14:56:10 ******/
+SET ANSI_NULLS ON
+
+SET QUOTED_IDENTIFIER ON
+
+IF  not EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[NW_AssignReportParameter]'))
+CREATE TABLE [dbo].[NW_AssignReportParameter](
+	[AssignReportParameter_ID] [numeric](18, 0) IDENTITY(1,1) NOT NULL,
+	[AssignReportParameter_ReportID] [numeric](18, 0) NOT NULL,
+	[AssignReportParameter_ReportParameterID] [numeric](18, 0) NOT NULL,
+ CONSTRAINT [PK_NW_AssignReportParameter] PRIMARY KEY CLUSTERED 
+(
+	[AssignReportParameter_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+
+
+/****** Object:  ForeignKey [FK_NW_AssignReportParameter_NW_Report]    Script Date: 05/29/2013 14:56:10 ******/
+IF not EXISTS (SELECT * 
+           FROM sys.foreign_keys 
+           WHERE object_id = OBJECT_ID(N'[dbo].[FK_NW_AssignReportParameter_NW_Report]') 
+            )
+ALTER TABLE [dbo].[NW_AssignReportParameter]  WITH CHECK ADD  CONSTRAINT [FK_NW_AssignReportParameter_NW_Report] FOREIGN KEY([AssignReportParameter_ReportID])
+REFERENCES [dbo].[NW_Report] ([Report_ID])
+
+IF not EXISTS (SELECT * 
+           FROM sys.foreign_keys 
+           WHERE object_id = OBJECT_ID(N'[dbo].[FK_NW_AssignReportParameter_NW_Report]') )
+ALTER TABLE [dbo].[NW_AssignReportParameter] CHECK CONSTRAINT [FK_NW_AssignReportParameter_NW_Report]
+
+/****** Object:  ForeignKey [FK_NW_AssignReportParameter_NW_ReportParameterType]    Script Date: 05/29/2013 14:56:10 ******/
+IF not EXISTS (SELECT * 
+           FROM sys.foreign_keys 
+           WHERE object_id = OBJECT_ID(N'[dbo].[FK_NW_AssignReportParameter_NW_ReportParameterType]') )
+ALTER TABLE [dbo].[NW_AssignReportParameter]  WITH CHECK ADD  CONSTRAINT [FK_NW_AssignReportParameter_NW_ReportParameterType] FOREIGN KEY([AssignReportParameter_ReportParameterID])
+REFERENCES [dbo].[NW_ReportParameterType] ([ReportParameterType_ID])
+
+IF not EXISTS (SELECT * 
+           FROM sys.foreign_keys 
+           WHERE object_id = OBJECT_ID(N'[dbo].[FK_NW_AssignReportParameter_NW_ReportParameterType]') )
+ALTER TABLE [dbo].[NW_AssignReportParameter] CHECK CONSTRAINT [FK_NW_AssignReportParameter_NW_ReportParameterType]
+
+if not exists(select * from sys.columns 
+            where Name = N'IsPermit' and Object_ID = Object_ID(N'pishcard')) 
+            alter table [dbo].[pishcard]
+            ADD IsPermit bit 
+            
+            if not exists(select * from sys.columns 
+            where Name = N'IsDaily' and Object_ID = Object_ID(N'pishcard')) 
+            alter table [dbo].[pishcard]
+            ADD IsDaily bit 
+         IF  not EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[NW_AccessReports]'))
+CREATE TABLE [dbo].[NW_AccessReports](
+	[AccessReports_ID] [numeric](18, 0) IDENTITY(1,1) NOT NULL,
+	[Report_ID] [numeric](18, 0) NOT NULL,
+	[Role_Title] [nvarchar](150) NOT NULL,
+ CONSTRAINT [PK_NW_AccessReports] PRIMARY KEY CLUSTERED 
+(
+	[AccessReports_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]

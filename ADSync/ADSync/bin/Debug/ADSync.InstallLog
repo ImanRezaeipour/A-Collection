@@ -1,0 +1,54 @@
+﻿Installing assembly 'C:\Users\p0034-ghadir\Documents\Visual Studio 2012\Projects\ADSync\ADSync\bin\Debug\ADSync.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\p0034-ghadir\Documents\Visual Studio 2012\Projects\ADSync\ADSync\bin\Debug\ADSync.InstallLog
+   assemblypath = C:\Users\p0034-ghadir\Documents\Visual Studio 2012\Projects\ADSync\ADSync\bin\Debug\ADSync.exe
+   logtoconsole = 
+No public installers with the RunInstallerAttribute.Yes attribute could be found in the C:\Users\p0034-ghadir\Documents\Visual Studio 2012\Projects\ADSync\ADSync\bin\Debug\ADSync.exe assembly.
+Committing assembly 'C:\Users\p0034-ghadir\Documents\Visual Studio 2012\Projects\ADSync\ADSync\bin\Debug\ADSync.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\p0034-ghadir\Documents\Visual Studio 2012\Projects\ADSync\ADSync\bin\Debug\ADSync.InstallLog
+   assemblypath = C:\Users\p0034-ghadir\Documents\Visual Studio 2012\Projects\ADSync\ADSync\bin\Debug\ADSync.exe
+   logtoconsole = 
+No public installers with the RunInstallerAttribute.Yes attribute could be found in the C:\Users\p0034-ghadir\Documents\Visual Studio 2012\Projects\ADSync\ADSync\bin\Debug\ADSync.exe assembly.
+Remove InstallState file because there are no installers.
+Installing assembly 'C:\Users\p0034-ghadir\Documents\Visual Studio 2012\Projects\ADSync\ADSync\bin\Debug\ADSync.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\p0034-ghadir\Documents\Visual Studio 2012\Projects\ADSync\ADSync\bin\Debug\ADSync.InstallLog
+   assemblypath = C:\Users\p0034-ghadir\Documents\Visual Studio 2012\Projects\ADSync\ADSync\bin\Debug\ADSync.exe
+   logtoconsole = 
+Committing assembly 'C:\Users\p0034-ghadir\Documents\Visual Studio 2012\Projects\ADSync\ADSync\bin\Debug\ADSync.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\p0034-ghadir\Documents\Visual Studio 2012\Projects\ADSync\ADSync\bin\Debug\ADSync.InstallLog
+   assemblypath = C:\Users\p0034-ghadir\Documents\Visual Studio 2012\Projects\ADSync\ADSync\bin\Debug\ADSync.exe
+   logtoconsole = 
+Installing assembly 'C:\Users\p0034-ghadir\Documents\Visual Studio 2012\Projects\ADSync\ADSync\bin\Debug\ADSync.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\p0034-ghadir\Documents\Visual Studio 2012\Projects\ADSync\ADSync\bin\Debug\ADSync.InstallLog
+   assemblypath = C:\Users\p0034-ghadir\Documents\Visual Studio 2012\Projects\ADSync\ADSync\bin\Debug\ADSync.exe
+   logtoconsole = 
+Committing assembly 'C:\Users\p0034-ghadir\Documents\Visual Studio 2012\Projects\ADSync\ADSync\bin\Debug\ADSync.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\p0034-ghadir\Documents\Visual Studio 2012\Projects\ADSync\ADSync\bin\Debug\ADSync.InstallLog
+   assemblypath = C:\Users\p0034-ghadir\Documents\Visual Studio 2012\Projects\ADSync\ADSync\bin\Debug\ADSync.exe
+   logtoconsole = 
+Installing assembly 'C:\Users\p0034-ghadir\Documents\Visual Studio 2012\Projects\ADSync\ADSync\bin\Debug\ADSync.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\p0034-ghadir\Documents\Visual Studio 2012\Projects\ADSync\ADSync\bin\Debug\ADSync.InstallLog
+   assemblypath = C:\Users\p0034-ghadir\Documents\Visual Studio 2012\Projects\ADSync\ADSync\bin\Debug\ADSync.exe
+   logtoconsole = 
+Installing service ActiveDirectory...
+Service ActiveDirectory has been successfully installed.
+Creating EventLog source ActiveDirectory in log Application...
+Committing assembly 'C:\Users\p0034-ghadir\Documents\Visual Studio 2012\Projects\ADSync\ADSync\bin\Debug\ADSync.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\p0034-ghadir\Documents\Visual Studio 2012\Projects\ADSync\ADSync\bin\Debug\ADSync.InstallLog
+   assemblypath = C:\Users\p0034-ghadir\Documents\Visual Studio 2012\Projects\ADSync\ADSync\bin\Debug\ADSync.exe
+   logtoconsole = 

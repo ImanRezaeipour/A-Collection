@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AtlasModelStoreContainer" CdmEntityContainer="AtlasEntities">
+    <EntitySetMapping Name="TA_Person">
+      <EntityTypeMapping TypeName="AtlasModel.TA_Person">
+        <MappingFragment StoreEntitySet="TA_Person">
+          <ScalarProperty Name="Prs_DigitalSignature" ColumnName="Prs_DigitalSignature" />
+          <ScalarProperty Name="Prs_ID" ColumnName="Prs_ID" />
+          <ScalarProperty Name="Prs_Barcode" ColumnName="Prs_Barcode" />
+          <ScalarProperty Name="Prs__Param" ColumnName="Prs__Param" />
+          <ScalarProperty Name="Prs_Active" ColumnName="Prs_Active" />
+          <ScalarProperty Name="Prs_CardNum" ColumnName="Prs_CardNum" />
+          <ScalarProperty Name="Prs_DepartmentId" ColumnName="Prs_DepartmentId" />
+          <ScalarProperty Name="Prs_EmploymentNum" ColumnName="Prs_EmploymentNum" />
+          <ScalarProperty Name="Prs_EmploymentDate" ColumnName="Prs_EmploymentDate" />
+          <ScalarProperty Name="Prs_EndEmploymentDate" ColumnName="Prs_EndEmploymentDate" />
+          <ScalarProperty Name="Prs_EmployId" ColumnName="Prs_EmployId" />
+          <ScalarProperty Name="Prs_Sex" ColumnName="Prs_Sex" />
+          <ScalarProperty Name="Prs_Education" ColumnName="Prs_Education" />
+          <ScalarProperty Name="Prs_FirstName" ColumnName="Prs_FirstName" />
+          <ScalarProperty Name="Prs_MaritalStatus" ColumnName="Prs_MaritalStatus" />
+          <ScalarProperty Name="Prs_LastName" ColumnName="Prs_LastName" />
+          <ScalarProperty Name="Prs_PrsDtlID" ColumnName="Prs_PrsDtlID" />
+          <ScalarProperty Name="prs_IsDeleted" ColumnName="prs_IsDeleted" />
+          <ScalarProperty Name="prs_GradeId" ColumnName="prs_GradeId" />
+          <ScalarProperty Name="prs_CreationDate" ColumnName="prs_CreationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TA_PersonDetail">
+      <EntityTypeMapping TypeName="AtlasModel.TA_PersonDetail">
+        <MappingFragment StoreEntitySet="TA_PersonDetail">
+          <ScalarProperty Name="PrsDtl_Grade" ColumnName="PrsDtl_Grade" />
+          <ScalarProperty Name="PrsDtl_MobileNumber" ColumnName="PrsDtl_MobileNumber" />
+          <ScalarProperty Name="PrsDtl_EmailAddress" ColumnName="PrsDtl_EmailAddress" />
+          <ScalarProperty Name="PrsDtl_Image" ColumnName="PrsDtl_Image" />
+          <ScalarProperty Name="PrsDtl_BirthDate" ColumnName="PrsDtl_BirthDate" />
+          <ScalarProperty Name="PrsDtl_BirthPlace" ColumnName="PrsDtl_BirthPlace" />
+          <ScalarProperty Name="PrsDtl_Address" ColumnName="PrsDtl_Address" />
+          <ScalarProperty Name="PrsDtl_Tel" ColumnName="PrsDtl_Tel" />
+          <ScalarProperty Name="PrsDtl_PlaceIssued" ColumnName="PrsDtl_PlaceIssued" />
+          <ScalarProperty Name="PrsDtl_MilitaryStatus" ColumnName="PrsDtl_MilitaryStatus" />
+          <ScalarProperty Name="PrsDtl_FatherName" ColumnName="PrsDtl_FatherName" />
+          <ScalarProperty Name="PrsDtl_Status" ColumnName="PrsDtl_Status" />
+          <ScalarProperty Name="PrsDtl_BirthCertificate" ColumnName="PrsDtl_BirthCertificate" />
+          <ScalarProperty Name="PrsDtl_ShomareShenasname" ColumnName="PrsDtl_ShomareShenasname" />
+          <ScalarProperty Name="PrsDtl_MeliCode" ColumnName="PrsDtl_MeliCode" />
+          <ScalarProperty Name="PrsDtl_ID" ColumnName="PrsDtl_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TA_Department">
+      <EntityTypeMapping TypeName="AtlasModel.TA_Department">
+        <MappingFragment StoreEntitySet="TA_Department">
+          <ScalarProperty Name="dep_ParentPath" ColumnName="dep_ParentPath" />
+          <ScalarProperty Name="dep_ParentID" ColumnName="dep_ParentID" />
+          <ScalarProperty Name="dep_CustomCode" ColumnName="dep_CustomCode" />
+          <ScalarProperty Name="dep_Name" ColumnName="dep_Name" />
+          <ScalarProperty Name="dep_ID" ColumnName="dep_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TA_EmploymentType">
+      <EntityTypeMapping TypeName="AtlasModel.TA_EmploymentType">
+        <MappingFragment StoreEntitySet="TA_EmploymentType">
+          <ScalarProperty Name="emply_CustomCode" ColumnName="emply_CustomCode" />
+          <ScalarProperty Name="emply_Name" ColumnName="emply_Name" />
+          <ScalarProperty Name="emply_ID" ColumnName="emply_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TA_Grade">
+      <EntityTypeMapping TypeName="AtlasModel.TA_Grade">
+        <MappingFragment StoreEntitySet="TA_Grade">
+          <ScalarProperty Name="Grade_Description" ColumnName="Grade_Description" />
+          <ScalarProperty Name="Grade_Name" ColumnName="Grade_Name" />
+          <ScalarProperty Name="Grade_ID" ColumnName="Grade_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

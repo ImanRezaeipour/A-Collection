@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AtlasModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TA_Department">
+    <Key>
+      <PropertyRef Name="dep_ID" />
+    </Key>
+    <Property Name="dep_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dep_Name" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="dep_CustomCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="dep_ParentID" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="dep_ParentPath" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="TA_EmploymentType">
+    <Key>
+      <PropertyRef Name="emply_ID" />
+    </Key>
+    <Property Name="emply_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="emply_Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="emply_CustomCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TA_Grade">
+    <Key>
+      <PropertyRef Name="Grade_ID" />
+    </Key>
+    <Property Name="Grade_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Grade_Name" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Grade_Description" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="TA_Person">
+    <Key>
+      <PropertyRef Name="Prs_ID" />
+    </Key>
+    <Property Name="Prs_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Prs_Barcode" Type="nvarchar" MaxLength="50" />
+    <Property Name="Prs__Param" Type="int" />
+    <Property Name="Prs_Active" Type="bit" />
+    <Property Name="Prs_CardNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="Prs_DepartmentId" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Prs_EmploymentNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="Prs_EmploymentDate" Type="datetime" />
+    <Property Name="Prs_EndEmploymentDate" Type="datetime" />
+    <Property Name="Prs_EmployId" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Prs_Sex" Type="bit" />
+    <Property Name="Prs_Education" Type="nvarchar" MaxLength="50" />
+    <Property Name="Prs_FirstName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Prs_MaritalStatus" Type="int" />
+    <Property Name="Prs_LastName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Prs_PrsDtlID" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="prs_IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="prs_CreationDate" Type="datetime" Nullable="false" />
+    <Property Name="prs_GradeId" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Prs_DigitalSignature" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="TA_PersonDetail">
+    <Key>
+      <PropertyRef Name="PrsDtl_ID" />
+    </Key>
+    <Property Name="PrsDtl_ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="PrsDtl_MeliCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrsDtl_ShomareShenasname" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrsDtl_BirthCertificate" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrsDtl_FatherName" Type="nvarchar" MaxLength="100" />
+    <Property Name="PrsDtl_MilitaryStatus" Type="int" />
+    <Property Name="PrsDtl_PlaceIssued" Type="nvarchar" MaxLength="100" />
+    <Property Name="PrsDtl_Tel" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrsDtl_Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="PrsDtl_BirthPlace" Type="nvarchar" MaxLength="100" />
+    <Property Name="PrsDtl_BirthDate" Type="datetime" />
+    <Property Name="PrsDtl_Image" Type="nvarchar(max)" />
+    <Property Name="PrsDtl_EmailAddress" Type="nvarchar" MaxLength="200" />
+    <Property Name="PrsDtl_MobileNumber" Type="nvarchar" MaxLength="200" />
+    <Property Name="PrsDtl_Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrsDtl_Grade" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_TA_Grade_TA_Grade">
+    <End Role="TA_Grade" Type="Self.TA_Grade" Multiplicity="1" />
+    <End Role="TA_Grade1" Type="Self.TA_Grade" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TA_Grade">
+        <PropertyRef Name="Grade_ID" />
+      </Principal>
+      <Dependent Role="TA_Grade1">
+        <PropertyRef Name="Grade_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TA_Grade_TA_Grade1">
+    <End Role="TA_Grade" Type="Self.TA_Grade" Multiplicity="1" />
+    <End Role="TA_Grade1" Type="Self.TA_Grade" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TA_Grade">
+        <PropertyRef Name="Grade_ID" />
+      </Principal>
+      <Dependent Role="TA_Grade1">
+        <PropertyRef Name="Grade_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TA_Person_TA_EmploymentType">
+    <End Role="TA_EmploymentType" Type="Self.TA_EmploymentType" Multiplicity="0..1" />
+    <End Role="TA_Person" Type="Self.TA_Person" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TA_EmploymentType">
+        <PropertyRef Name="emply_ID" />
+      </Principal>
+      <Dependent Role="TA_Person">
+        <PropertyRef Name="Prs_EmployId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TA_Person_TA_Grade">
+    <End Role="TA_Grade" Type="Self.TA_Grade" Multiplicity="0..1" />
+    <End Role="TA_Person" Type="Self.TA_Person" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TA_Grade">
+        <PropertyRef Name="Grade_ID" />
+      </Principal>
+      <Dependent Role="TA_Person">
+        <PropertyRef Name="prs_GradeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TA_Person_TA_PersonDetail">
+    <End Role="TA_PersonDetail" Type="Self.TA_PersonDetail" Multiplicity="0..1" />
+    <End Role="TA_Person" Type="Self.TA_Person" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TA_PersonDetail">
+        <PropertyRef Name="PrsDtl_ID" />
+      </Principal>
+      <Dependent Role="TA_Person">
+        <PropertyRef Name="Prs_PrsDtlID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AtlasModelStoreContainer">
+    <EntitySet Name="TA_Department" EntityType="Self.TA_Department" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TA_EmploymentType" EntityType="Self.TA_EmploymentType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TA_Grade" EntityType="Self.TA_Grade" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TA_Person" EntityType="Self.TA_Person" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TA_PersonDetail" EntityType="Self.TA_PersonDetail" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_TA_Grade_TA_Grade" Association="Self.FK_TA_Grade_TA_Grade">
+      <End Role="TA_Grade" EntitySet="TA_Grade" />
+      <End Role="TA_Grade1" EntitySet="TA_Grade" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TA_Grade_TA_Grade1" Association="Self.FK_TA_Grade_TA_Grade1">
+      <End Role="TA_Grade" EntitySet="TA_Grade" />
+      <End Role="TA_Grade1" EntitySet="TA_Grade" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TA_Person_TA_EmploymentType" Association="Self.FK_TA_Person_TA_EmploymentType">
+      <End Role="TA_EmploymentType" EntitySet="TA_EmploymentType" />
+      <End Role="TA_Person" EntitySet="TA_Person" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TA_Person_TA_Grade" Association="Self.FK_TA_Person_TA_Grade">
+      <End Role="TA_Grade" EntitySet="TA_Grade" />
+      <End Role="TA_Person" EntitySet="TA_Person" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TA_Person_TA_PersonDetail" Association="Self.FK_TA_Person_TA_PersonDetail">
+      <End Role="TA_PersonDetail" EntitySet="TA_PersonDetail" />
+      <End Role="TA_Person" EntitySet="TA_Person" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

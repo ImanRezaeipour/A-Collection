@@ -1,0 +1,855 @@
+﻿Installing assembly 'D:\test\Release\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\test\Release\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = D:\test\Release\GTS.Clock.ELESchedulingService.exe
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'D:\test\Release\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\test\Release\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = D:\test\Release\GTS.Clock.ELESchedulingService.exe
+Restoring event log to previous state for source ELESchedulerService.
+Installing assembly 'D:\test\Release\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\test\Release\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = D:\test\Release\GTS.Clock.ELESchedulingService.exe
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'D:\test\Release\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\test\Release\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = D:\test\Release\GTS.Clock.ELESchedulingService.exe
+Restoring event log to previous state for source ELESchedulerService.
+Installing assembly 'D:\test\Release\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\test\Release\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = D:\test\Release\GTS.Clock.ELESchedulingService.exe
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'D:\test\Release\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\test\Release\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = D:\test\Release\GTS.Clock.ELESchedulingService.exe
+Restoring event log to previous state for source ELESchedulerService.
+Uninstalling assembly 'D:\test\Release\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\test\Release\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = D:\test\Release\GTS.Clock.ELESchedulingService.exe
+Removing EventLog source ELESchedulerService.
+Service ELESchedulerService is being removed from the system...
+Service ELESchedulerService was successfully removed from the system.
+Uninstalling assembly 'D:\test\Release\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\test\Release\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = D:\test\Release\GTS.Clock.ELESchedulingService.exe
+Removing EventLog source ELESchedulerService.
+Warning: The source ELESchedulerService is not registered on the local machine.
+Service ELESchedulerService is being removed from the system...
+Service ELESchedulerService was successfully removed from the system.
+Installing assembly 'D:\test\Release\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\test\Release\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = D:\test\Release\GTS.Clock.ELESchedulingService.exe
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'D:\test\Release\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\test\Release\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = D:\test\Release\GTS.Clock.ELESchedulingService.exe
+Restoring event log to previous state for source ELESchedulerService.
+Installing assembly 'D:\test\Release\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\test\Release\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = D:\test\Release\GTS.Clock.ELESchedulingService.exe
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'D:\test\Release\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\test\Release\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = D:\test\Release\GTS.Clock.ELESchedulingService.exe
+Restoring event log to previous state for source ELESchedulerService.
+Installing assembly 'D:\test\Release\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\test\Release\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = D:\test\Release\GTS.Clock.ELESchedulingService.exe
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'D:\test\Release\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\test\Release\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = D:\test\Release\GTS.Clock.ELESchedulingService.exe
+Restoring event log to previous state for source ELESchedulerService.
+Installing assembly 'D:\test\Release\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\test\Release\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = D:\test\Release\GTS.Clock.ELESchedulingService.exe
+Installing service ELESchedulerService...
+Service ELESchedulerService has been successfully installed.
+Creating EventLog source ELESchedulerService in log Application...
+Committing assembly 'D:\test\Release\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\test\Release\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = D:\test\Release\GTS.Clock.ELESchedulingService.exe
+Uninstalling assembly 'D:\test\Release\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\test\Release\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = D:\test\Release\GTS.Clock.ELESchedulingService.exe
+Removing EventLog source ELESchedulerService.
+Service ELESchedulerService is being removed from the system...
+Service ELESchedulerService was successfully removed from the system.
+Attempt to stop service ELESchedulerService.
+Installing assembly 'D:\test\Release\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\test\Release\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = D:\test\Release\GTS.Clock.ELESchedulingService.exe
+Installing service ELESchedulerService...
+Service ELESchedulerService has been successfully installed.
+Creating EventLog source ELESchedulerService in log Application...
+Committing assembly 'D:\test\Release\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\test\Release\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = D:\test\Release\GTS.Clock.ELESchedulingService.exe
+Uninstalling assembly 'D:\test\Release\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\test\Release\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = D:\test\Release\GTS.Clock.ELESchedulingService.exe
+Removing EventLog source ELESchedulerService.
+Service ELESchedulerService is being removed from the system...
+Service ELESchedulerService was successfully removed from the system.
+Attempt to stop service ELESchedulerService.
+Installing assembly 'D:\test\Release\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\test\Release\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = D:\test\Release\GTS.Clock.ELESchedulingService.exe
+Installing service ELESchedulerService...
+Service ELESchedulerService has been successfully installed.
+Creating EventLog source ELESchedulerService in log Application...
+Committing assembly 'D:\test\Release\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\test\Release\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = D:\test\Release\GTS.Clock.ELESchedulingService.exe
+Installing assembly 'H:\_GHADIR\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = H:\_GHADIR\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = H:\_GHADIR\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Service ELESchedulerService has been successfully installed.
+Creating EventLog source ELESchedulerService in log Application...
+Committing assembly 'H:\_GHADIR\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = H:\_GHADIR\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = H:\_GHADIR\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Service ELESchedulerService has been successfully installed.
+Creating EventLog source ELESchedulerService in log Application...
+Committing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Uninstalling assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+Removing EventLog source ELESchedulerService.
+Service ELESchedulerService is being removed from the system...
+Service ELESchedulerService was successfully removed from the system.
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Service ELESchedulerService has been successfully installed.
+Creating EventLog source ELESchedulerService in log Application...
+Committing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Installing service ELESchedulerService...
+Creating EventLog source ELESchedulerService in log Application...
+Rolling back assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+   logtoconsole = 
+Restoring event log to previous state for source ELESchedulerService.
+Uninstalling assembly 'C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+Removing EventLog source ELESchedulerService.
+Service ELESchedulerService is being removed from the system...
+Service ELESchedulerService was successfully removed from the system.
+Installing assembly 'D:\_Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   i = 
+   logfile = D:\_Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = D:\_Atlas\ELE\GTS.Clock.ELESchedulingService.exe
+Installing service ELESchedulerService...
+Service ELESchedulerService has been successfully installed.
+Creating EventLog source ELESchedulerService in log Application...
+Committing assembly 'D:\_Atlas\ELE\GTS.Clock.ELESchedulingService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   i = 
+   logfile = D:\_Atlas\ELE\GTS.Clock.ELESchedulingService.InstallLog
+   assemblypath = D:\_Atlas\ELE\GTS.Clock.ELESchedulingService.exe

@@ -1,0 +1,568 @@
+EurekaLog 6.0.3
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Tue, 12 Jun 2012 09:07:30 +0300
+  1.2 Name/Description: SQLTools.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+  1.5 Compilation Date: Mon, 13 Feb 2012 14:11:54 +0400
+  1.6 Up Time         : 20 seconds
+
+Exception:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  2.1 Date          : Tue, 12 Jun 2012 09:07:51 +0400
+  2.2 Address       : 005003F4
+  2.3 Module Name   : SQLTools.exe
+  2.4 Module Version: 
+  2.5 Type          : EOleException
+  2.6 Message       : Cannot create file 'C:\Program Files\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\DATA\Clock.mdf' because it already exists. Change the file path or the file name, and retry the operation.
+  2.7 ID            : 6542
+  2.8 Count         : 1
+  2.9 Status        : New
+  2.10 Note         : 
+
+User:
+-------------------------------------------------------
+  3.1 ID        : ghaharBeigi
+  3.2 Name      : omid
+  3.3 Email     : 
+  3.4 Company   : 
+  3.5 Privileges: SeIncreaseQuotaPrivilege        - OFF
+                  SeSecurityPrivilege             - OFF
+                  SeTakeOwnershipPrivilege        - OFF
+                  SeLoadDriverPrivilege           - OFF
+                  SeSystemProfilePrivilege        - OFF
+                  SeSystemtimePrivilege           - OFF
+                  SeProfileSingleProcessPrivilege - OFF
+                  SeIncreaseBasePriorityPrivilege - OFF
+                  SeCreatePagefilePrivilege       - OFF
+                  SeBackupPrivilege               - OFF
+                  SeRestorePrivilege              - OFF
+                  SeShutdownPrivilege             - OFF
+                  SeDebugPrivilege                - OFF
+                  SeSystemEnvironmentPrivilege    - OFF
+                  SeChangeNotifyPrivilege         - ON
+                  SeRemoteShutdownPrivilege       - OFF
+                  SeUndockPrivilege               - OFF
+                  SeManageVolumePrivilege         - OFF
+                  SeImpersonatePrivilege          - ON
+                  SeCreateGlobalPrivilege         - ON
+                  SeIncreaseWorkingSetPrivilege   - OFF
+                  SeTimeZonePrivilege             - OFF
+                  SeCreateSymbolicLinkPrivilege   - OFF
+
+Active Controls:
+-------------------------------------------
+  4.1 Form Class   : TfrmSQLMenu
+  4.2 Form Text    : Clock SQL Server Tools
+  4.3 Control Class: TBitBtn
+  4.4 Control Text : Create Database
+
+Computer:
+------------------------------------------------------------------------------------------------
+  5.1 Name          : GHAHARI
+  5.2 Total Memory  : 2048 Mb
+  5.3 Free Memory   : 1565 Mb
+  5.4 Total Disk    : 93.56 Gb
+  5.5 Free Disk     : 18.64 Gb
+  5.6 System Up Time: 9 minutes, 29 seconds
+  5.7 Processor     : Intel(R) Core(TM) i3 CPU       M 350  @ 2.27GHz
+  5.8 Display Mode  : 1366 x 768, 32 bit
+  5.9 Display DPI   : 96
+  5.10 Video Card   : Intel(R) Graphics Media Accelerator HD (driver 8.15.10.1968 - RAM 1275 MB)
+  5.11 Printer      : Canon MF5600 Series (driver 2.00.17)
+
+Operating System:
+---------------------------------------
+  6.1 Type    : Microsoft Windows Vista
+  6.2 Build # : 7600
+  6.3 Update  : 
+  6.4 Language: Persian
+  6.5 Charset : 178
+
+Network:
+---------------------------------------------------
+  7.1 IP Address: 000.000.000.000 - 192.168.010.015
+  7.2 Submask   : 000.000.000.000 - 255.255.255.000
+  7.3 Gateway   : 000.000.000.000 - 192.168.010.002
+  7.4 DNS 1     : 000.000.000.000 - 192.168.010.001
+  7.5 DNS 2     : 000.000.000.000 - 192.168.010.007
+  7.6 DHCP      : ON              - ON             
+
+Call Stack Information:
+--------------------------------------------------------------------------------
+|Address |Module      |Unit    |Class      |Procedure/Method           |Line   |
+--------------------------------------------------------------------------------
+|Running Thread: ID=6012; Priority=0; Class=; [Main]                           |
+|------------------------------------------------------------------------------|
+|0054204A|SQLTools.exe|Menu.pas|TfrmSQLMenu|btnCreateSqlDbsClick       |387[12]|
+|76E0F299|USER32.dll  |        |           |NotifyWinEvent             |       |
+|77A41FCC|ntdll.dll   |        |           |RtlAllocateHeap            |       |
+|77A4262D|ntdll.dll   |        |           |RtlMultiByteToUnicodeN     |       |
+|77A41E32|ntdll.dll   |        |           |RtlFreeHeap                |       |
+|77A41DB9|ntdll.dll   |        |           |RtlFreeHeap                |       |
+|77A427BF|ntdll.dll   |        |           |RtlDeleteBoundaryDescriptor|       |
+|76E241DE|USER32.dll  |        |           |CallWindowProcA            |       |
+|76E241F4|USER32.dll  |        |           |CallWindowProcA            |       |
+|77A36800|ntdll.dll   |        |           |RtlLeaveCriticalSection    |       |
+|76E07690|USER32.dll  |        |           |SendMessageW               |       |
+|76E0764C|USER32.dll  |        |           |SendMessageW               |       |
+|77A41FCC|ntdll.dll   |        |           |RtlAllocateHeap            |       |
+|76E241F4|USER32.dll  |        |           |CallWindowProcA            |       |
+|76E241DE|USER32.dll  |        |           |CallWindowProcA            |       |
+|77A4262D|ntdll.dll   |        |           |RtlMultiByteToUnicodeN     |       |
+|77A41E32|ntdll.dll   |        |           |RtlFreeHeap                |       |
+|77A41DB9|ntdll.dll   |        |           |RtlFreeHeap                |       |
+|77A427BF|ntdll.dll   |        |           |RtlDeleteBoundaryDescriptor|       |
+|77B7D80D|kernel32.dll|        |           |CreateDirectoryA           |       |
+|76DFBBB3|USER32.dll  |        |           |GetCapture                 |       |
+|76E241AC|USER32.dll  |        |           |GetPropA                   |       |
+|76E03573|USER32.dll  |        |           |DispatchMessageA           |       |
+|76E03569|USER32.dll  |        |           |DispatchMessageA           |       |
+|77B91132|kernel32.dll|        |           |BaseThreadInitThunk        |       |
+--------------------------------------------------------------------------------
+
+Modules Information:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name                |Description                                     |Version           |Size    |Modified           |Path                                                                                                          |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|00400000|SQLTools.exe        |                                                |                  |1505280 |2012-02-13 13:11:56|C:\Clock6 Setup\Files                                                                                         |
+|6C290000|winspool.drv        |Windows Spooler Driver                          |6.1.7600.16385    |319488  |2009-07-14 04:44:10|C:\Windows\system32                                                                                           |
+|6E430000|SQLOLEDB.RLL        |OLE DB Provider for SQL Server Resources        |6.1.7600.16385    |16384   |2009-07-14 03:42:14|C:\Program Files\Common Files\System\Ole DB                                                                   |
+|6FC00000|comctl32.dll        |Common Controls Library                         |5.82.7600.16661   |530432  |2010-08-21 09:03:26|C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7600.16661_none_ebfb56996c72aefc|
+|723C0000|rasadhlp.dll        |Remote Access AutoDial Helper                   |6.1.7600.16385    |11776   |2009-07-14 04:46:14|C:\Windows\system32                                                                                           |
+|723D0000|PrxerNsp.dll        |Proxifier Namespace Service Provider            |3.0.2.1           |54000   |2011-05-01 01:32:08|C:\Windows\system32                                                                                           |
+|72560000|ntdsapi.dll         |Active Directory Domain Services API            |6.1.7600.16385    |90112   |2009-07-14 04:46:12|C:\Windows\system32                                                                                           |
+|725B0000|security.dll        |Security Support Provider Interface             |6.1.7600.16385    |4608    |2009-07-14 04:39:54|C:\Windows\system32                                                                                           |
+|725C0000|DBNETLIB.DLL        |Winsock Oriented Net DLL for SQL Clients        |6.1.7600.16385    |135168  |2009-07-14 04:45:10|C:\Windows\system32                                                                                           |
+|72600000|MSDATL3.dll         |OLE DB Implementation Support Routines          |6.1.7600.16385    |98304   |2009-07-14 04:45:44|C:\Program Files\Common Files\System\Ole DB                                                                   |
+|72620000|sqloledb.dll        |OLE DB Provider for SQL Server                  |6.1.7600.16385    |921600  |2009-07-14 04:46:16|C:\Program Files\Common Files\System\Ole DB                                                                   |
+|72720000|comsvcs.dll         |COM+ Services                                   |2001.12.8530.16385|1242112 |2009-07-14 04:45:08|C:\Windows\system32                                                                                           |
+|72860000|OLEDB32R.DLL        |OLE DB Core Services Resources                  |6.1.7600.16385    |81920   |2009-07-14 04:39:18|C:\Program Files\Common Files\System\Ole DB                                                                   |
+|72880000|oledb32.dll         |OLE DB Core Services                            |6.1.7600.16385    |864256  |2009-07-14 04:46:14|C:\Program Files\Common Files\System\Ole DB                                                                   |
+|72BA0000|MSDART.DLL          |OLE DB Runtime Routines                         |6.1.7600.16385    |126976  |2009-07-14 04:45:44|C:\Windows\system32                                                                                           |
+|72BC0000|msado15.dll         |ActiveX Data Objects                            |6.1.7600.16688    |987136  |2010-10-16 08:03:28|C:\Program Files\Common Files\System\ado                                                                      |
+|72E50000|wsock32.dll         |Windows Socket 32-Bit DLL                       |6.1.7600.16385    |15360   |2009-07-14 04:46:22|C:\Windows\system32                                                                                           |
+|73340000|wkscli.dll          |Workstation Service Client DLL                  |6.1.7600.16385    |47104   |2009-07-14 04:46:20|C:\Windows\system32                                                                                           |
+|73350000|NETAPI32.dll        |Net Win32 API DLL                               |6.1.7600.16385    |56832   |2009-07-14 04:46:04|C:\Windows\system32                                                                                           |
+|73C10000|fwpuclnt.dll        |FWP/IPsec User-Mode API                         |6.1.7600.16385    |216576  |2009-07-14 04:45:22|C:\Windows\System32                                                                                           |
+|73E70000|WINNSI.DLL          |Network Store Information RPC interface         |6.1.7600.16385    |16896   |2009-07-14 04:46:20|C:\Windows\system32                                                                                           |
+|73E80000|IPHLPAPI.DLL        |IP Helper API                                   |6.1.7600.16385    |103936  |2009-07-14 04:45:34|C:\Windows\system32                                                                                           |
+|73F20000|dwmapi.dll          |Microsoft Desktop Window Manager API            |6.1.7600.16385    |67072   |2009-07-14 04:45:14|C:\Windows\system32                                                                                           |
+|74290000|uxtheme.dll         |Microsoft UxTheme Library                       |6.1.7600.16385    |249856  |2009-07-14 04:46:18|C:\Windows\system32                                                                                           |
+|74810000|comctl32.DLL        |User Experience Controls Library                |6.10.7600.16661   |1680896 |2010-08-21 08:51:34|C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7600.16661_none_420fe3fa2b8113bd |
+|74AE0000|ATL.DLL             |ATL Module for Windows XP (Unicode)             |3.5.2284.0        |70144   |2009-07-14 04:44:58|C:\Windows\system32                                                                                           |
+|75090000|wshtcpip.dll        |Winsock2 Helper DLL (TL/IPv4)                   |6.1.7600.16385    |9216    |2009-07-14 04:46:22|C:\Windows\System32                                                                                           |
+|750A0000|version.dll         |Version Checking and File Installation Libraries|6.1.7600.16385    |21504   |2009-07-14 04:46:18|C:\Windows\system32                                                                                           |
+|750B0000|PrxerDrv.dll        |Proxifier Winsock Layered Service Provider      |3.0.2.1           |67824   |2011-05-01 01:32:08|C:\Windows\system32                                                                                           |
+|75290000|credssp.dll         |Credential Delegation Security Package          |6.1.7600.16385    |16896   |2009-07-14 04:45:08|C:\Windows\system32                                                                                           |
+|752D0000|bcryptprimitives.dll|Windows Cryptographic Primitives Library        |6.1.7600.16385    |249680  |2009-07-14 04:47:56|C:\Windows\system32                                                                                           |
+|75380000|netutils.dll        |Net Win32 API Helpers DLL                       |6.1.7600.16385    |22016   |2009-07-14 04:46:04|C:\Windows\system32                                                                                           |
+|75390000|rsaenh.dll          |Microsoft Enhanced Cryptographic Provider       |6.1.7600.16385    |242936  |2009-07-14 04:47:56|C:\Windows\system32                                                                                           |
+|75400000|schannel.DLL        |TLS / SSL Security Provider                     |6.1.7600.16385    |220160  |2009-07-14 04:46:14|C:\Windows\system32                                                                                           |
+|75470000|DNSAPI.dll          |DNS Client API DLL                              |6.1.7600.16772    |269824  |2011-03-03 08:59:24|C:\Windows\system32                                                                                           |
+|75550000|msv1_0.DLL          |Microsoft Authentication Package v1.0           |6.1.7600.16420    |257024  |2009-09-10 09:22:06|C:\Windows\system32                                                                                           |
+|755A0000|wship6.dll          |Winsock2 Helper DLL (TL/IPv6)                   |6.1.7600.16385    |10752   |2009-07-14 04:46:22|C:\Windows\System32                                                                                           |
+|755B0000|mswsock.dll         |Microsoft Windows Sockets 2.0 Service Provider  |6.1.7600.16385    |232448  |2009-07-14 04:45:52|C:\Windows\system32                                                                                           |
+|755F0000|CRYPTSP.dll         |Cryptographic Service Provider API              |6.1.7600.16385    |78848   |2009-07-14 04:45:08|C:\Windows\system32                                                                                           |
+|75700000|bcrypt.dll          |Windows Cryptographic Primitives Library        |6.1.7600.16385    |80384   |2009-07-14 04:45:00|C:\Windows\system32                                                                                           |
+|75720000|ncrypt.dll          |Windows cryptographic library                   |6.1.7600.16385    |219136  |2009-07-14 04:46:04|C:\Windows\system32                                                                                           |
+|757E0000|cryptdll.dll        |Cryptography Manager                            |6.1.7600.16385    |58880   |2009-07-14 04:45:08|C:\Windows\system32                                                                                           |
+|75800000|srvcli.dll          |Server Service Client DLL                       |6.1.7600.16385    |90112   |2009-07-14 04:46:16|C:\Windows\system32                                                                                           |
+|75910000|SECUR32.DLL         |Security Support Provider Interface             |6.1.7600.16385    |22016   |2009-07-14 04:46:14|C:\Windows\system32                                                                                           |
+|75A50000|SSPICLI.DLL         |Security Support Provider Interface             |6.1.7600.16385    |99840   |2009-07-14 04:46:16|C:\Windows\system32                                                                                           |
+|75AC0000|CRYPTBASE.dll       |Base cryptographic API DLL                      |6.1.7600.16385    |36864   |2009-07-14 04:45:08|C:\Windows\system32                                                                                           |
+|75B30000|RpcRtRemote.dll     |Remote RPC Extension                            |6.1.7600.16385    |45568   |2009-07-14 04:46:14|C:\Windows\system32                                                                                           |
+|75BB0000|MSASN1.dll          |ASN.1 Runtime APIs                              |6.1.7600.16415    |34816   |2009-08-29 10:27:32|C:\Windows\system32                                                                                           |
+|75CB0000|CRYPT32.dll         |Crypto API32                                    |6.1.7600.16385    |1151488 |2009-07-14 04:45:08|C:\Windows\system32                                                                                           |
+|75DF0000|KERNELBASE.dll      |Windows NT BASE API Client DLL                  |6.1.7600.21010    |290816  |2011-07-16 07:55:26|C:\Windows\system32                                                                                           |
+|75E40000|MSCTF.dll           |MSCTF Server DLL                                |6.1.7600.16385    |828928  |2009-07-14 04:45:44|C:\Windows\system32                                                                                           |
+|75F10000|USP10.dll           |Uniscribe Unicode script processor              |1.626.7600.16385  |627200  |2009-07-14 04:46:18|C:\Windows\system32                                                                                           |
+|75FB0000|shell32.dll         |Windows Shell Common Dll                        |6.1.7600.16941    |12868096|2012-01-04 12:33:46|C:\Windows\system32                                                                                           |
+|76C00000|advapi32.dll        |Advanced Windows 32 Base API                    |6.1.7600.16385    |640000  |2009-07-14 04:44:54|C:\Windows\system32                                                                                           |
+|76CB0000|CLBCatQ.DLL         |COM+ Configuration Catalog                      |2001.12.8530.16385|522240  |2009-07-14 04:45:04|C:\Windows\system32                                                                                           |
+|76D40000|SHLWAPI.dll         |Shell Light-weight Utility Library              |6.1.7600.16385    |350208  |2009-07-14 04:46:16|C:\Windows\system32                                                                                           |
+|76DA0000|sechost.dll         |Host for SCM/SDDL/LSA Lookup APIs               |6.1.7600.16385    |92160   |2009-07-14 04:46:14|C:\Windows\SYSTEM32                                                                                           |
+|76DF0000|USER32.dll          |Multi-User Windows USER API Client DLL          |6.1.7600.16385    |811520  |2009-07-14 04:46:18|C:\Windows\system32                                                                                           |
+|76EC0000|WS2_32.dll          |Windows Socket 2.0 32-Bit DLL                   |6.1.7600.16385    |206336  |2009-07-14 04:46:22|C:\Windows\system32                                                                                           |
+|76F00000|comdlg32.dll        |Common Dialogs DLL                              |6.1.7600.16385    |486912  |2009-07-14 04:45:08|C:\Windows\system32                                                                                           |
+|76F80000|oleaut32.dll        |                                                |6.1.7600.16872    |571904  |2011-08-27 08:13:08|C:\Windows\system32                                                                                           |
+|77260000|GDI32.dll           |GDI Client DLL                                  |6.1.7600.16385    |304640  |2009-07-14 04:45:24|C:\Windows\system32                                                                                           |
+|773F0000|RPCRT4.dll          |Remote Procedure Call Runtime                   |6.1.7600.16385    |652288  |2009-07-14 04:46:14|C:\Windows\system32                                                                                           |
+|774A0000|ole32.dll           |Microsoft OLE for Windows                       |6.1.7600.16624    |1413632 |2010-06-29 08:32:04|C:\Windows\system32                                                                                           |
+|77600000|LPK.dll             |Language Pack                                   |6.1.7600.16385    |26624   |2009-07-14 04:45:38|C:\Windows\system32                                                                                           |
+|77610000|NSI.dll             |NSI User-mode interface DLL                     |6.1.7600.16385    |8704    |2009-07-14 04:46:12|C:\Windows\system32                                                                                           |
+|77620000|IMM32.DLL           |Multi-User Windows IMM32 API Client DLL         |6.1.7600.16385    |118272  |2009-07-14 04:45:34|C:\Windows\system32                                                                                           |
+|77940000|msvcrt.dll          |Windows NT CRT DLL                              |7.0.7600.16930    |690688  |2011-12-16 11:29:18|C:\Windows\system32                                                                                           |
+|779F0000|ntdll.dll           |NT Layer DLL                                    |6.1.7600.16915    |1288984 |2011-11-17 09:11:40|C:\Windows\SYSTEM32                                                                                           |
+|77B30000|PSAPI.DLL           |Process Status Helper                           |6.1.7600.16385    |6144    |2009-07-14 04:46:14|C:\Windows\system32                                                                                           |
+|77B40000|kernel32.dll        |Windows NT BASE API Client DLL                  |6.1.7600.21010    |868352  |2011-07-16 07:55:26|C:\Windows\system32                                                                                           |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Processes Information:
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|ID  |Name                       |Description                        |Version        |Memory   |Priority    |Threads|Path                                                                    |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|212 |hkcmd.exe                  |hkcmd Module                       |8.15.10.1968   |5206016  |Normal      |3      |C:\Windows\System32                                                     |
+|1408|egui.exe                   |ESET GUI                           |4.2.71.2       |10727424 |Normal      |6      |C:\Program Files\ESET\ESET Smart Security                               |
+|1704|SynTPEnh.exe               |Synaptics TouchPad Enhancements    |14.0.0.3       |9998336  |Above-Normal|6      |C:\Program Files\Synaptics\SynTP                                        |
+|1888|igfxtray.exe               |igfxTray Module                    |8.15.10.1968   |4767744  |Normal      |3      |C:\Windows\System32                                                     |
+|2004|ISUSPM.exe                 |Acresso Software Manager           |11.60.100.22284|5775360  |Normal      |3      |C:\ProgramData\FLEXnet\Connect\11                                       |
+|2016|igfxpers.exe               |persistence Module                 |8.15.10.1968   |6537216  |Normal      |3      |C:\Windows\System32                                                     |
+|2780|googletalk.exe             |Google Talk                        |1.0.0.104      |26288128 |Normal      |18     |C:\Program Files\Google\Google Talk                                     |
+|2828|jusched.exe                |Java(TM) Platform SE binary        |6.0.0.105      |3870720  |Normal      |1      |C:\Program Files\Java\jre1.6.0\bin                                      |
+|3100|PCSuite.exe                |Nokia Launch Application           |7.1.72.0       |25714688 |Normal      |12     |C:\Program Files\Nokia\Nokia PC Suite 7                                 |
+|3140|PCCompanion.exe            |Sony PC Companion                  |2.1.0.0        |37494784 |Normal      |10     |C:\Program Files\Sony\Sony PC Companion                                 |
+|3648|Dwm.exe                    |Desktop Window Manager             |6.1.7600.16385 |25722880 |High        |5      |C:\Windows\system32                                                     |
+|3680|Snagit32.exe               |Snagit                             |10.0.0.788     |35569664 |Normal      |12     |C:\Program Files\TechSmith\Snagit 10                                    |
+|3688|Explorer.EXE               |Windows Explorer                   |6.1.7600.16768 |58331136 |Normal      |33     |C:\Windows                                                              |
+|3700|taskhost.exe               |Host Process for Windows Tasks     |6.1.7600.16385 |6766592  |Normal      |10     |C:\Windows\system32                                                     |
+|3916|SynTPHelper.exe            |Synaptics Pointing Device Helper   |14.0.0.3       |2723840  |Above-Normal|1      |C:\Program Files\Synaptics\SynTP                                        |
+|3952|LightScribeControlPanel.exe|                                   |1.18.16.1      |11046912 |Normal      |1      |C:\Program Files\Common Files\LightScribe                               |
+|4072|DAP.exe                    |Download Accelerator Plus (DAP)    |9.4.0.4        |33366016 |Normal      |17     |C:\Program Files\DAP                                                    |
+|4132|igfxsrvc.exe               |igfxsrvc Module                    |8.15.10.1968   |4939776  |Normal      |4      |C:\Windows\system32                                                     |
+|4292|TSCHelp.exe                |TechSmith HTML Help Helper         |1.0.1.788      |3522560  |Normal      |1      |C:\Program Files\TechSmith\Snagit 10                                    |
+|4340|SnagPriv.exe               |Snagit RPC Helper                  |10.0.0.788     |4509696  |Normal      |5      |C:\Program Files\TechSmith\Snagit 10                                    |
+|4368|PCCompanionInfo.exe        |                                   |               |5898240  |Normal      |2      |C:\Program Files\Sony\Sony PC Companion                                 |
+|4508|Ssms.exe                   |SSMS - SQL Server Management Studio|2009.100.1600.1|109092864|Normal      |17     |C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE|
+|4800|snagiteditor.exe           |Snagit Editor                      |10.0.0.788     |70881280 |Normal      |14     |C:\Program Files\TechSmith\Snagit 10                                    |
+|5852|SQLTools.exe               |                                   |               |14598144 |Normal      |7      |C:\Clock6 Setup\Files                                                   |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Assembler Information:
+-------------------------------------------------------
+005003DD  push    edi
+005003DE  push    esi
+005003DF  lea     eax, [ebp-$10]
+005003E2  call    -$000ED38B
+005003E7  push    eax
+005003E8  mov     eax, [ebp-$14]
+005003EB  mov     eax, [eax+$30]
+005003EE  push    eax
+005003EF  mov     eax, [eax]
+005003F1  call    dword ptr [eax+$44]
+005003F4  call    -$000F8D65           ; <-- EXCEPTION
+005003F9  lea     eax, [ebp-$10]
+005003FC  call    -$000EC685
+00500401  mov     [ebx], eax
+00500403  xor     eax, eax
+00500405  pop     edx
+00500406  pop     ecx
+00500407  pop     ecx
+00500408  mov     fs:[eax], edx
+0050040B  push    $00500427            ; '3ÀZYYd‰.hD.P'
+00500410  xor     ecx, ecx
+
+Registers:
+-----------------------------
+EAX: 015B5250   EDI: 00000001
+EBX: 80040E14   ESI: 005003F9
+ECX: 00000000   ESP: 0012F45C
+EDX: 005003F9   EIP: 005003F4
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0012F45C: 0012F49C   005003F4: E8 9B 72 F0 FF 8D 45 F0 E8 7B 39 F1 FF 89 03 33  ..r...E..{9....3
+0012F460: 00404C48   00500404: C0 5A 59 59 64 89 10 68 27 04 50 00 33 C9 BA 02  .ZYYd..h'.P.3...
+0012F464: 0012F490   00500414: 00 00 00 8B 45 EC 8B 18 FF 53 3C C3 E9 A3 47 F0  ....E....S<...G.
+0012F468: 00557970   00500424: FF EB E9 33 C0 5A 59 59 64 89 10 68 44 04 50 00  ...3.ZYYd..hD.P.
+0012F46C: 01514D34   00500434: 8D 45 F0 E8 20 2C F1 FF C3 E9 86 47 F0 FF EB F0  .E.. ,.....G....
+0012F470: 00000000   00500444: 5F 5E 5B 8B E5 5D C2 04 00 8D 40 00 55 8B EC 6A  _^[..]....@.U..j
+0012F474: 00000000   00500454: 00 6A 00 6A 00 53 56 8B DA 8B F0 33 C0 55 68 84  .j.j.SV....3.Uh.
+0012F478: 00000000   00500464: 05 50 00 64 FF 30 64 89 20 8B C6 E8 A4 FC FF FF  .P.d.0d. .......
+0012F47C: 00000000   00500474: 84 DB 0F 84 ED 00 00 00 8B C6 E8 D1 04 00 00 04  ................
+0012F480: 00000000   00500484: FE 2C 02 0F 83 D4 00 00 00 8B 56 3C B8 98 05 50  .,........V<...P
+0012F484: 00000000   00500494: 00 E8 8A 5B F0 FF 85 C0 0F 8E BF 00 00 00 8B 46  ...[...........F
+0012F488: 00000000   005004A4: 3C 66 83 38 5B 0F 84 B2 00 00 00 8D 45 FC 8B 56  <f.8[.......E..V
+0012F48C: 00000000   005004B4: 3C E8 E2 57 F0 FF 8B 55 FC B8 A0 05 50 00 E8 5D  <..W...U....P..]
+0012F490: 0012F4D8   005004C4: 5B F0 FF 85 C0 7E 2B 0F B6 05 A4 05 50 00 50 8D  [....~+.....P.P.
+0012F494: 004076A7   005004D4: 45 F8 50 B9 AC 05 50 00 BA A0 05 50 00 8B 45 FC  E.P...P....P..E.
+0012F498: 005003F9   005004E4: E8 8B 6B F9 FF 8B 55 F8 8D 45 FC E8 A8 57 F0 FF  ..k...U..E...W..
+
+
+
+EurekaLog 6.0.3
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Tue, 12 Jun 2012 09:07:30 +0400
+  1.2 Name/Description: SQLTools.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+  1.5 Compilation Date: Mon, 13 Feb 2012 14:11:54 +0400
+  1.6 Up Time         : 35 seconds
+
+Exception:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  2.1 Date          : Tue, 12 Jun 2012 09:08:06 +0400
+  2.2 Address       : 005003F4
+  2.3 Module Name   : SQLTools.exe
+  2.4 Module Version: 
+  2.5 Type          : EOleException
+  2.6 Message       : Cannot create file 'C:\Program Files\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\DATA\Clock.mdf' because it already exists. Change the file path or the file name, and retry the operation.
+  2.7 ID            : 6542
+  2.8 Count         : 1
+  2.9 Status        : New
+  2.10 Note         : 
+
+User:
+-------------------------------------------------------
+  3.1 ID        : ghaharBeigi
+  3.2 Name      : omid
+  3.3 Email     : 
+  3.4 Company   : 
+  3.5 Privileges: SeIncreaseQuotaPrivilege        - OFF
+                  SeSecurityPrivilege             - OFF
+                  SeTakeOwnershipPrivilege        - OFF
+                  SeLoadDriverPrivilege           - OFF
+                  SeSystemProfilePrivilege        - OFF
+                  SeSystemtimePrivilege           - OFF
+                  SeProfileSingleProcessPrivilege - OFF
+                  SeIncreaseBasePriorityPrivilege - OFF
+                  SeCreatePagefilePrivilege       - OFF
+                  SeBackupPrivilege               - OFF
+                  SeRestorePrivilege              - OFF
+                  SeShutdownPrivilege             - OFF
+                  SeDebugPrivilege                - OFF
+                  SeSystemEnvironmentPrivilege    - OFF
+                  SeChangeNotifyPrivilege         - ON
+                  SeRemoteShutdownPrivilege       - OFF
+                  SeUndockPrivilege               - OFF
+                  SeManageVolumePrivilege         - OFF
+                  SeImpersonatePrivilege          - ON
+                  SeCreateGlobalPrivilege         - ON
+                  SeIncreaseWorkingSetPrivilege   - OFF
+                  SeTimeZonePrivilege             - OFF
+                  SeCreateSymbolicLinkPrivilege   - OFF
+
+Active Controls:
+-------------------------------------------
+  4.1 Form Class   : TfrmSQLMenu
+  4.2 Form Text    : Clock SQL Server Tools
+  4.3 Control Class: TBitBtn
+  4.4 Control Text : Create Database
+
+Computer:
+------------------------------------------------------------------------------------------------
+  5.1 Name          : GHAHARI
+  5.2 Total Memory  : 2048 Mb
+  5.3 Free Memory   : 1564 Mb
+  5.4 Total Disk    : 93.56 Gb
+  5.5 Free Disk     : 18.64 Gb
+  5.6 System Up Time: 9 minutes, 43 seconds
+  5.7 Processor     : Intel(R) Core(TM) i3 CPU       M 350  @ 2.27GHz
+  5.8 Display Mode  : 1366 x 768, 32 bit
+  5.9 Display DPI   : 96
+  5.10 Video Card   : Intel(R) Graphics Media Accelerator HD (driver 8.15.10.1968 - RAM 1275 MB)
+  5.11 Printer      : Canon MF5600 Series (driver 2.00.17)
+
+Operating System:
+---------------------------------------
+  6.1 Type    : Microsoft Windows Vista
+  6.2 Build # : 7600
+  6.3 Update  : 
+  6.4 Language: Persian
+  6.5 Charset : 178
+
+Network:
+---------------------------------------------------
+  7.1 IP Address: 000.000.000.000 - 192.168.010.015
+  7.2 Submask   : 000.000.000.000 - 255.255.255.000
+  7.3 Gateway   : 000.000.000.000 - 192.168.010.002
+  7.4 DNS 1     : 000.000.000.000 - 192.168.010.001
+  7.5 DNS 2     : 000.000.000.000 - 192.168.010.007
+  7.6 DHCP      : ON              - ON             
+
+Call Stack Information:
+--------------------------------------------------------------------------------
+|Address |Module      |Unit    |Class      |Procedure/Method           |Line   |
+--------------------------------------------------------------------------------
+|Running Thread: ID=6012; Priority=0; Class=; [Main]                           |
+|------------------------------------------------------------------------------|
+|0054204A|SQLTools.exe|Menu.pas|TfrmSQLMenu|btnCreateSqlDbsClick       |387[12]|
+|76E0F299|USER32.dll  |        |           |NotifyWinEvent             |       |
+|77A41FCC|ntdll.dll   |        |           |RtlAllocateHeap            |       |
+|77A4262D|ntdll.dll   |        |           |RtlMultiByteToUnicodeN     |       |
+|77A41E32|ntdll.dll   |        |           |RtlFreeHeap                |       |
+|77A41DB9|ntdll.dll   |        |           |RtlFreeHeap                |       |
+|77A427BF|ntdll.dll   |        |           |RtlDeleteBoundaryDescriptor|       |
+|77B7D80D|kernel32.dll|        |           |CreateDirectoryA           |       |
+|76E241F4|USER32.dll  |        |           |CallWindowProcA            |       |
+|76E241DE|USER32.dll  |        |           |CallWindowProcA            |       |
+|76E07690|USER32.dll  |        |           |SendMessageW               |       |
+|76E0764C|USER32.dll  |        |           |SendMessageW               |       |
+|76E04493|USER32.dll  |        |           |PtInRect                   |       |
+|77A36800|ntdll.dll   |        |           |RtlLeaveCriticalSection    |       |
+|76E07690|USER32.dll  |        |           |SendMessageW               |       |
+|76E0764C|USER32.dll  |        |           |SendMessageW               |       |
+|76E241F4|USER32.dll  |        |           |CallWindowProcA            |       |
+|76E241DE|USER32.dll  |        |           |CallWindowProcA            |       |
+|76DFED0A|USER32.dll  |        |           |PostThreadMessageW         |       |
+|76DFBBB3|USER32.dll  |        |           |GetCapture                 |       |
+|76E03573|USER32.dll  |        |           |DispatchMessageA           |       |
+|76E03569|USER32.dll  |        |           |DispatchMessageA           |       |
+|77B91132|kernel32.dll|        |           |BaseThreadInitThunk        |       |
+--------------------------------------------------------------------------------
+
+Modules Information:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name                |Description                                     |Version           |Size    |Modified           |Path                                                                                                          |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|00400000|SQLTools.exe        |                                                |                  |1505280 |2012-02-13 13:11:56|C:\Clock6 Setup\Files                                                                                         |
+|6C290000|winspool.drv        |Windows Spooler Driver                          |6.1.7600.16385    |319488  |2009-07-14 04:44:10|C:\Windows\system32                                                                                           |
+|6E430000|SQLOLEDB.RLL        |OLE DB Provider for SQL Server Resources        |6.1.7600.16385    |16384   |2009-07-14 03:42:14|C:\Program Files\Common Files\System\Ole DB                                                                   |
+|6FC00000|comctl32.dll        |Common Controls Library                         |5.82.7600.16661   |530432  |2010-08-21 09:03:26|C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7600.16661_none_ebfb56996c72aefc|
+|723C0000|rasadhlp.dll        |Remote Access AutoDial Helper                   |6.1.7600.16385    |11776   |2009-07-14 04:46:14|C:\Windows\system32                                                                                           |
+|723D0000|PrxerNsp.dll        |Proxifier Namespace Service Provider            |3.0.2.1           |54000   |2011-05-01 01:32:08|C:\Windows\system32                                                                                           |
+|72560000|ntdsapi.dll         |Active Directory Domain Services API            |6.1.7600.16385    |90112   |2009-07-14 04:46:12|C:\Windows\system32                                                                                           |
+|725B0000|security.dll        |Security Support Provider Interface             |6.1.7600.16385    |4608    |2009-07-14 04:39:54|C:\Windows\system32                                                                                           |
+|725C0000|DBNETLIB.DLL        |Winsock Oriented Net DLL for SQL Clients        |6.1.7600.16385    |135168  |2009-07-14 04:45:10|C:\Windows\system32                                                                                           |
+|72600000|MSDATL3.dll         |OLE DB Implementation Support Routines          |6.1.7600.16385    |98304   |2009-07-14 04:45:44|C:\Program Files\Common Files\System\Ole DB                                                                   |
+|72620000|sqloledb.dll        |OLE DB Provider for SQL Server                  |6.1.7600.16385    |921600  |2009-07-14 04:46:16|C:\Program Files\Common Files\System\Ole DB                                                                   |
+|72720000|comsvcs.dll         |COM+ Services                                   |2001.12.8530.16385|1242112 |2009-07-14 04:45:08|C:\Windows\system32                                                                                           |
+|72860000|OLEDB32R.DLL        |OLE DB Core Services Resources                  |6.1.7600.16385    |81920   |2009-07-14 04:39:18|C:\Program Files\Common Files\System\Ole DB                                                                   |
+|72880000|oledb32.dll         |OLE DB Core Services                            |6.1.7600.16385    |864256  |2009-07-14 04:46:14|C:\Program Files\Common Files\System\Ole DB                                                                   |
+|72BA0000|MSDART.DLL          |OLE DB Runtime Routines                         |6.1.7600.16385    |126976  |2009-07-14 04:45:44|C:\Windows\system32                                                                                           |
+|72BC0000|msado15.dll         |ActiveX Data Objects                            |6.1.7600.16688    |987136  |2010-10-16 08:03:28|C:\Program Files\Common Files\System\ado                                                                      |
+|72E50000|wsock32.dll         |Windows Socket 32-Bit DLL                       |6.1.7600.16385    |15360   |2009-07-14 04:46:22|C:\Windows\system32                                                                                           |
+|73340000|wkscli.dll          |Workstation Service Client DLL                  |6.1.7600.16385    |47104   |2009-07-14 04:46:20|C:\Windows\system32                                                                                           |
+|73350000|NETAPI32.dll        |Net Win32 API DLL                               |6.1.7600.16385    |56832   |2009-07-14 04:46:04|C:\Windows\system32                                                                                           |
+|73A80000|dhcpcsvc.DLL        |DHCP Client Service                             |6.1.7600.16385    |61952   |2009-07-14 04:45:12|C:\Windows\system32                                                                                           |
+|73AA0000|dhcpcsvc6.DLL       |DHCPv6 Client                                   |6.1.7600.16385    |43008   |2009-07-14 04:45:12|C:\Windows\system32                                                                                           |
+|73C10000|fwpuclnt.dll        |FWP/IPsec User-Mode API                         |6.1.7600.16385    |216576  |2009-07-14 04:45:22|C:\Windows\System32                                                                                           |
+|73E70000|WINNSI.DLL          |Network Store Information RPC interface         |6.1.7600.16385    |16896   |2009-07-14 04:46:20|C:\Windows\system32                                                                                           |
+|73E80000|IPHLPAPI.DLL        |IP Helper API                                   |6.1.7600.16385    |103936  |2009-07-14 04:45:34|C:\Windows\system32                                                                                           |
+|73F20000|dwmapi.dll          |Microsoft Desktop Window Manager API            |6.1.7600.16385    |67072   |2009-07-14 04:45:14|C:\Windows\system32                                                                                           |
+|74290000|uxtheme.dll         |Microsoft UxTheme Library                       |6.1.7600.16385    |249856  |2009-07-14 04:46:18|C:\Windows\system32                                                                                           |
+|74810000|comctl32.DLL        |User Experience Controls Library                |6.10.7600.16661   |1680896 |2010-08-21 08:51:34|C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7600.16661_none_420fe3fa2b8113bd |
+|74AE0000|ATL.DLL             |ATL Module for Windows XP (Unicode)             |3.5.2284.0        |70144   |2009-07-14 04:44:58|C:\Windows\system32                                                                                           |
+|75090000|wshtcpip.dll        |Winsock2 Helper DLL (TL/IPv4)                   |6.1.7600.16385    |9216    |2009-07-14 04:46:22|C:\Windows\System32                                                                                           |
+|750A0000|version.dll         |Version Checking and File Installation Libraries|6.1.7600.16385    |21504   |2009-07-14 04:46:18|C:\Windows\system32                                                                                           |
+|750B0000|PrxerDrv.dll        |Proxifier Winsock Layered Service Provider      |3.0.2.1           |67824   |2011-05-01 01:32:08|C:\Windows\system32                                                                                           |
+|75290000|credssp.dll         |Credential Delegation Security Package          |6.1.7600.16385    |16896   |2009-07-14 04:45:08|C:\Windows\system32                                                                                           |
+|752D0000|bcryptprimitives.dll|Windows Cryptographic Primitives Library        |6.1.7600.16385    |249680  |2009-07-14 04:47:56|C:\Windows\system32                                                                                           |
+|75380000|netutils.dll        |Net Win32 API Helpers DLL                       |6.1.7600.16385    |22016   |2009-07-14 04:46:04|C:\Windows\system32                                                                                           |
+|75390000|rsaenh.dll          |Microsoft Enhanced Cryptographic Provider       |6.1.7600.16385    |242936  |2009-07-14 04:47:56|C:\Windows\system32                                                                                           |
+|75400000|schannel.DLL        |TLS / SSL Security Provider                     |6.1.7600.16385    |220160  |2009-07-14 04:46:14|C:\Windows\system32                                                                                           |
+|75470000|DNSAPI.dll          |DNS Client API DLL                              |6.1.7600.16772    |269824  |2011-03-03 08:59:24|C:\Windows\system32                                                                                           |
+|75550000|msv1_0.DLL          |Microsoft Authentication Package v1.0           |6.1.7600.16420    |257024  |2009-09-10 09:22:06|C:\Windows\system32                                                                                           |
+|755A0000|wship6.dll          |Winsock2 Helper DLL (TL/IPv6)                   |6.1.7600.16385    |10752   |2009-07-14 04:46:22|C:\Windows\System32                                                                                           |
+|755B0000|mswsock.dll         |Microsoft Windows Sockets 2.0 Service Provider  |6.1.7600.16385    |232448  |2009-07-14 04:45:52|C:\Windows\system32                                                                                           |
+|755F0000|CRYPTSP.dll         |Cryptographic Service Provider API              |6.1.7600.16385    |78848   |2009-07-14 04:45:08|C:\Windows\system32                                                                                           |
+|75700000|bcrypt.dll          |Windows Cryptographic Primitives Library        |6.1.7600.16385    |80384   |2009-07-14 04:45:00|C:\Windows\system32                                                                                           |
+|75720000|ncrypt.dll          |Windows cryptographic library                   |6.1.7600.16385    |219136  |2009-07-14 04:46:04|C:\Windows\system32                                                                                           |
+|757E0000|cryptdll.dll        |Cryptography Manager                            |6.1.7600.16385    |58880   |2009-07-14 04:45:08|C:\Windows\system32                                                                                           |
+|75800000|srvcli.dll          |Server Service Client DLL                       |6.1.7600.16385    |90112   |2009-07-14 04:46:16|C:\Windows\system32                                                                                           |
+|75910000|SECUR32.DLL         |Security Support Provider Interface             |6.1.7600.16385    |22016   |2009-07-14 04:46:14|C:\Windows\system32                                                                                           |
+|75A50000|SSPICLI.DLL         |Security Support Provider Interface             |6.1.7600.16385    |99840   |2009-07-14 04:46:16|C:\Windows\system32                                                                                           |
+|75AC0000|CRYPTBASE.dll       |Base cryptographic API DLL                      |6.1.7600.16385    |36864   |2009-07-14 04:45:08|C:\Windows\system32                                                                                           |
+|75B30000|RpcRtRemote.dll     |Remote RPC Extension                            |6.1.7600.16385    |45568   |2009-07-14 04:46:14|C:\Windows\system32                                                                                           |
+|75BB0000|MSASN1.dll          |ASN.1 Runtime APIs                              |6.1.7600.16415    |34816   |2009-08-29 10:27:32|C:\Windows\system32                                                                                           |
+|75CB0000|CRYPT32.dll         |Crypto API32                                    |6.1.7600.16385    |1151488 |2009-07-14 04:45:08|C:\Windows\system32                                                                                           |
+|75DF0000|KERNELBASE.dll      |Windows NT BASE API Client DLL                  |6.1.7600.21010    |290816  |2011-07-16 07:55:26|C:\Windows\system32                                                                                           |
+|75E40000|MSCTF.dll           |MSCTF Server DLL                                |6.1.7600.16385    |828928  |2009-07-14 04:45:44|C:\Windows\system32                                                                                           |
+|75F10000|USP10.dll           |Uniscribe Unicode script processor              |1.626.7600.16385  |627200  |2009-07-14 04:46:18|C:\Windows\system32                                                                                           |
+|75FB0000|shell32.dll         |Windows Shell Common Dll                        |6.1.7600.16941    |12868096|2012-01-04 12:33:46|C:\Windows\system32                                                                                           |
+|76C00000|advapi32.dll        |Advanced Windows 32 Base API                    |6.1.7600.16385    |640000  |2009-07-14 04:44:54|C:\Windows\system32                                                                                           |
+|76CB0000|CLBCatQ.DLL         |COM+ Configuration Catalog                      |2001.12.8530.16385|522240  |2009-07-14 04:45:04|C:\Windows\system32                                                                                           |
+|76D40000|SHLWAPI.dll         |Shell Light-weight Utility Library              |6.1.7600.16385    |350208  |2009-07-14 04:46:16|C:\Windows\system32                                                                                           |
+|76DA0000|sechost.dll         |Host for SCM/SDDL/LSA Lookup APIs               |6.1.7600.16385    |92160   |2009-07-14 04:46:14|C:\Windows\SYSTEM32                                                                                           |
+|76DF0000|USER32.dll          |Multi-User Windows USER API Client DLL          |6.1.7600.16385    |811520  |2009-07-14 04:46:18|C:\Windows\system32                                                                                           |
+|76EC0000|WS2_32.dll          |Windows Socket 2.0 32-Bit DLL                   |6.1.7600.16385    |206336  |2009-07-14 04:46:22|C:\Windows\system32                                                                                           |
+|76F00000|comdlg32.dll        |Common Dialogs DLL                              |6.1.7600.16385    |486912  |2009-07-14 04:45:08|C:\Windows\system32                                                                                           |
+|76F80000|oleaut32.dll        |                                                |6.1.7600.16872    |571904  |2011-08-27 08:13:08|C:\Windows\system32                                                                                           |
+|77260000|GDI32.dll           |GDI Client DLL                                  |6.1.7600.16385    |304640  |2009-07-14 04:45:24|C:\Windows\system32                                                                                           |
+|773F0000|RPCRT4.dll          |Remote Procedure Call Runtime                   |6.1.7600.16385    |652288  |2009-07-14 04:46:14|C:\Windows\system32                                                                                           |
+|774A0000|ole32.dll           |Microsoft OLE for Windows                       |6.1.7600.16624    |1413632 |2010-06-29 08:32:04|C:\Windows\system32                                                                                           |
+|77600000|LPK.dll             |Language Pack                                   |6.1.7600.16385    |26624   |2009-07-14 04:45:38|C:\Windows\system32                                                                                           |
+|77610000|NSI.dll             |NSI User-mode interface DLL                     |6.1.7600.16385    |8704    |2009-07-14 04:46:12|C:\Windows\system32                                                                                           |
+|77620000|IMM32.DLL           |Multi-User Windows IMM32 API Client DLL         |6.1.7600.16385    |118272  |2009-07-14 04:45:34|C:\Windows\system32                                                                                           |
+|77940000|msvcrt.dll          |Windows NT CRT DLL                              |7.0.7600.16930    |690688  |2011-12-16 11:29:18|C:\Windows\system32                                                                                           |
+|779F0000|ntdll.dll           |NT Layer DLL                                    |6.1.7600.16915    |1288984 |2011-11-17 09:11:40|C:\Windows\SYSTEM32                                                                                           |
+|77B30000|PSAPI.DLL           |Process Status Helper                           |6.1.7600.16385    |6144    |2009-07-14 04:46:14|C:\Windows\system32                                                                                           |
+|77B40000|kernel32.dll        |Windows NT BASE API Client DLL                  |6.1.7600.21010    |868352  |2011-07-16 07:55:26|C:\Windows\system32                                                                                           |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Processes Information:
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|ID  |Name                       |Description                        |Version        |Memory   |Priority    |Threads|Path                                                                    |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|212 |hkcmd.exe                  |hkcmd Module                       |8.15.10.1968   |5206016  |Normal      |3      |C:\Windows\System32                                                     |
+|1408|egui.exe                   |ESET GUI                           |4.2.71.2       |10727424 |Normal      |6      |C:\Program Files\ESET\ESET Smart Security                               |
+|1704|SynTPEnh.exe               |Synaptics TouchPad Enhancements    |14.0.0.3       |10010624 |Above-Normal|6      |C:\Program Files\Synaptics\SynTP                                        |
+|1888|igfxtray.exe               |igfxTray Module                    |8.15.10.1968   |4767744  |Normal      |3      |C:\Windows\System32                                                     |
+|2004|ISUSPM.exe                 |Acresso Software Manager           |11.60.100.22284|5775360  |Normal      |3      |C:\ProgramData\FLEXnet\Connect\11                                       |
+|2016|igfxpers.exe               |persistence Module                 |8.15.10.1968   |6537216  |Normal      |3      |C:\Windows\System32                                                     |
+|2780|googletalk.exe             |Google Talk                        |1.0.0.104      |26316800 |Normal      |17     |C:\Program Files\Google\Google Talk                                     |
+|2828|jusched.exe                |Java(TM) Platform SE binary        |6.0.0.105      |3870720  |Normal      |1      |C:\Program Files\Java\jre1.6.0\bin                                      |
+|3100|PCSuite.exe                |Nokia Launch Application           |7.1.72.0       |25714688 |Normal      |12     |C:\Program Files\Nokia\Nokia PC Suite 7                                 |
+|3140|PCCompanion.exe            |Sony PC Companion                  |2.1.0.0        |37376000 |Normal      |10     |C:\Program Files\Sony\Sony PC Companion                                 |
+|3648|Dwm.exe                    |Desktop Window Manager             |6.1.7600.16385 |25739264 |High        |5      |C:\Windows\system32                                                     |
+|3680|Snagit32.exe               |Snagit                             |10.0.0.788     |35569664 |Normal      |12     |C:\Program Files\TechSmith\Snagit 10                                    |
+|3688|Explorer.EXE               |Windows Explorer                   |6.1.7600.16768 |58363904 |Normal      |34     |C:\Windows                                                              |
+|3700|taskhost.exe               |Host Process for Windows Tasks     |6.1.7600.16385 |7958528  |Normal      |10     |C:\Windows\system32                                                     |
+|3916|SynTPHelper.exe            |Synaptics Pointing Device Helper   |14.0.0.3       |2723840  |Above-Normal|1      |C:\Program Files\Synaptics\SynTP                                        |
+|3952|LightScribeControlPanel.exe|                                   |1.18.16.1      |11046912 |Normal      |1      |C:\Program Files\Common Files\LightScribe                               |
+|4072|DAP.exe                    |Download Accelerator Plus (DAP)    |9.4.0.4        |33370112 |Normal      |17     |C:\Program Files\DAP                                                    |
+|4132|igfxsrvc.exe               |igfxsrvc Module                    |8.15.10.1968   |4939776  |Normal      |4      |C:\Windows\system32                                                     |
+|4292|TSCHelp.exe                |TechSmith HTML Help Helper         |1.0.1.788      |3522560  |Normal      |1      |C:\Program Files\TechSmith\Snagit 10                                    |
+|4340|SnagPriv.exe               |Snagit RPC Helper                  |10.0.0.788     |4509696  |Normal      |5      |C:\Program Files\TechSmith\Snagit 10                                    |
+|4368|PCCompanionInfo.exe        |                                   |               |5898240  |Normal      |2      |C:\Program Files\Sony\Sony PC Companion                                 |
+|4508|Ssms.exe                   |SSMS - SQL Server Management Studio|2009.100.1600.1|109166592|Normal      |17     |C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE|
+|4800|snagiteditor.exe           |Snagit Editor                      |10.0.0.788     |70881280 |Normal      |14     |C:\Program Files\TechSmith\Snagit 10                                    |
+|5852|SQLTools.exe               |                                   |               |15671296 |Normal      |8      |C:\Clock6 Setup\Files                                                   |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Assembler Information:
+-------------------------------------------------------
+005003DD  push    edi
+005003DE  push    esi
+005003DF  lea     eax, [ebp-$10]
+005003E2  call    -$000ED38B
+005003E7  push    eax
+005003E8  mov     eax, [ebp-$14]
+005003EB  mov     eax, [eax+$30]
+005003EE  push    eax
+005003EF  mov     eax, [eax]
+005003F1  call    dword ptr [eax+$44]
+005003F4  call    -$000F8D65           ; <-- EXCEPTION
+005003F9  lea     eax, [ebp-$10]
+005003FC  call    -$000EC685
+00500401  mov     [ebx], eax
+00500403  xor     eax, eax
+00500405  pop     edx
+00500406  pop     ecx
+00500407  pop     ecx
+00500408  mov     fs:[eax], edx
+0050040B  push    $00500427            ; '3ÀZYYd‰.hD.P'
+00500410  xor     ecx, ecx
+
+Registers:
+-----------------------------
+EAX: 014993F0   EDI: 00000001
+EBX: 80040E14   ESI: 005003F9
+ECX: 00000000   ESP: 0012F45C
+EDX: 005003F9   EIP: 005003F4
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0012F45C: 0012F49C   005003F4: E8 9B 72 F0 FF 8D 45 F0 E8 7B 39 F1 FF 89 03 33  ..r...E..{9....3
+0012F460: 00404C48   00500404: C0 5A 59 59 64 89 10 68 27 04 50 00 33 C9 BA 02  .ZYYd..h'.P.3...
+0012F464: 0012F490   00500414: 00 00 00 8B 45 EC 8B 18 FF 53 3C C3 E9 A3 47 F0  ....E....S<...G.
+0012F468: 00557970   00500424: FF EB E9 33 C0 5A 59 59 64 89 10 68 44 04 50 00  ...3.ZYYd..hD.P.
+0012F46C: 01514D34   00500434: 8D 45 F0 E8 20 2C F1 FF C3 E9 86 47 F0 FF EB F0  .E.. ,.....G....
+0012F470: 00000000   00500444: 5F 5E 5B 8B E5 5D C2 04 00 8D 40 00 55 8B EC 6A  _^[..]....@.U..j
+0012F474: 00000000   00500454: 00 6A 00 6A 00 53 56 8B DA 8B F0 33 C0 55 68 84  .j.j.SV....3.Uh.
+0012F478: 00000000   00500464: 05 50 00 64 FF 30 64 89 20 8B C6 E8 A4 FC FF FF  .P.d.0d. .......
+0012F47C: 00000000   00500474: 84 DB 0F 84 ED 00 00 00 8B C6 E8 D1 04 00 00 04  ................
+0012F480: 00000000   00500484: FE 2C 02 0F 83 D4 00 00 00 8B 56 3C B8 98 05 50  .,........V<...P
+0012F484: 00000000   00500494: 00 E8 8A 5B F0 FF 85 C0 0F 8E BF 00 00 00 8B 46  ...[...........F
+0012F488: 00000000   005004A4: 3C 66 83 38 5B 0F 84 B2 00 00 00 8D 45 FC 8B 56  <f.8[.......E..V
+0012F48C: 00000000   005004B4: 3C E8 E2 57 F0 FF 8B 55 FC B8 A0 05 50 00 E8 5D  <..W...U....P..]
+0012F490: 0012F4D8   005004C4: 5B F0 FF 85 C0 7E 2B 0F B6 05 A4 05 50 00 50 8D  [....~+.....P.P.
+0012F494: 004076A7   005004D4: 45 F8 50 B9 AC 05 50 00 BA A0 05 50 00 8B 45 FC  E.P...P....P..E.
+0012F498: 005003F9   005004E4: E8 8B 6B F9 FF 8B 55 F8 8D 45 FC E8 A8 57 F0 FF  ..k...U..E...W..
+
+
+

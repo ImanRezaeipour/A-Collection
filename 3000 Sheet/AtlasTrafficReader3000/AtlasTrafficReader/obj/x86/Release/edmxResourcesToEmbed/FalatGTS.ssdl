@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FalatGTSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="FalatGTSModelStoreContainer">
+    <EntitySet Name="TA_BaseTraffic" EntityType="FalatGTSModel.Store.TA_BaseTraffic" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TA_Person" EntityType="FalatGTSModel.Store.TA_Person" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_TA_BaseTrafic_TA_Person" Association="FalatGTSModel.Store.FK_TA_BaseTrafic_TA_Person">
+      <End Role="TA_Person" EntitySet="TA_Person" />
+      <End Role="TA_BaseTraffic" EntitySet="TA_BaseTraffic" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="TA_BaseTraffic">
+    <Key>
+      <PropertyRef Name="BasicTraffic_ID" />
+    </Key>
+    <Property Name="BasicTraffic_ID" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BasicTraffic_PrecardId" Type="numeric" Nullable="false" />
+    <Property Name="BasicTraffic_PersonID" Type="numeric" />
+    <Property Name="BasicTraffic_Date" Type="datetime" Nullable="false" />
+    <Property Name="BasicTraffic_Time" Type="int" Nullable="false" />
+    <Property Name="BasicTraffic_Used" Type="bit" />
+    <Property Name="BasicTraffic_Active" Type="bit" />
+    <Property Name="BasicTraffic_Manual" Type="bit" />
+    <Property Name="BasicTraffic_State" Type="bit" />
+    <Property Name="BasicTraffic_ReportsListId" Type="numeric" />
+    <Property Name="BasicTraffic_OperatorPersonID" Type="numeric" />
+    <Property Name="BasicTraffic_Description" Type="nvarchar(max)" />
+    <Property Name="BasicTraffic_ClockCustomCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TA_Person">
+    <Key>
+      <PropertyRef Name="Prs_ID" />
+    </Key>
+    <Property Name="Prs_ID" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Prs_Barcode" Type="nvarchar" MaxLength="50" />
+    <Property Name="Prs__Param" Type="int" />
+    <Property Name="Prs_Active" Type="bit" />
+    <Property Name="Prs_CardNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="Prs_DepartmentId" Type="numeric" />
+    <Property Name="Prs_EmploymentNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="Prs_EmploymentDate" Type="datetime" />
+    <Property Name="Prs_ControlStationId" Type="numeric" />
+    <Property Name="Prs_EndEmploymentDate" Type="datetime" />
+    <Property Name="Prs_EmployId" Type="numeric" />
+    <Property Name="Prs_Sex" Type="bit" />
+    <Property Name="Prs_Education" Type="nvarchar" MaxLength="50" />
+    <Property Name="Prs_FirstName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Prs_MaritalStatus" Type="int" />
+    <Property Name="Prs_LastName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Prs_PrsDtlID" Type="numeric" />
+    <Property Name="Prs_UIValidationGroupID" Type="numeric" />
+  </EntityType>
+  <Association Name="FK_TA_BaseTrafic_TA_Person">
+    <End Role="TA_Person" Type="FalatGTSModel.Store.TA_Person" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TA_BaseTraffic" Type="FalatGTSModel.Store.TA_BaseTraffic" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TA_Person">
+        <PropertyRef Name="Prs_ID" />
+      </Principal>
+      <Dependent Role="TA_BaseTraffic">
+        <PropertyRef Name="BasicTraffic_PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="spr_UpdateCFP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="prsID" Type="numeric" Mode="In" />
+    <Parameter Name="Date" Type="date" Mode="In" />
+  </Function>
+</Schema>

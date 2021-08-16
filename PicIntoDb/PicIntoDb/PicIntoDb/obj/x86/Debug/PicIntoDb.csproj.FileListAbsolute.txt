@@ -1,0 +1,40 @@
+c:\users\iman\documents\visual studio 2010\Projects\PicIntoDb\PicIntoDb\bin\Debug\PicIntoDb.exe.config
+c:\users\iman\documents\visual studio 2010\Projects\PicIntoDb\PicIntoDb\bin\Debug\PicIntoDb.exe
+c:\users\iman\documents\visual studio 2010\Projects\PicIntoDb\PicIntoDb\bin\Debug\PicIntoDb.pdb
+c:\users\iman\documents\visual studio 2010\Projects\PicIntoDb\PicIntoDb\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\iman\documents\visual studio 2010\Projects\PicIntoDb\PicIntoDb\obj\x86\Debug\PicIntoDb.FormMain.resources
+c:\users\iman\documents\visual studio 2010\Projects\PicIntoDb\PicIntoDb\obj\x86\Debug\PicIntoDb.Properties.Resources.resources
+c:\users\iman\documents\visual studio 2010\Projects\PicIntoDb\PicIntoDb\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\iman\documents\visual studio 2010\Projects\PicIntoDb\PicIntoDb\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\iman\documents\visual studio 2010\Projects\PicIntoDb\PicIntoDb\obj\x86\Debug\PicIntoDb.exe
+c:\users\iman\documents\visual studio 2010\Projects\PicIntoDb\PicIntoDb\obj\x86\Debug\PicIntoDb.pdb
+D:\Ghadir Projects\PicIntoDb\PicIntoDb\bin\Debug\PicIntoDb.exe.config
+D:\Ghadir Projects\PicIntoDb\PicIntoDb\obj\x86\Debug\PicIntoDb.exe
+D:\Ghadir Projects\PicIntoDb\PicIntoDb\obj\x86\Debug\PicIntoDb.pdb
+D:\Ghadir Projects\PicIntoDb\PicIntoDb\bin\Debug\PicIntoDb.exe
+D:\Ghadir Projects\PicIntoDb\PicIntoDb\bin\Debug\PicIntoDb.pdb
+D:\Ghadir Projects\PicIntoDb\PicIntoDb\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Ghadir Projects\PicIntoDb\PicIntoDb\obj\x86\Debug\PicIntoDb.FormMain.resources
+D:\Ghadir Projects\PicIntoDb\PicIntoDb\obj\x86\Debug\PicIntoDb.Properties.Resources.resources
+D:\Ghadir Projects\PicIntoDb\PicIntoDb\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Ghadir Projects\PicIntoDb\PicIntoDb\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\Project\PicIntoDb\PicIntoDb\bin\Debug\PicIntoDb.exe.config
+E:\Project\PicIntoDb\PicIntoDb\obj\x86\Debug\PicIntoDb.exe
+E:\Project\PicIntoDb\PicIntoDb\obj\x86\Debug\PicIntoDb.pdb
+E:\Project\PicIntoDb\PicIntoDb\bin\Debug\PicIntoDb.exe
+E:\Project\PicIntoDb\PicIntoDb\bin\Debug\PicIntoDb.pdb
+E:\Project\PicIntoDb\PicIntoDb\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Project\PicIntoDb\PicIntoDb\obj\x86\Debug\PicIntoDb.FormMain.resources
+E:\Project\PicIntoDb\PicIntoDb\obj\x86\Debug\PicIntoDb.Properties.Resources.resources
+E:\Project\PicIntoDb\PicIntoDb\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\Project\PicIntoDb\PicIntoDb\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Administrator\Desktop\PicIntoDb\PicIntoDb\PicIntoDb\bin\Debug\PicIntoDb.exe.config
+C:\Users\Administrator\Desktop\PicIntoDb\PicIntoDb\PicIntoDb\obj\x86\Debug\PicIntoDb.exe
+C:\Users\Administrator\Desktop\PicIntoDb\PicIntoDb\PicIntoDb\obj\x86\Debug\PicIntoDb.pdb
+C:\Users\Administrator\Desktop\PicIntoDb\PicIntoDb\PicIntoDb\bin\Debug\PicIntoDb.exe
+C:\Users\Administrator\Desktop\PicIntoDb\PicIntoDb\PicIntoDb\bin\Debug\PicIntoDb.pdb
+C:\Users\Administrator\Desktop\PicIntoDb\PicIntoDb\PicIntoDb\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\PicIntoDb\PicIntoDb\PicIntoDb\obj\x86\Debug\PicIntoDb.FormMain.resources
+C:\Users\Administrator\Desktop\PicIntoDb\PicIntoDb\PicIntoDb\obj\x86\Debug\PicIntoDb.Properties.Resources.resources
+C:\Users\Administrator\Desktop\PicIntoDb\PicIntoDb\PicIntoDb\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Administrator\Desktop\PicIntoDb\PicIntoDb\PicIntoDb\obj\x86\Debug\GenerateResource.write.1.tlog

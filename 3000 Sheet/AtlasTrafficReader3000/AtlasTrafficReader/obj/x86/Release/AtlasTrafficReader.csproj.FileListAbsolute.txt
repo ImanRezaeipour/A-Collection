@@ -1,0 +1,8 @@
+D:\AtlasTrafficReader\AtlasTrafficReader\bin\Release\AtlasTrafficReader.exe.config
+D:\AtlasTrafficReader\AtlasTrafficReader\bin\Release\AtlasTrafficReader.exe
+D:\AtlasTrafficReader\AtlasTrafficReader\bin\Release\AtlasTrafficReader.pdb
+D:\AtlasTrafficReader\AtlasTrafficReader\obj\x86\Release\AtlasTrafficReader.MainForm.resources
+D:\AtlasTrafficReader\AtlasTrafficReader\obj\x86\Release\AtlasTrafficReader.Properties.Resources.resources
+D:\AtlasTrafficReader\AtlasTrafficReader\obj\x86\Release\AtlasTrafficReader.exe
+D:\AtlasTrafficReader\AtlasTrafficReader\obj\x86\Release\AtlasTrafficReader.pdb
+D:\AtlasTrafficReader\AtlasTrafficReader\obj\x86\Release\AtlasTrafficReader.csproj.GenerateResource.Cache

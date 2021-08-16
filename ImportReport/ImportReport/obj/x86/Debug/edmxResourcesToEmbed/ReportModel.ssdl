@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ReportModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ReportModelStoreContainer">
+    <EntitySet Name="TA_Report" EntityType="ReportModel.Store.TA_Report" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TA_ReportFile" EntityType="ReportModel.Store.TA_ReportFile" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TA_ReportParameter" EntityType="ReportModel.Store.TA_ReportParameter" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TA_ReportUIParameter" EntityType="ReportModel.Store.TA_ReportUIParameter" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_TA_Report_TA_ReportFile" Association="ReportModel.Store.FK_TA_Report_TA_ReportFile">
+      <End Role="TA_ReportFile" EntitySet="TA_ReportFile" />
+      <End Role="TA_Report" EntitySet="TA_Report" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TA_ReportParameter_TA_ReportFile" Association="ReportModel.Store.FK_TA_ReportParameter_TA_ReportFile">
+      <End Role="TA_ReportFile" EntitySet="TA_ReportFile" />
+      <End Role="TA_ReportParameter" EntitySet="TA_ReportParameter" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TA_ReportParameter_TA_ReportTemplateParameter" Association="ReportModel.Store.FK_TA_ReportParameter_TA_ReportTemplateParameter">
+      <End Role="TA_ReportUIParameter" EntitySet="TA_ReportUIParameter" />
+      <End Role="TA_ReportParameter" EntitySet="TA_ReportParameter" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TA_ReportParameter_TA_ReportUIParameter" Association="ReportModel.Store.FK_TA_ReportParameter_TA_ReportUIParameter">
+      <End Role="TA_ReportUIParameter" EntitySet="TA_ReportUIParameter" />
+      <End Role="TA_ReportParameter" EntitySet="TA_ReportParameter" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="TA_Report">
+    <Key>
+      <PropertyRef Name="Report_ID" />
+    </Key>
+    <Property Name="Report_ID" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Report_Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Report_ParentId" Type="numeric" />
+    <Property Name="Report_ReportFileId" Type="numeric" />
+    <Property Name="Report_IsReport" Type="bit" />
+    <Property Name="Report_ParentPath" Type="varchar(max)" />
+    <Property Name="Report_Order" Type="int" />
+  </EntityType>
+  <EntityType Name="TA_ReportFile">
+    <Key>
+      <PropertyRef Name="ReportFile_ID" />
+    </Key>
+    <Property Name="ReportFile_ID" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ReportFile_Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ReportFile_File" Type="nvarchar(max)" />
+    <Property Name="ReportFile_Description" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="TA_ReportParameter">
+    <Key>
+      <PropertyRef Name="ReportParameter_ID" />
+    </Key>
+    <Property Name="ReportParameter_ID" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ReportParameter_RptUIParamId" Type="numeric" />
+    <Property Name="ReportParameter_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReportParameter_RptFileId" Type="numeric" />
+  </EntityType>
+  <EntityType Name="TA_ReportUIParameter">
+    <Key>
+      <PropertyRef Name="RptUIParameter_ID" />
+    </Key>
+    <Property Name="RptUIParameter_ID" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RptUIParameter_Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="RptUIParameter_Key" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="RptUIParameter_fnName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="RptUIParameter_EnName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="RptUIParameter_ParameterOrder" Type="int" Nullable="false" />
+    <Property Name="RptUIParameter_ActionId" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="RptUIParameter_ShowInDialog" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_TA_Report_TA_ReportFile">
+    <End Role="TA_ReportFile" Type="ReportModel.Store.TA_ReportFile" Multiplicity="0..1" />
+    <End Role="TA_Report" Type="ReportModel.Store.TA_Report" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TA_ReportFile">
+        <PropertyRef Name="ReportFile_ID" />
+      </Principal>
+      <Dependent Role="TA_Report">
+        <PropertyRef Name="Report_ReportFileId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TA_ReportParameter_TA_ReportFile">
+    <End Role="TA_ReportFile" Type="ReportModel.Store.TA_ReportFile" Multiplicity="0..1" />
+    <End Role="TA_ReportParameter" Type="ReportModel.Store.TA_ReportParameter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TA_ReportFile">
+        <PropertyRef Name="ReportFile_ID" />
+      </Principal>
+      <Dependent Role="TA_ReportParameter">
+        <PropertyRef Name="ReportParameter_RptFileId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TA_ReportParameter_TA_ReportTemplateParameter">
+    <End Role="TA_ReportUIParameter" Type="ReportModel.Store.TA_ReportUIParameter" Multiplicity="0..1" />
+    <End Role="TA_ReportParameter" Type="ReportModel.Store.TA_ReportParameter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TA_ReportUIParameter">
+        <PropertyRef Name="RptUIParameter_ID" />
+      </Principal>
+      <Dependent Role="TA_ReportParameter">
+        <PropertyRef Name="ReportParameter_RptUIParamId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TA_ReportParameter_TA_ReportUIParameter">
+    <End Role="TA_ReportUIParameter" Type="ReportModel.Store.TA_ReportUIParameter" Multiplicity="0..1" />
+    <End Role="TA_ReportParameter" Type="ReportModel.Store.TA_ReportParameter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TA_ReportUIParameter">
+        <PropertyRef Name="RptUIParameter_ID" />
+      </Principal>
+      <Dependent Role="TA_ReportParameter">
+        <PropertyRef Name="ReportParameter_RptUIParamId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,1 @@
+INSERT TA_ReportUIParameter(RptUIParameter_ID,RptUIParameter_Name,RptUIParameter_Key,RptUIParameter_fnName,RptUIParameter_EnName,RptUIParameter_ParameterOrder,RptUIParameter_ActionId,RptUIParameter_ShowInDialog) VALUES('36','Empty param','about:blank','','','1','EmptyParam','0')

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImportReport", "ImportReport\ImportReport.csproj", "{061D7F6B-B6EC-40BF-B1A1-993996B08071}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{061D7F6B-B6EC-40BF-B1A1-993996B08071}.Debug|x86.ActiveCfg = Debug|x86
+		{061D7F6B-B6EC-40BF-B1A1-993996B08071}.Debug|x86.Build.0 = Debug|x86
+		{061D7F6B-B6EC-40BF-B1A1-993996B08071}.Release|x86.ActiveCfg = Release|x86
+		{061D7F6B-B6EC-40BF-B1A1-993996B08071}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

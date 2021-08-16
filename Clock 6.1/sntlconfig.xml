@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SentinelConfiguration>
+<SentinelKeys>
+<Protocol>
+SP_TCP_PROTOCOL
+</Protocol>
+<ContactServer>
+127.0.0.1
+</ContactServer>
+<Heartbeat>
+60
+</Heartbeat>
+<ServerPort>
+7001
+</ServerPort>
+</SentinelKeys>
+</SentinelConfiguration>

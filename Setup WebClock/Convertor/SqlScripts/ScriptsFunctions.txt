@@ -1,0 +1,617 @@
+﻿
+/****** Object:  UserDefinedFunction [dbo].[NW_ManagerPersons]    Script Date: 06/09/2013 09:29:25 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[NW_ManagerPersons]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
+DROP FUNCTION [dbo].[NW_ManagerPersons]
+GO
+
+/****** Object:  UserDefinedFunction [dbo].[NW_ManagerPersons]    Script Date: 06/09/2013 09:29:25 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE FUNCTION [dbo].[NW_ManagerPersons]
+(
+@id varchar(20)
+)
+RETURNS 
+@tbl TABLE (Sub_BarCode varchar(8)  COLLATE  database_default ,AccessType bit,isvalidweb bit,isRequestfrm bit)
+
+AS
+BEGIN
+-------------------------------
+declare @part varchar(100)
+declare @AccessType bit
+declare @isRequestfrm bit
+------------
+declare @today varchar(10)
+declare @getdate datetime
+declare @barcode nvarchar
+declare @WebPassId numeric
+--declare @isAcceptOwner bit 
+
+select @barcode = p_barcode from NW_webpass where id=@id 
+select @WebPassId = @id 
+--select @isAcceptOwner = isAcceptOwner from NW_webpass where id=@id and isAcceptOwner=1
+select  @getdate = [vgetdate]  FROM vGETDATE 
+--set @today=dbo.miladitoshamsi(@getdate)
+--/////////// 
+declare @tbl_temp TABLE (Sub_BarCode varchar(8)  COLLATE  database_default ,AccessType bit,isvalidweb bit,isRequestfrm bit)
+declare @tbl_insteadman table(instead_barcode varchar(8))
+insert into @tbl_insteadman values(@barcode)
+insert into @tbl_insteadman select p_barcode from NW_webpass where InsteadMan=@barcode 
+DECLARE instead_cursor CURSOR FOR 
+select instead_barcode from @tbl_insteadman  
+OPEN instead_cursor
+FETCH NEXT FROM instead_cursor INTO @BarCode
+WHILE @@FETCH_STATUS = 0
+BEGIN
+--///////////
+		insert into @tbl_temp 
+		SELECT     p.P_BarCode, wpp.AccessType,p.p_isvalidweb,wpp.isRequestfrm
+		FROM         dbo.NW_webpasspersons wpp INNER JOIN
+		dbo.persons  p ON wpp.PersonBarCode = p.P_Parts
+--		WHERE not(P_EndJobDate<>'' and P_EndJobDate<@today) and 
+		where  (wpp.WebPassId = @WebPassId) AND (wpp.isPart = 1) AND (wpp.isSubPart = 0)  and (p.P_IsValid=1)
+		-----------
+		DECLARE subpart_cursor CURSOR FOR 
+
+		SELECT personbarcode,AccessType,isRequestfrm FROM NW_webpasspersons where  WebPassid=@WebPassId  and  issubpart=1 
+		OPEN subpart_cursor
+
+		FETCH NEXT FROM subpart_cursor INTO @part,@AccessType,@isRequestfrm
+
+		WHILE @@FETCH_STATUS = 0
+		BEGIN
+		  insert into @tbl_temp select p_barcode,@AccessType,p_isvalidweb,@isRequestfrm from persons
+--                                where not(P_EndJobDate<>'' and P_EndJobDate<@today) and 
+                                  where p_barcode not in (select sub_barcode from @tbl_temp)  and (P_parts like @part+'%')  and (P_IsValid=1)
+		 FETCH NEXT FROM subpart_cursor INTO @part,@AccessType,@isRequestfrm
+		END
+
+		delete @tbl_temp where Sub_BarCode=@BarCode 
+
+		delete @tbl_temp where Sub_BarCode in (select personbarcode from NW_webpasspersons where  WebPassid=@WebPassId and isperson=1 )
+
+		insert into @tbl_temp 
+		select personbarcode,AccessType,p_isvalidweb,isRequestfrm 
+		from NW_webpasspersons wpp,persons p 
+		where wpp.personbarcode= p.p_barcode  and WebPassId=@WebPassId and isperson=1  and  (p.P_IsValid=1)
+--		and not (P_EndJobDate<>'' and P_EndJobDate<@today) 
+
+		CLOSE subpart_cursor
+
+		DEALLOCATE subpart_cursor
+--///////////////
+        FETCH NEXT FROM instead_cursor INTO @BarCode
+        insert into @tbl select Distinct  * from @tbl_temp 
+        where Sub_Barcode not in (select Sub_Barcode from @tbl )
+END
+RETURN 
+END
+GO
+
+/****** Object:  View [dbo].[vGETDATE]    Script Date: 06/09/2013 09:30:24 ******/
+IF  EXISTS (SELECT * FROM sys.views WHERE object_id = OBJECT_ID(N'[dbo].[vGETDATE]'))
+DROP VIEW [dbo].[vGETDATE]
+GO
+
+/****** Object:  View [dbo].[vGETDATE]    Script Date: 06/09/2013 09:30:24 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE VIEW [dbo].[vGETDATE] as SELECT vGETDATE = GETDATE()
+GO
+
+/****** Object:  UserDefinedFunction [dbo].[AddDate]    Script Date: 06/09/2013 09:32:15 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[AddDate]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
+DROP FUNCTION [dbo].[AddDate]
+GO
+
+/****** Object:  UserDefinedFunction [dbo].[AddDate]    Script Date: 06/09/2013 09:32:15 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE FUNCTION [dbo].[AddDate]
+(@date varchar(10),@n int)
+RETURNS varchar(10)
+AS
+BEGIN
+------------
+
+declare @y int,@m int,@d int
+declare @ystr varchar(4),@mstr varchar(2),@dstr varchar(2)
+
+
+set  @y=convert(int,SUBSTRING(@date,1,4))
+set  @m=convert(int,SUBSTRING(@date,6,2))
+set  @d=convert(int,SUBSTRING(@date,9,2))
+
+if @n>=0 
+begin
+  set @d=@d+@n
+  while @d>dbo.maxdays(@y,@m) 
+  begin
+    set @d=@d-dbo.maxdays(@y,@m) 
+    set @m=@m+1
+    if @m>12 
+    begin
+      set @m=1
+      set @y=@y+1
+    end
+  end
+end
+else
+begin
+  set @d=@d+@n
+  while @d<1 
+  begin
+    set @m=@m-1
+    if @m<1
+    begin
+      set @m=12
+      set @y=@y-1
+    end
+    set @d=@d+dbo.maxdays(@y,@m) 
+  end
+end
+set @ystr=CONVERT(varchar(4),@y)
+if @m<10 set @mstr='0'+CONVERT(varchar(1),@m) else set @mstr=CONVERT(varchar(2),@m)
+if @d<10 set @dstr='0'+CONVERT(varchar(1),@d) else set @dstr=CONVERT(varchar(2),@d)
+
+Return @ystr+'/'+@mstr+'/'+@dstr
+-----------
+END
+
+
+GO
+
+
+
+/****** Object:  UserDefinedFunction [dbo].[FARSI_WEEK_DAY]    Script Date: 06/09/2013 09:34:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[FARSI_WEEK_DAY]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
+DROP FUNCTION [dbo].[FARSI_WEEK_DAY]
+GO
+
+
+/****** Object:  UserDefinedFunction [dbo].[FARSI_WEEK_DAY]    Script Date: 06/09/2013 09:34:35 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE FUNCTION [dbo].[FARSI_WEEK_DAY]
+(
+	@date varchar(10)
+)
+RETURNS varchar(10)
+AS
+BEGIN
+-----------------
+declare @y int
+set @y=convert(int,substring(@date,1,4))
+declare @m int
+set @m=convert(int,substring(@date,6,2))
+declare @d int
+set @d=convert(int,substring(@date,9,2))
+declare @i int
+declare @daystr varchar(10)
+declare @r int
+--------------------------
+set @i=
+case @m
+ when 1  then 0
+ when 2  then 3
+ when 3  then 6
+ when 4  then 2
+ when 5  then 5
+ when 6  then 1
+ when 7  then 4
+ when 8  then 6
+ when 9  then 1
+ when 10 then 3
+ when 11 then 5
+ when 12 then 0
+end
+
+set @r=(@y+@y/4+@i+@d)%7
+set @daystr=
+case @r
+  when 0 then 'شنبه'
+  when 1 then 'یکشنبه'
+  when 2 then 'دوشنبه'
+  when 3 then 'سه شنبه'
+  when 4 then 'چهارشنبه'
+  when 5 then 'پنجشنبه'
+  when 6 then 'جمعه'
+end
+-----------------
+	RETURN @daystr
+END
+
+
+GO
+
+
+
+/****** Object:  UserDefinedFunction [dbo].[MiladiTOShamsi]    Script Date: 08/03/2013 15:52:08 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[MiladiTOShamsi]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
+DROP FUNCTION [dbo].[MiladiTOShamsi]
+GO
+
+
+
+/****** Object:  UserDefinedFunction [dbo].[MiladiTOShamsi]    Script Date: 08/03/2013 15:52:08 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE FUNCTION [dbo].[MiladiTOShamsi] (@MDate  DateTime)  RETURNS Varchar(10)AS  BEGIN    DECLARE @SYear  as Integer   DECLARE @SMonth  as Integer   DECLARE @StMonth  as varchar(10)   DECLARE @SDay  as Integer   DECLARE @StDay  as varchar(10)   DECLARE @AllDays  as float   DECLARE @ShiftDays  as float   DECLARE @OneYear  as float   DECLARE @LeftDays  as float   DECLARE @YearDay  as Integer   DECLARE @Farsi_Date  as Varchar(100)    SET @MDate=@MDate-CONVERT(char,@MDate,114)  SET @ShiftDays=466699   +2  SET @OneYear= 365.24199   SET @SYear = 0   SET @SMonth = 0   SET @SDay = 0   SET @AllDays  = CAst(@Mdate as Real)   SET @AllDays = @AllDays + @ShiftDays  SET @SYear = (@AllDays / @OneYear)   SET @LeftDays = @AllDays - @SYear * @OneYear  if (@LeftDays < 0.5)  begin    SET @SYear=@SYear+1    SET @LeftDays = @AllDays - @SYear * @OneYear  end;  SET @YearDay = @LeftDays  if (@LeftDays - @YearDay) >= 0.5     SET @YearDay=@YearDay+1  if ((@YearDay / 31) > 6 )  begin    SET @SMonth = 6    SET @YearDay=@YearDay-(6 * 31)    SET @SMonth= @SMonth+( @YearDay / 30)    if (@YearDay % 30) <> 0       SET @SMonth=@SMonth+1    SET @YearDay=@YearDay-((@SMonth - 7) * 30)  end   else  begin    SET @SMonth = @YearDay / 31    if (@YearDay % 31) <> 0       SET @SMonth=@SMonth+1     SET @YearDay=@YearDay-((@SMonth - 1) * 31)  end  SET @SDay = @YearDay  SET @SYear=@SYear+1    if @SMonth<10 set @StMonth='0'+convert(varchar(2),@SMonth) else  set @StMonth=convert(varchar(2),@SMonth)   if @SDay<10 set @StDay='0'+convert(varchar(2),@SDay) else  set @StDay=convert(varchar(2),@SDay)    SET @Farsi_Date =   CAST (@SYear   as VarChar(10)) + '/' +@StMonth+ '/' + @StDay Return @Farsi_Date END
+
+GO
+
+
+/****** Object:  UserDefinedFunction [dbo].[MToH]    Script Date: 06/09/2013 09:37:39 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[MToH]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
+DROP FUNCTION [dbo].[MToH]
+GO
+
+
+
+/****** Object:  UserDefinedFunction [dbo].[MToH]    Script Date: 06/09/2013 09:37:39 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE FUNCTION [dbo].[MToH]
+(@d int
+)
+RETURNS varchar(10)
+AS
+	BEGIN
+    if @d=-1000 RETURN ''
+    if @d=0 return '00:00' 
+-----------
+declare @negative bit
+if @d<0 
+begin
+set @negative=1
+set @d=ABS(@d)
+end
+ else  set @negative=0
+-----------
+	declare @m int
+	declare @mstr varchar(10)
+	declare @s int
+	declare @sstr varchar(10)
+	declare @Saat varchar(16)
+	set @m=@d/60
+	set @s=@d%60
+	if @m<10 set @mstr='0'+CONVERT(varchar(10),@m) else set @mstr=CONVERT(varchar(10),@m)
+	if @s<10 set @sstr='0'+CONVERT(varchar(10),@s) else set @sstr=CONVERT(varchar(10),@s)
+    if @negative=0  
+	set @Saat=@mstr+':'+@sstr
+	else
+	set @Saat='('+@mstr+':'+@sstr+')'
+	Return @Saat
+END
+
+
+GO
+
+
+/****** Object:  UserDefinedFunction [dbo].[MToHTaraddod]    Script Date: 06/09/2013 09:38:39 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[MToHTaraddod]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
+DROP FUNCTION [dbo].[MToHTaraddod]
+GO
+
+
+
+/****** Object:  UserDefinedFunction [dbo].[MToHTaraddod]    Script Date: 06/09/2013 09:38:39 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+create FUNCTION [dbo].[MToHTaraddod]
+(@d int
+)
+RETURNS varchar(10)
+AS
+	BEGIN
+    if @d=-1000 RETURN ''
+    declare @flag varchar(1)
+    set @flag=''
+    if @d<0 begin set @d=1440-@d set @flag='-' end
+    if @d>1440 begin set @d=@d-1440 set @flag='+' end
+	declare @m int
+	declare @mstr varchar(10)
+	declare @s int
+	declare @sstr varchar(10)
+	set @m=@d/60
+	set @s=@d%60
+	if @m<10 set @mstr='0'+CONVERT(varchar(10),@m) else set @mstr=CONVERT(varchar(10),@m)
+	if @s<10 set @sstr='0'+CONVERT(varchar(10),@s) else set @sstr=CONVERT(varchar(10),@s)
+	RETURN @flag+@mstr+':'+@sstr
+END
+
+
+
+GO
+
+
+
+/****** Object:  UserDefinedFunction [dbo].[person_name]    Script Date: 06/09/2013 09:40:49 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[person_name]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
+DROP FUNCTION [dbo].[person_name]
+GO
+
+
+/****** Object:  UserDefinedFunction [dbo].[person_name]    Script Date: 06/09/2013 09:40:49 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+CREATE FUNCTION [dbo].[person_name]
+(@pcode varchar(8)
+)
+RETURNS nvarchar(50)
+AS
+BEGIN
+declare @FamilyName varchar(50)
+select @FamilyName=P_Family+' '+P_Name from persons where P_BarCode=@pcode	
+	RETURN @FamilyName
+END
+
+
+
+GO
+
+
+
+
+/****** Object:  UserDefinedFunction [dbo].[pish_lastname]    Script Date: 06/09/2013 09:41:29 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[pish_lastname]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
+DROP FUNCTION [dbo].[pish_lastname]
+GO
+
+
+
+/****** Object:  UserDefinedFunction [dbo].[pish_lastname]    Script Date: 06/09/2013 09:41:29 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+CREATE FUNCTION [dbo].[pish_lastname]
+(
+  @Barcode varchar(8),@RecState smallint
+)
+RETURNS nvarchar(50)
+AS
+BEGIN
+declare @PishName nvarchar(50)
+
+select @PishName=case when (Pish_LastName<>'') and (Pish_LastName IS not null)  then Pish_LastName else Pish_Name end from pishcard
+where Pish_Code=@RecState and Pish_InitCode=(select P_Param from persons where P_BarCode=@Barcode)
+
+	RETURN @PishName
+
+END
+
+
+
+GO
+
+
+
+/****** Object:  UserDefinedFunction [dbo].[PishCardFullName]    Script Date: 06/09/2013 09:41:47 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[PishCardFullName]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
+DROP FUNCTION [dbo].[PishCardFullName]
+GO
+
+
+/****** Object:  UserDefinedFunction [dbo].[PishCardFullName]    Script Date: 06/09/2013 09:41:47 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE FUNCTION [dbo].[PishCardFullName]
+(@kind int,@type int)
+RETURNS varchar(50)
+AS
+BEGIN
+ declare @str varchar(20)
+ if @kind=0 
+ begin 
+  if @type&4=4 set @str='تعطیل رسمی'
+  else if @type&2=2 set @str='تعطیل غیر رسمی'
+  else if @type&1=1 set @str='تعطیل شیفت'
+  else set @str=''
+ end
+ else
+ set @str=(select case  when pish_lastname<>'' then pish_lastname else pish_name end  pish_name from pishcard where Pish_Code=@kind and Pish_InitCode=0)
+ RETURN @str
+END
+
+GO
+
+
+
+
+/****** Object:  UserDefinedFunction [dbo].[Shift]    Script Date: 06/09/2013 09:42:36 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Shift]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
+DROP FUNCTION [dbo].[Shift]
+GO
+
+
+
+/****** Object:  UserDefinedFunction [dbo].[Shift]    Script Date: 06/09/2013 09:42:36 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE function [dbo].[Shift]
+(
+ @date varchar(10),@Grd_Code int
+)
+returns int
+AS
+BEGIN
+declare @y varchar(4)
+set @y=substring(@date,1,4)
+declare @m varchar(2)
+set @m=substring(@date,6,2)
+declare @d varchar(2)
+set @d=substring(@date,9,2)
+
+
+declare @var int,@month int,@day int
+set @month=convert(int,@m)
+set @day=convert(int,@d)
+-----------------
+set @var =
+case @month
+when 1 then  (select ascii(substring(Grd_M1 ,@day,1))-1 shift_code from grp_dtl where Grd_Year=@y and Grd_Code=@Grd_Code)
+when 2 then  (select ascii(substring(Grd_M2 ,@day,1))-1 shift_code from grp_dtl where Grd_Year=@y and Grd_Code=@Grd_Code)
+when 3 then  (select ascii(substring(Grd_M3 ,@day,1))-1 shift_code from grp_dtl where Grd_Year=@y and Grd_Code=@Grd_Code)
+when 4 then  (select ascii(substring(Grd_M4 ,@day,1))-1 shift_code from grp_dtl where Grd_Year=@y and Grd_Code=@Grd_Code)
+when 5 then  (select ascii(substring(Grd_M5 ,@day,1))-1 shift_code from grp_dtl where Grd_Year=@y and Grd_Code=@Grd_Code)
+when 6 then  (select ascii(substring(Grd_M6 ,@day,1))-1 shift_code from grp_dtl where Grd_Year=@y and Grd_Code=@Grd_Code)
+when 7 then  (select ascii(substring(Grd_M7 ,@day,1))-1 shift_code from grp_dtl where Grd_Year=@y and Grd_Code=@Grd_Code)
+when 8 then  (select ascii(substring(Grd_M8 ,@day,1))-1 shift_code from grp_dtl where Grd_Year=@y and Grd_Code=@Grd_Code)
+when 9 then  (select ascii(substring(Grd_M9 ,@day,1))-1 shift_code from grp_dtl where Grd_Year=@y and Grd_Code=@Grd_Code)
+when 10 then (select ascii(substring(Grd_M10,@day,1))-1 shift_code from grp_dtl where Grd_Year=@y and Grd_Code=@Grd_Code)
+when 11 then (select ascii(substring(Grd_M11,@day,1))-1 shift_code from grp_dtl where Grd_Year=@y and Grd_Code=@Grd_Code)
+when 12 then (select ascii(substring(Grd_M12,@day,1))-1 shift_code from grp_dtl where Grd_Year=@y and Grd_Code=@Grd_Code)
+
+end
+-----------------
+RETURN (@var)
+END
+
+
+GO
+
+
+
+/****** Object:  UserDefinedFunction [dbo].[WMorHRemain]    Script Date: 06/09/2013 09:42:54 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[WMorHRemain]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
+DROP FUNCTION [dbo].[WMorHRemain]
+GO
+
+
+
+/****** Object:  UserDefinedFunction [dbo].[WMorHRemain]    Script Date: 06/09/2013 09:42:54 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE FUNCTION [dbo].[WMorHRemain]
+(@requestValue int,@date nvarchar(20),@barcode nvarchar(8))
+RETURNS int
+AS
+BEGIN
+
+	declare @dayoffarsiweek int
+	
+	
+	declare @str varchar(10)
+	set @str=dbo.MiladiTOShamsi(@date);
+	--select @str
+	
+    declare @FDOW varchar(10)
+    declare @LDOW varchar(10)
+
+set @dayoffarsiweek=
+	case DATEPART(DW,@date)
+	 when 7 then 1
+	 when 1 then 2
+	 when 2 then 3
+	 when 3 then 4
+	 when 4 then 5
+	 when 5 then 6
+	 when 6 then 7
+	end
+	set @FDOW=dbo.AddDate(@str,-@dayoffarsiweek+1)
+    set @LDOW=dbo.AddDate(@FDOW,6)
+    
+    declare @sumLeaveHourlyInWeek int
+declare @countLeaveHourlyInWeek int
+set @countLeaveHourlyInWeek=(select count(Clock_eTime - Clock_Time)as clock_sumDuration from nw_requests 
+where  (Clock_RecState='27') and Clock_Date between @FDOW and @LDOW and (clock_user=@barcode)
+and (Clock_FirstlyAgree<>2) and (Clock_SeconderyAgree<>2) and (Clock_FinallyAgree<>2))
+
+set @sumLeaveHourlyInWeek = (select sum(Clock_eTime - Clock_Time)as clock_sumDuration from nw_requests 
+where  (Clock_RecState='27') and Clock_Date between @FDOW and @LDOW and (clock_user=@barcode)
+and (Clock_FirstlyAgree<>2) and (Clock_SeconderyAgree<>2) and (Clock_FinallyAgree<>2))
+ if(@countLeaveHourlyInWeek>=2)
+ return 120 + @requestValue
+ 
+ RETURN isnull(@sumLeaveHourlyInWeek,0)  + @requestValue
+END
+GO
+
+
+
+/****** Object:  UserDefinedFunction [dbo].[zerotospace]    Script Date: 06/09/2013 09:43:36 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[zerotospace]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
+DROP FUNCTION [dbo].[zerotospace]
+GO
+
+
+
+/****** Object:  UserDefinedFunction [dbo].[zerotospace]    Script Date: 06/09/2013 09:43:36 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE FUNCTION [dbo].[zerotospace]
+(
+  @i int
+)
+RETURNS varchar(20)
+AS
+BEGIN
+declare @str varchar(20)
+    if @i=0  set @str='' 
+    else
+    set @str=CONVERT(varchar(20),@i)
+	RETURN @str
+	
+
+END
+
+
+GO

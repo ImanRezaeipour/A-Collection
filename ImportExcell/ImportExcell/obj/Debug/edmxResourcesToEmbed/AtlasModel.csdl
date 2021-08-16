@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AtlasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TA_Person">
+    <Key>
+      <PropertyRef Name="Prs_ID" />
+    </Key>
+    <Property Name="Prs_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Prs_Barcode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Prs__Param" Type="Int32" />
+    <Property Name="Prs_Active" Type="Boolean" />
+    <Property Name="Prs_CardNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Prs_DepartmentId" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Prs_EmploymentNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Prs_EmploymentDate" Type="DateTime" Precision="3" />
+    <Property Name="Prs_EndEmploymentDate" Type="DateTime" Precision="3" />
+    <Property Name="Prs_EmployId" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Prs_Sex" Type="Boolean" />
+    <Property Name="Prs_Education" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Prs_FirstName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Prs_MaritalStatus" Type="Int32" />
+    <Property Name="Prs_LastName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Prs_PrsDtlID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="prs_IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="prs_GradeId" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="prs_CreationDate" Type="DateTime" Precision="3" Nullable="false" />
+    <NavigationProperty Name="TA_PersonDetail" Relationship="AtlasModel.FK_TA_Person_TA_PersonDetail" FromRole="TA_Person" ToRole="TA_PersonDetail" />
+    <NavigationProperty Name="TA_EmploymentType" Relationship="AtlasModel.FK_TA_Person_TA_EmploymentType" FromRole="TA_Person" ToRole="TA_EmploymentType" />
+    <NavigationProperty Name="TA_Grade" Relationship="AtlasModel.FK_TA_Person_TA_Grade" FromRole="TA_Person" ToRole="TA_Grade" />
+    <Property Name="Prs_DigitalSignature" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="AtlasEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TA_Person" EntityType="Self.TA_Person" />
+    <EntitySet Name="TA_PersonDetail" EntityType="AtlasModel.TA_PersonDetail" />
+    <AssociationSet Name="FK_TA_Person_TA_PersonDetail" Association="AtlasModel.FK_TA_Person_TA_PersonDetail">
+      <End Role="TA_PersonDetail" EntitySet="TA_PersonDetail" />
+      <End Role="TA_Person" EntitySet="TA_Person" />
+    </AssociationSet>
+    <EntitySet Name="TA_Department" EntityType="AtlasModel.TA_Department" />
+    <EntitySet Name="TA_EmploymentType" EntityType="AtlasModel.TA_EmploymentType" />
+    <EntitySet Name="TA_Grade" EntityType="AtlasModel.TA_Grade" />
+    <AssociationSet Name="FK_TA_Person_TA_EmploymentType" Association="AtlasModel.FK_TA_Person_TA_EmploymentType">
+      <End Role="TA_EmploymentType" EntitySet="TA_EmploymentType" />
+      <End Role="TA_Person" EntitySet="TA_Person" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TA_Grade_TA_Grade" Association="AtlasModel.FK_TA_Grade_TA_Grade">
+      <End Role="TA_Grade" EntitySet="TA_Grade" />
+      <End Role="TA_Grade1" EntitySet="TA_Grade" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TA_Grade_TA_Grade1" Association="AtlasModel.FK_TA_Grade_TA_Grade1">
+      <End Role="TA_Grade" EntitySet="TA_Grade" />
+      <End Role="TA_Grade1" EntitySet="TA_Grade" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TA_Person_TA_Grade" Association="AtlasModel.FK_TA_Person_TA_Grade">
+      <End Role="TA_Grade" EntitySet="TA_Grade" />
+      <End Role="TA_Person" EntitySet="TA_Person" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="TA_PersonDetail">
+    <Key>
+      <PropertyRef Name="PrsDtl_ID" />
+    </Key>
+    <Property Name="PrsDtl_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="PrsDtl_MeliCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PrsDtl_ShomareShenasname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PrsDtl_BirthCertificate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PrsDtl_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PrsDtl_FatherName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PrsDtl_MilitaryStatus" Type="Int32" />
+    <Property Name="PrsDtl_PlaceIssued" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PrsDtl_Tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PrsDtl_Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PrsDtl_BirthPlace" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PrsDtl_BirthDate" Type="DateTime" Precision="3" />
+    <Property Name="PrsDtl_Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PrsDtl_EmailAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="PrsDtl_MobileNumber" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="PrsDtl_Grade" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TA_Person" Relationship="AtlasModel.FK_TA_Person_TA_PersonDetail" FromRole="TA_PersonDetail" ToRole="TA_Person" />
+  </EntityType>
+  <Association Name="FK_TA_Person_TA_PersonDetail">
+    <End Type="AtlasModel.TA_PersonDetail" Role="TA_PersonDetail" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="AtlasModel.TA_Person" Role="TA_Person" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TA_PersonDetail">
+        <PropertyRef Name="PrsDtl_ID" />
+      </Principal>
+      <Dependent Role="TA_Person">
+        <PropertyRef Name="Prs_PrsDtlID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TA_Department">
+    <Key>
+      <PropertyRef Name="dep_ID" />
+    </Key>
+    <Property Name="dep_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dep_Name" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="dep_CustomCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="dep_ParentID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="dep_ParentPath" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TA_EmploymentType">
+    <Key>
+      <PropertyRef Name="emply_ID" />
+    </Key>
+    <Property Name="emply_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="emply_Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="emply_CustomCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TA_Person" Relationship="AtlasModel.FK_TA_Person_TA_EmploymentType" FromRole="TA_EmploymentType" ToRole="TA_Person" />
+  </EntityType>
+  <EntityType Name="TA_Grade">
+    <Key>
+      <PropertyRef Name="Grade_ID" />
+    </Key>
+    <Property Name="Grade_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Grade_Name" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Grade_Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TA_Grade1" Relationship="AtlasModel.FK_TA_Grade_TA_Grade" FromRole="TA_Grade" ToRole="TA_Grade1" />
+    <NavigationProperty Name="TA_Grade2" Relationship="AtlasModel.FK_TA_Grade_TA_Grade" FromRole="TA_Grade1" ToRole="TA_Grade" />
+    <NavigationProperty Name="TA_Grade11" Relationship="AtlasModel.FK_TA_Grade_TA_Grade1" FromRole="TA_Grade" ToRole="TA_Grade1" />
+    <NavigationProperty Name="TA_Grade3" Relationship="AtlasModel.FK_TA_Grade_TA_Grade1" FromRole="TA_Grade1" ToRole="TA_Grade" />
+    <NavigationProperty Name="TA_Person" Relationship="AtlasModel.FK_TA_Person_TA_Grade" FromRole="TA_Grade" ToRole="TA_Person" />
+  </EntityType>
+  <Association Name="FK_TA_Person_TA_EmploymentType">
+    <End Type="AtlasModel.TA_EmploymentType" Role="TA_EmploymentType" Multiplicity="0..1" />
+    <End Type="AtlasModel.TA_Person" Role="TA_Person" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TA_EmploymentType">
+        <PropertyRef Name="emply_ID" />
+      </Principal>
+      <Dependent Role="TA_Person">
+        <PropertyRef Name="Prs_EmployId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TA_Grade_TA_Grade">
+    <End Type="AtlasModel.TA_Grade" Role="TA_Grade" Multiplicity="1" />
+    <End Type="AtlasModel.TA_Grade" Role="TA_Grade1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TA_Grade">
+        <PropertyRef Name="Grade_ID" />
+      </Principal>
+      <Dependent Role="TA_Grade1">
+        <PropertyRef Name="Grade_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TA_Grade_TA_Grade1">
+    <End Type="AtlasModel.TA_Grade" Role="TA_Grade" Multiplicity="1" />
+    <End Type="AtlasModel.TA_Grade" Role="TA_Grade1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TA_Grade">
+        <PropertyRef Name="Grade_ID" />
+      </Principal>
+      <Dependent Role="TA_Grade1">
+        <PropertyRef Name="Grade_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TA_Person_TA_Grade">
+    <End Type="AtlasModel.TA_Grade" Role="TA_Grade" Multiplicity="0..1" />
+    <End Type="AtlasModel.TA_Person" Role="TA_Person" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TA_Grade">
+        <PropertyRef Name="Grade_ID" />
+      </Principal>
+      <Dependent Role="TA_Person">
+        <PropertyRef Name="prs_GradeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

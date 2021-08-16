@@ -1,0 +1,2 @@
+INSERT TA_Department(dep_Name,dep_CustomCode,dep_ParentID) VALUES('Sazman','1','0')
+INSERT TA_OrganizationUnit(organ_Name,organ_CustomCode,organ_PersonID,organ_ParentID) VALUES('OrganChartRoot','1-0',NULL,'0')

@@ -1,0 +1,3 @@
+update TA_ConceptTemplate
+set ConceptTmp_CalcSituationType=2
+where ConceptTmp_IdentifierCode=22

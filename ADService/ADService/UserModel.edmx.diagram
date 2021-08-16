@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3783415f71ad4e60a3415800f6aabe6a" Name="Diagram1" ZoomLevel="79">
+        <EntityTypeShape EntityType="AtlasModel.TA_Person" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtlasModel.TA_SecurityUser" Width="1.5" PointX="3" PointY="2" IsExpanded="true" />
+        <AssociationConnector Association="AtlasModel.FK_TA_SecurityUser_TA_Person" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

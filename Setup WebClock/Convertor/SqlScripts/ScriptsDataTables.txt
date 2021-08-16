@@ -1,0 +1,880 @@
+﻿
+/****** Object:  Table [dbo].[NW_webNavbar]    Script Date: 05/29/2013 16:20:28 ******/
+delete from NW_log
+delete from NW_WebColor
+delete from NW_webAssignRoleNavbar
+delete from NW_WebControl
+delete from NW_webNavbar
+delete from NW_Help
+delete from NW_AssignReportParameter
+delete from NW_Report
+delete from NW_ReportParameterType
+
+
+SET IDENTITY_INSERT [dbo].[NW_webNavbar] ON
+INSERT [dbo].[NW_webNavbar] ([navbar_ID], [navbar_Name], [navbar_Title], [navbar_ParentName]) VALUES (CAST(1 AS Numeric(18, 0)), N'report/DevMonthlyReport.aspx', N'گزارش کارکرد ماهيانه', N'Monthly')
+INSERT [dbo].[NW_webNavbar] ([navbar_ID], [navbar_Name], [navbar_Title], [navbar_ParentName]) VALUES (CAST(2 AS Numeric(18, 0)), N'operation/Dashbord.aspx', N'کارتابل درخواست ها', N'Monthly')
+INSERT [dbo].[NW_webNavbar] ([navbar_ID], [navbar_Name], [navbar_Title], [navbar_ParentName]) VALUES (CAST(3 AS Numeric(18, 0)), N'operator/TrafficRequestOperator.aspx', N'ثبت تردد', N'Monthly')
+INSERT [dbo].[NW_webNavbar] ([navbar_ID], [navbar_Name], [navbar_Title], [navbar_ParentName]) VALUES (CAST(4 AS Numeric(18, 0)), N'report/FrmRPRest.aspx', N'گزارش رستوران', N'Report')
+INSERT [dbo].[NW_webNavbar] ([navbar_ID], [navbar_Name], [navbar_Title], [navbar_ParentName]) VALUES (CAST(5 AS Numeric(18, 0)), N'Pelak/Pelak.aspx', N'ثبت شماره پلاک', N'Report')
+INSERT [dbo].[NW_webNavbar] ([navbar_ID], [navbar_Name], [navbar_Title], [navbar_ParentName]) VALUES (CAST(6 AS Numeric(18, 0)), N'auth/ChangePassword.aspx', N'تغيير رمز عبور', N'Report')
+INSERT [dbo].[NW_webNavbar] ([navbar_ID], [navbar_Name], [navbar_Title], [navbar_ParentName]) VALUES (CAST(7 AS Numeric(18, 0)), N'operation/DashboardUser.aspx', N'درخواست هاي ثبت شده', N'Report')
+INSERT [dbo].[NW_webNavbar] ([navbar_ID], [navbar_Name], [navbar_Title], [navbar_ParentName]) VALUES (CAST(8 AS Numeric(18, 0)), N'operation/DefineInsteadMan.aspx', N'مدیر جانشین', N'Report')
+INSERT [dbo].[NW_webNavbar] ([navbar_ID], [navbar_Name], [navbar_Title], [navbar_ParentName]) VALUES (CAST(9 AS Numeric(18, 0)), N'report/Report.aspx', N'گزارش', N'Report')
+SET IDENTITY_INSERT [dbo].[NW_webNavbar] OFF
+/****** Object:  Table [dbo].[NW_WebControl]    Script Date: 05/29/2013 16:20:28 ******/
+SET IDENTITY_INSERT [dbo].[NW_WebControl] ON
+INSERT [dbo].[NW_WebControl] ([Ctrl_ID], [Ctrl_Name], [Ctrl_Title], [Ctrl_NavbarName]) VALUES (CAST(1 AS Numeric(18, 0)), N'AddMenuHeaderDaily_TrafficRequestOperator', N'آيتم جديد در نوار ابزار بخش روزانه', N'operator/TrafficRequestOperator.aspx')
+INSERT [dbo].[NW_WebControl] ([Ctrl_ID], [Ctrl_Name], [Ctrl_Title], [Ctrl_NavbarName]) VALUES (CAST(2 AS Numeric(18, 0)), N'EditMenuHeaderDaily_TrafficRequestOperator', N'آيتم ويرايش در نوار ابزار بخش روزانه', N'operator/TrafficRequestOperator.aspx')
+INSERT [dbo].[NW_WebControl] ([Ctrl_ID], [Ctrl_Name], [Ctrl_Title], [Ctrl_NavbarName]) VALUES (CAST(3 AS Numeric(18, 0)), N'DeleteMenuHeaderDaily_TrafficRequestOperator', N'آيتم حذف در نوار ابزار بخش روزانه', N'operator/TrafficRequestOperator.aspx')
+INSERT [dbo].[NW_WebControl] ([Ctrl_ID], [Ctrl_Name], [Ctrl_Title], [Ctrl_NavbarName]) VALUES (CAST(4 AS Numeric(18, 0)), N'ASPxButton4_Dashbord', N'آيتم عدم تاييد درخواست ها', N'operation/Dashbord.aspx')
+INSERT [dbo].[NW_WebControl] ([Ctrl_ID], [Ctrl_Name], [Ctrl_Title], [Ctrl_NavbarName]) VALUES (CAST(5 AS Numeric(18, 0)), N'ASPxButton3_Dashbord', N'آيتم تاييد درخواست ها', N'operation/Dashbord.aspx')
+INSERT [dbo].[NW_WebControl] ([Ctrl_ID], [Ctrl_Name], [Ctrl_Title], [Ctrl_NavbarName]) VALUES (CAST(6 AS Numeric(18, 0)), N'AddMenuHeaderHourlyPermit_TrafficRequestOperator', N'آيتم جديد در نوار ابزار بخش ساعتي مجوز ', N'operator/TrafficRequestOperator.aspx')
+INSERT [dbo].[NW_WebControl] ([Ctrl_ID], [Ctrl_Name], [Ctrl_Title], [Ctrl_NavbarName]) VALUES (CAST(7 AS Numeric(18, 0)), N'EditMenuHeaderHourlyPermit_TrafficRequestOperator', N'آيتم ويرايش در نوار ابزار بخش ساعتي مجوز ', N'operator/TrafficRequestOperator.aspx')
+INSERT [dbo].[NW_WebControl] ([Ctrl_ID], [Ctrl_Name], [Ctrl_Title], [Ctrl_NavbarName]) VALUES (CAST(8 AS Numeric(18, 0)), N'DeleteMenuHeaderHourlyPermit_TrafficRequestOperator', N'آيتم حذف در نوار ابزار بخش ساعتي مجوز ', N'operator/TrafficRequestOperator.aspx')
+INSERT [dbo].[NW_WebControl] ([Ctrl_ID], [Ctrl_Name], [Ctrl_Title], [Ctrl_NavbarName]) VALUES (CAST(9 AS Numeric(18, 0)), N'AddMenuHeaderHourlyTraffic_TrafficRequestOperator', N'آيتم جديد در نوار ابزار بخش ساعتي تردد', N'operator/TrafficRequestOperator.aspx')
+INSERT [dbo].[NW_WebControl] ([Ctrl_ID], [Ctrl_Name], [Ctrl_Title], [Ctrl_NavbarName]) VALUES (CAST(10 AS Numeric(18, 0)), N'EditMenuHeaderHourlyTraffic_TrafficRequestOperator', N'آيتم ويرايش در نوار ابزار بخش ساعتي تردد', N'operator/TrafficRequestOperator.aspx')
+INSERT [dbo].[NW_WebControl] ([Ctrl_ID], [Ctrl_Name], [Ctrl_Title], [Ctrl_NavbarName]) VALUES (CAST(11 AS Numeric(18, 0)), N'DeleteMenuHeaderHourlyTraffic_TrafficRequestOperator', N'آيتم حذف در نوار ابزار بخش ساعتي تردد', N'operator/TrafficRequestOperator.aspx')
+INSERT [dbo].[NW_WebControl] ([Ctrl_ID], [Ctrl_Name], [Ctrl_Title], [Ctrl_NavbarName]) VALUES (CAST(12 AS Numeric(18, 0)), N'AccessActionGridMonthly_DevMonthlyReport', N'آيتم درخواست جديد و حذف در گزارش کارکرد ماهانه', N'report/DevMonthlyReport.aspx')
+INSERT [dbo].[NW_WebControl] ([Ctrl_ID], [Ctrl_Name], [Ctrl_Title], [Ctrl_NavbarName]) VALUES (CAST(13 AS Numeric(18, 0)), N'SaveMenuHeader_DefineInsteadMan', N'آیتم ثبت در نوار ابزار', N'operation/DefineInsteadMan.aspx')
+INSERT [dbo].[NW_WebControl] ([Ctrl_ID], [Ctrl_Name], [Ctrl_Title], [Ctrl_NavbarName]) VALUES (CAST(14 AS Numeric(18, 0)), N'ASPxButtonDelete_Dashbord', N'آیتم حذف درخواست ها', N'operation/Dashbord.aspx')
+INSERT [dbo].[NW_WebControl] ([Ctrl_ID], [Ctrl_Name], [Ctrl_Title], [Ctrl_NavbarName]) VALUES (CAST(15 AS Numeric(18, 0)), N'AddNewRequest_DashboardUser', N'آیتم درخواست جدید ', N'operation/DashboardUser.aspx')
+INSERT [dbo].[NW_WebControl] ([Ctrl_ID], [Ctrl_Name], [Ctrl_Title], [Ctrl_NavbarName]) VALUES (CAST(16 AS Numeric(18, 0)), N'DeleteRequest_DashboardUser', N'آیتم حذف درخواست', N'operation/DashboardUser.aspx')
+SET IDENTITY_INSERT [dbo].[NW_WebControl] OFF
+/****** Object:  Table [dbo].[NW_WebColor]    Script Date: 05/29/2013 16:20:28 ******/
+SET IDENTITY_INSERT [dbo].[NW_WebColor] ON
+INSERT [dbo].[NW_WebColor] ([WebColor_id], [WebColor_ColumnName], [WebColor_Color], [WebColor_Order], [WebColor_Active]) VALUES (CAST(1 AS Numeric(18, 0)), N'kasrekar', N'#F35499   ', CAST(2 AS Numeric(18, 0)), 1)
+INSERT [dbo].[NW_WebColor] ([WebColor_id], [WebColor_ColumnName], [WebColor_Color], [WebColor_Order], [WebColor_Active]) VALUES (CAST(2 AS Numeric(18, 0)), N'GheibatRuz', N'#ff0000   ', CAST(1 AS Numeric(18, 0)), 1)
+INSERT [dbo].[NW_WebColor] ([WebColor_id], [WebColor_ColumnName], [WebColor_Color], [WebColor_Order], [WebColor_Active]) VALUES (CAST(3 AS Numeric(18, 0)), N'prc_FirstIn', N'#ffff00   ', CAST(0 AS Numeric(18, 0)), 1)
+SET IDENTITY_INSERT [dbo].[NW_WebColor] OFF
+/****** Object:  Table [dbo].[NW_ReportParameterType]    Script Date: 05/29/2013 16:20:28 ******/
+SET IDENTITY_INSERT [dbo].[NW_ReportParameterType] ON
+INSERT [dbo].[NW_ReportParameterType] ([ReportParameterType_ID], [ReportParameterType_Value]) VALUES (CAST(1 AS Numeric(18, 0)), N'Date')
+INSERT [dbo].[NW_ReportParameterType] ([ReportParameterType_ID], [ReportParameterType_Value]) VALUES (CAST(2 AS Numeric(18, 0)), N'DateRange')
+INSERT [dbo].[NW_ReportParameterType] ([ReportParameterType_ID], [ReportParameterType_Value]) VALUES (CAST(3 AS Numeric(18, 0)), N'FromToDate')
+INSERT [dbo].[NW_ReportParameterType] ([ReportParameterType_ID], [ReportParameterType_Value]) VALUES (CAST(4 AS Numeric(18, 0)), N'Barcode')
+INSERT [dbo].[NW_ReportParameterType] ([ReportParameterType_ID], [ReportParameterType_Value]) VALUES (CAST(5 AS Numeric(18, 0)), N'None')
+INSERT [dbo].[NW_ReportParameterType] ([ReportParameterType_ID], [ReportParameterType_Value]) VALUES (CAST(6 AS Numeric(18, 0)), N'PishcardHourly')
+INSERT [dbo].[NW_ReportParameterType] ([ReportParameterType_ID], [ReportParameterType_Value]) VALUES (CAST(7 AS Numeric(18, 0)), N'PishcardDaily')
+INSERT [dbo].[NW_ReportParameterType] ([ReportParameterType_ID], [ReportParameterType_Value]) VALUES (CAST(8 AS Numeric(18, 0)), N'Time')
+INSERT [dbo].[NW_ReportParameterType] ([ReportParameterType_ID], [ReportParameterType_Value]) VALUES (CAST(9 AS Numeric(18, 0)), N'TimeRange')
+INSERT [dbo].[NW_ReportParameterType] ([ReportParameterType_ID], [ReportParameterType_Value]) VALUES (CAST(10 AS Numeric(18, 0)), N'FromToTime')
+INSERT [dbo].[NW_ReportParameterType] ([ReportParameterType_ID], [ReportParameterType_Value]) VALUES (CAST(11 AS Numeric(18, 0)), N'Terminal')
+INSERT [dbo].[NW_ReportParameterType] ([ReportParameterType_ID], [ReportParameterType_Value]) VALUES (CAST(12 AS Numeric(18, 0)), N'EmploymentType')
+INSERT [dbo].[NW_ReportParameterType] ([ReportParameterType_ID], [ReportParameterType_Value]) VALUES (CAST(13 AS Numeric(18, 0)), N'Station')
+INSERT [dbo].[NW_ReportParameterType] ([ReportParameterType_ID], [ReportParameterType_Value]) VALUES (CAST(14 AS Numeric(18, 0)), N'DayRange')
+SET IDENTITY_INSERT [dbo].[NW_ReportParameterType] OFF
+/****** Object:  Table [dbo].[NW_Report]    Script Date: 05/29/2013 16:20:28 ******/
+SET IDENTITY_INSERT [dbo].[NW_Report] ON
+INSERT [dbo].[NW_Report] ([Report_ID], [Report_Name], [Report_FileAddress], [Report_IsCalculate]) VALUES (CAST(1 AS Numeric(18, 0)), N'گزارش کارکرد ماهانه', N'ReportFile/ReportMonthly.mrt', 1)
+INSERT [dbo].[NW_Report] ([Report_ID], [Report_Name], [Report_FileAddress], [Report_IsCalculate]) VALUES (CAST(5 AS Numeric(18, 0)), N'گزارش اضافه کار', N'ReportFile/ezafe kar.mrt', 1)
+INSERT [dbo].[NW_Report] ([Report_ID], [Report_Name], [Report_FileAddress], [Report_IsCalculate]) VALUES (CAST(6 AS Numeric(18, 0)), N'گزارش اضافه کار و کشیک', N'ReportFile/ezafe kari va keshik.mrt', 1)
+INSERT [dbo].[NW_Report] ([Report_ID], [Report_Name], [Report_FileAddress], [Report_IsCalculate]) VALUES (CAST(8 AS Numeric(18, 0)), N'گزارش غیبت', N'ReportFile/gheibat.mrt', 1)
+INSERT [dbo].[NW_Report] ([Report_ID], [Report_Name], [Report_FileAddress], [Report_IsCalculate]) VALUES (CAST(9 AS Numeric(18, 0)), N'گزارش حضور غیاب در لحظه', N'ReportFile/hozor va ghiab dar lahze.mrt', 0)
+INSERT [dbo].[NW_Report] ([Report_ID], [Report_Name], [Report_FileAddress], [Report_IsCalculate]) VALUES (CAST(11 AS Numeric(18, 0)), N'گزارش مجوزهای روزانه', N'ReportFile/mojavez rozane.mrt', 0)
+INSERT [dbo].[NW_Report] ([Report_ID], [Report_Name], [Report_FileAddress], [Report_IsCalculate]) VALUES (CAST(13 AS Numeric(18, 0)), N'گزارش مجوز های ساعتی', N'ReportFile/mojavez saati.mrt', 0)
+INSERT [dbo].[NW_Report] ([Report_ID], [Report_Name], [Report_FileAddress], [Report_IsCalculate]) VALUES (CAST(14 AS Numeric(18, 0)), N'گزارش لیست پرسنل به تفکیک بخش', N'ReportFile/personel list as part.mrt', 0)
+INSERT [dbo].[NW_Report] ([Report_ID], [Report_Name], [Report_FileAddress], [Report_IsCalculate]) VALUES (CAST(16 AS Numeric(18, 0)), N'گزارش لیست پرسنل به تفکیک استخدام', N'ReportFile/prsonel list as job.mrt', 0)
+INSERT [dbo].[NW_Report] ([Report_ID], [Report_Name], [Report_FileAddress], [Report_IsCalculate]) VALUES (CAST(18 AS Numeric(18, 0)), N'گزارش رکوردهای اصلاح شده', N'ReportFile/rekord haie eslaah shode.mrt', 0)
+INSERT [dbo].[NW_Report] ([Report_ID], [Report_Name], [Report_FileAddress], [Report_IsCalculate]) VALUES (CAST(19 AS Numeric(18, 0)), N'گزارش تردد ناقص', N'ReportFile/taradode naghes.mrt', 1)
+INSERT [dbo].[NW_Report] ([Report_ID], [Report_Name], [Report_FileAddress], [Report_IsCalculate]) VALUES (CAST(21 AS Numeric(18, 0)), N'گزارش ورود و خروج پرسنل', N'ReportFile/vorod va khoroj persenel.mrt', 1)
+INSERT [dbo].[NW_Report] ([Report_ID], [Report_Name], [Report_FileAddress], [Report_IsCalculate]) VALUES (CAST(22 AS Numeric(18, 0)), N'گزارش کسر کار بیش از حد', N'ReportFile/kasri kar bish az had.mrt', 1)
+INSERT [dbo].[NW_Report] ([Report_ID], [Report_Name], [Report_FileAddress], [Report_IsCalculate]) VALUES (CAST(23 AS Numeric(18, 0)), N'گزارش خلاصه غیبت پرسنل', N'ReportFile/kholase gheibat.mrt', 1)
+INSERT [dbo].[NW_Report] ([Report_ID], [Report_Name], [Report_FileAddress], [Report_IsCalculate]) VALUES (CAST(24 AS Numeric(18, 0)), N'گزارش خلاصه کسر کاری', N'ReportFile/kholase kasri kar.mrt', 1)
+INSERT [dbo].[NW_Report] ([Report_ID], [Report_Name], [Report_FileAddress], [Report_IsCalculate]) VALUES (CAST(26 AS Numeric(18, 0)), N'گزارش مشروح کسر کاری', N'ReportFile/mashrohe kasri kar.mrt', 1)
+INSERT [dbo].[NW_Report] ([Report_ID], [Report_Name], [Report_FileAddress], [Report_IsCalculate]) VALUES (CAST(27 AS Numeric(18, 0)), N'گزارش مشروح اضافه کاری و کشیک ماهانه', N'ReportFile/mashrohe ezafe kar va keshik mahiane.mrt', 1)
+INSERT [dbo].[NW_Report] ([Report_ID], [Report_Name], [Report_FileAddress], [Report_IsCalculate]) VALUES (CAST(29 AS Numeric(18, 0)), N'گزارش خلاصه اضافه کاری و کشیک ماهانه', N'ReportFile/kholase ezafe kar va keshik mahane.mrt', 1)
+INSERT [dbo].[NW_Report] ([Report_ID], [Report_Name], [Report_FileAddress], [Report_IsCalculate]) VALUES (CAST(30 AS Numeric(18, 0)), N'گزارش مرخصی استحقاقی و مانده آن', N'ReportFile/morakhasi estehghaghi va mande.mrt', 1)
+INSERT [dbo].[NW_Report] ([Report_ID], [Report_Name], [Report_FileAddress], [Report_IsCalculate]) VALUES (CAST(31 AS Numeric(18, 0)), N'گزارش مشروح اضافه کار 5 شنبه', N'ReportFile/mashrohe ezafe kar 5 shanbe.mrt', 1)
+INSERT [dbo].[NW_Report] ([Report_ID], [Report_Name], [Report_FileAddress], [Report_IsCalculate]) VALUES (CAST(32 AS Numeric(18, 0)), N'گزارش خلاصه اضافه کار 5 شنبه', N'ReportFile/kholase ezafe kar 5 shanbe.mrt', 1)
+INSERT [dbo].[NW_Report] ([Report_ID], [Report_Name], [Report_FileAddress], [Report_IsCalculate]) VALUES (CAST(33 AS Numeric(18, 0)), N'گزارش مشروح غیبت پرسنل', N'ReportFile/mashrohe gheibat.mrt', 1)
+INSERT [dbo].[NW_Report] ([Report_ID], [Report_Name], [Report_FileAddress], [Report_IsCalculate]) VALUES (CAST(34 AS Numeric(18, 0)), N'گزارش ورود خروج از ترمینال ها', N'ReportFile/taradode afrad az terminal.mrt', 0)
+INSERT [dbo].[NW_Report] ([Report_ID], [Report_Name], [Report_FileAddress], [Report_IsCalculate]) VALUES (CAST(37 AS Numeric(18, 0)), N'گزارش ورود اول', N'ReportFile/mashrohe vorode aval.mrt', 0)
+INSERT [dbo].[NW_Report] ([Report_ID], [Report_Name], [Report_FileAddress], [Report_IsCalculate]) VALUES (CAST(38 AS Numeric(18, 0)), N'گزارش تردد آخر', N'ReportFile/mashrohe Taradode Akhar.mrt', 0)
+INSERT [dbo].[NW_Report] ([Report_ID], [Report_Name], [Report_FileAddress], [Report_IsCalculate]) VALUES (CAST(40 AS Numeric(18, 0)), N'گزارش سازمان', N'ReportFile/sazman.mrt', 1)
+INSERT [dbo].[NW_Report] ([Report_ID], [Report_Name], [Report_FileAddress], [Report_IsCalculate]) VALUES (CAST(42 AS Numeric(18, 0)), N'گزارش خلاصه تاخیر', N'ReportFile/kholase Takhir.mrt', 1)
+INSERT [dbo].[NW_Report] ([Report_ID], [Report_Name], [Report_FileAddress], [Report_IsCalculate]) VALUES (CAST(43 AS Numeric(18, 0)), N'گزارش خلاصه تعجیل', N'ReportFile/kholase Tajil.mrt', 1)
+SET IDENTITY_INSERT [dbo].[NW_Report] OFF
+/****** Object:  Table [dbo].[NW_Help]    Script Date: 05/29/2013 16:20:28 ******/
+SET IDENTITY_INSERT [dbo].[NW_Help] ON
+INSERT [dbo].[NW_Help] ([Help_ID], [Help_ParantID], [Help_FaName], [Help_EnName], [Help_FaHTMLContent], [Help_EnHTMLContent], [Help_FormKey], [Help_LevelOrder]) VALUES (CAST(1 AS Numeric(18, 0)), CAST(0 AS Numeric(18, 0)), N'راهنماي انرم افزار تحت وب clock', N'', N'<P align=center><FONT face=Tahoma><STRONG>متن روي جلد</STRONG></FONT></P>', NULL, N'rootkey', NULL)
+INSERT [dbo].[NW_Help] ([Help_ID], [Help_ParantID], [Help_FaName], [Help_EnName], [Help_FaHTMLContent], [Help_EnHTMLContent], [Help_FormKey], [Help_LevelOrder]) VALUES (CAST(2 AS Numeric(18, 0)), CAST(8 AS Numeric(18, 0)), N'گزارش کارکرد ماهیانه', NULL, N'<p class="MsoNormal" align="right" style="text-align: right;"><font face="Tahoma" size="4"><span lang="FA" dir="RTL" style="line-height: 21px;">این قسمت تقویمی از روزهای ماه در اختیار شما قرار میدهد که مربوط به گزارش کارکرد شما&nbsp;</span><span style="line-height: 21px;">در بالای این جدول مشخصات فردی شما نمایش داده شده</span></font></p><p class="MsoNormal" align="right" style="text-align: right;"><span style="line-height: 21px;"><font face="Tahoma" size="4"><img src="/HelpNewClock/images/Help/HelpImage/Clip_20.jpg" alt="Clip_20.jpg" width="865" height="239" border="0"><br></font></span></p><p class="MsoNormal" align="right" style="text-align: right;"><span lang="FA" dir="RTL" style="line-height: 21px;"><font face="Tahoma" size="4">گزینه ی " انتخاب پرسنل تحت مدیریت " به شما امکان میدهد تا جدول گزارش کارکرد ماهانه ی مربوط به پرسنل خود رامشاهده کنید و با توجه به اختیارات داده شده به شما انها را کنترل کنید.</font></span></p><p class="MsoNormal" align="right" style="text-align: right;"><span lang="FA" dir="RTL" style="line-height: 21px;"><font face="Tahoma" size="4"><img src="/HelpNewClock/images/Help/HelpImage/Clip_18.jpg" alt="Clip_18.jpg" width="411" height="186" border="0"><br></font></span></p><p class="MsoNormal" align="right" style="text-align: right;"><font face="Tahoma" size="4"><span lang="FA" dir="RTL" style="line-height: 21px;"></span></font></p><p><font face="Tahoma" size="4"><span lang="FA" dir="RTL" style="line-height: 115%;"></span></font></p><p class="MsoNormal" align="right" style="text-align:right"><font face="Tahoma" size="4"><span lang="FA" dir="RTL" style="line-height: 115%;">شما با کلیک کردن بر روی هر کدام از ستون هایی
+که در تصویر بالا مشاهده می کنید میتوانید لیست پرسنل را به ترتیب نزولی یا صعودی
+مرتب کنید .</span><span style="line-height: 115%;"><o:p></o:p></span></font></p><p></p><p class="MsoNormal" align="right" style="text-align:right"><font face="Tahoma" size="4"><span lang="AR-SA" dir="RTL" style="line-height: 115%;">برای نمایش ماه های دیگر نیز میتوانید ستون های ماه و سال
+را تنظیم کنید و گزینه ی نمایش را انتخاب کنید</span><span style="line-height: 115%;"><o:p></o:p></span></font></p><p></p><p class="MsoNormal" align="right"><font face="Tahoma" size="4"><img src="/HelpNewClock/images/Help/HelpImage/Clip_20.jpg" alt="Clip_20.jpg" width="865" height="239" border="0"><br></font></p><p class="MsoNormal" align="right"><font face="Tahoma" size="4"><br></font></p><p class="MsoNormal" align="right"></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="line-height: 115%;"><font face="Tahoma" size="4">همان طور که در تصویر میبینید دو ستون رنگی در
+سمت راست ستون تاریخ وجود دارد<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="line-height: 115%;"><font face="Tahoma" size="4">رنگ ستون سمت راست متعثر از تردد های شما است .<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="line-height: 115%;"><font face="Tahoma" size="4">رنگ صورتی ، نشان دهنده ی کسری ساعتی است.<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="line-height: 115%;"><font face="Tahoma" size="4">رنگ قرمز ، نشان دهنده ی غیبت روزانه یا تجاوز
+از سقف تردد یا تاخیر روزانه ی مجاز است.<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="line-height: 115%;"><font face="Tahoma" size="4">رنگ زرد ، نشان دهنده ی تردد ناقص است یعنی تعداد
+ورود و خروج ها یکسان نیست.<o:p></o:p></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="line-height: 115%;"><font face="Tahoma" size="4"><br></font></span></p><p class="MsoNormal" align="right"><font face="Tahoma" size="4"><span lang="FA" dir="RTL" style="line-height: 115%;"></span></font></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="line-height: 115%;"><font face="Tahoma" size="4">حالا به بررسی ستون سمت چپ میپردازیم<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="line-height: 115%;"><font face="Tahoma" size="4">این ستون متعثر از وضعیت درخواست های شما هست<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma" size="4"><span lang="FA" dir="RTL" style="line-height: 115%;">به ترتیب اولویت :</span><span style="line-height: 115%;"><o:p></o:p></span></font></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="line-height: 115%;"><font face="Tahoma" size="4">رنگ زرد : عدم تایید درخواست.<o:p></o:p></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="line-height: 115%;"><font face="Tahoma" size="4">رنگ آبی : درخواست شما هنوز مشاهده نشده است<o:p></o:p></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="line-height: 115%;"><font face="Tahoma" size="4">رنگ سفید : در حال طی کردن مراحل تایید است<o:p></o:p></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="line-height: 115%;"><font face="Tahoma" size="4">رنگ سبز : تایید نهایی درخواست.<o:p></o:p></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="line-height: 115%;"><font face="Tahoma" size="4"><br></font></span></p><p class="MsoNormal" align="right"><font face="Tahoma" size="4"><span lang="FA" dir="RTL" style="line-height: 115%;"></span></font></p><p class="MsoNormal" align="right"><font face="Tahoma" size="4"><span lang="FA" dir="RTL" style="line-height: 115%;">در کنار هر روز که در جدول نشان داده شده یک
+علامت + وجود دارد</span><span style="line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma" size="4"><span lang="FA" dir="RTL" style="line-height: 115%;">با کلیک کردن بر روی این گزینه , آن روز باز میشود
+و تمام اتفاقات و درخواست هایی که درآن روز ثبت شده نشان داده میشود.</span><span style="line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="line-height: 115%;"><font face="Tahoma" size="4">مثلا برای آن روز درخواست صادر کنید یا درخواست
+صادر شده را حذف کنید.<o:p></o:p></font></span></p><p></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="line-height: 115%;"><font face="Tahoma" size="4"><br></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="line-height: 115%;"><font face="Tahoma" size="4"><img src="/HelpNewClock/images/Help/HelpImage/Clip_22.jpg" alt="Clip_22.jpg" width="624" height="146" border="0"><br></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="line-height: 115%;"><font face="Tahoma" size="4"><br></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="line-height: 115%;"><font face="Tahoma" size="4">که با انتخاب گزینه ی "درخواست جدید "
+فرم زیر برای شما باز میشود<o:p></o:p></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="line-height: 115%;"><font face="Tahoma" size="4"><br></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="line-height: 115%;"><font face="Tahoma" size="4"><img src="/HelpNewClock/images/Help/HelpImage/Clip_23.jpg" alt="Clip_23.jpg" width="628" height="407" border="0"><br></font></span></p><p class="MsoNormal" align="right"><font face="Tahoma" size="4"><span lang="FA" dir="RTL" style="line-height: 115%;"></span></font></p><p class="MsoNormal" align="right"><font face="Tahoma" size="4"><br></font></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma" size="4"><span lang="FA" dir="RTL" style="line-height: 115%;">درخواست شما دارای 3 نوع کلی است که در تصویر
+بالا مشاهده میکنید</span><span style="line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma" size="4"><span lang="FA" dir="RTL" style="line-height: 115%;">چنانچه هر کدام از قسمت های " ساعتی "
+یا " روزانه" یا " دستوری "&nbsp;
+انتخاب شود پیش کارت ها متفاوت خواهد بود <font color="#9acd32">منظور از پیش کارت همان عنوان
+درخواست شما است</font>.</span><span style="line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="line-height: 115%;"><font face="Tahoma" size="4">نکته: پر کردن قسمت توضیحات اختیاری میباشد.</font></span></p><p class="MsoNormal" align="right"><span style="line-height: 115%;"><font face="Tahoma" size="4">در پایان بر روی گزینه ی " بروزرسانی" کلیک کرده تا درخواست ثبت شود.</font></span></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="line-height: 115%;"><font face="Tahoma" size="4">اگر گزینه ی " انصراف " انتخاب کنید
+درخواست شما در سیستم ثبت نمیشود و حذف میشود.</font></span></p><p class="MsoNormal" align="right"><font face="Tahoma" size="4"><span lang="FA" dir="RTL" style="line-height: 115%;"></span></font></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="line-height: 115%;"><font face="Tahoma" size="4"><br></font></span></p><p class="MsoNormal" align="right"><font face="Tahoma" size="4"><span lang="FA" dir="RTL" style="line-height: 115%;">توجه داشته باشید که درخواست شما برای روزی ثبت
+میشود که انتخاب کرده اید</span><span style="line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma" size="4"><span lang="FA" dir="RTL" style="line-height: 115%;">به عنوان مثال وقتی قصد دارید برای تاریخ 3/آبان/91
+درخواست بدهید ، باید از ستون سال ، 91 و از ستون ماه ، آبان را انتخاب کنید </span><span style="line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma" size="4"><span lang="FA" dir="RTL" style="line-height: 115%;">سپس در جدول روز 3 آبان را انتخاب کنید ( گزینه
+ی + را بزنید ).</span><span style="line-height: 115%;"><o:p></o:p></span></font></p><p></p><p class="MsoNormal" align="right"><font face="Tahoma" size="4"><span lang="FA" dir="RTL" style="line-height: 115%;"></span></font></p><p class="MsoNormal" align="right"></p><p class="MsoNormal" align="right"><font face="Tahoma" size="4"><span lang="FA" dir="RTL" style="line-height: 115%;">شما میتوانید یک درخواست را با گزینه ی "
+حذف " از سیستم پاک کنید ( البته فقط درخواست هایی که مشاهده نشده هستند ) و
+یا با گزینه ی " جدید " درخواست دیگری ثبت کنید.</span><span style="line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma" size="4"><span lang="FA" dir="RTL" style="line-height: 115%;">پس از ثبت یک درخواست توسط شما , به صورت خودکار
+به مدیر مربوطه فرستاده میشود تا مورد برسی قرار بگیرد.</span><span style="line-height: 115%;"><o:p></o:p></span></font></p><p></p><p></p><p class="MsoNormal" align="right"><font face="Tahoma" size="4"><span lang="FA" dir="RTL" style="line-height: 115%;"></span></font></p><p class="MsoNormal" align="right"><font face="Tahoma" size="4"><span lang="FA" dir="RTL" style="line-height: 115%;">ستون "وضعیت" مراحلی است که یک
+درخواست تا کنون طی کرده است و برای اطلاع شما از وضعیت درخواستی که ارسال کرده
+اید طراحی شده.</span><span style="line-height: 115%;"><o:p></o:p></span></font></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="line-height: 115%;"><font face="Tahoma" size="4"><br></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size:14.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
+major-bidi;mso-bidi-language:FA"><br></span></p><p></p><p></p><p></p><p></p><p></p><p></p>', NULL, N'ReportMonthly', NULL)
+INSERT [dbo].[NW_Help] ([Help_ID], [Help_ParantID], [Help_FaName], [Help_EnName], [Help_FaHTMLContent], [Help_EnHTMLContent], [Help_FormKey], [Help_LevelOrder]) VALUES (CAST(3 AS Numeric(18, 0)), CAST(8 AS Numeric(18, 0)), N'درخواست های ثبت شده', NULL, N'<p class="MsoNormal" align="right" style="text-align:right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">تمامی درخواست هایی که شما در سیستم ثبت میکنید
+به تفکیک ماه و سال در این قسمت قابل دیدن است</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">در این قسمت شما به راحتی میتوانید وضعیت
+درخواست هایی را که خود ثبت کرده اید مشاهده کنید.</span><img src="/HelpNewClock/images/Help/HelpImage/Clip_2.jpg" alt="Clip_2.jpg" width="640" height="480" border="0" style="font-size: 14pt; line-height: 115%;"></font></p><p class="MsoNormal" align="right" style="text-align:right"><font face="Tahoma"><br></font></p><p class="MsoNormal" align="right" style="text-align:right"></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">شما میتوانید با انتخاب فیلترهای مناسب ( فقط گزینه
+هایی که تیک خورده باشند نمایش داده میشوند ) و همینطور ماه و سال , بر روی گزینه
+ی " نمایش " کلیک کنید تا به راحتی درخواست خود را پیدا کرده &nbsp;و اطلاعات آن را مشاهده کنید.<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">در این قسمت برای حذف یک درخواست مشاهده نشده میتوانید
+ازگذینه ی حذف استفاده کنید.</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><o:p><font face="Tahoma">&nbsp;</font></o:p></span></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">درخواست های شما بسته به این که در چه مرحله ای
+هستند و چه شرایطی دارند با رنگ های مختلف نمایش داده میشوند.</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p><p></p><p class="MsoNormal" align="right" style="text-align:right"></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 21px;">به ترتیب اولویت :</span><span style="font-size: 14pt; line-height: 21px;"><o:p></o:p></span></font></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 21px;"><font face="Tahoma">رنگ زرد : عدم تایید درخواست.<o:p></o:p></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 21px;"><font face="Tahoma">رنگ آبی : درخواست شما هنوز مشاهده نشده است<o:p></o:p></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 21px;"><font face="Tahoma">رنگ سفید : در حال طی کردن مراحل تایید است<o:p></o:p></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 21px;"><font face="Tahoma">رنگ سبز : تایید نهایی درخواست.<o:p></o:p></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 21px;"><font face="Tahoma"><br></font></span></p><div><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 21px;"><span lang="FA" dir="RTL" style="font-size: 11pt; line-height: 115%;"><span style="font-size: 14pt; line-height: 115%;">درخواست جدید</span></span></span><span style="font-size: 19px; line-height: 21px; text-align: -webkit-right;">&nbsp;</span><span style="font-size: 19px; line-height: 21px; text-align: -webkit-right;">:</span></font></div><div><p class="MsoNormal" align="right" style="text-align:right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">شما میتوانید با انتخواب گزینه ی درخواست جدید <img src="/HelpNewClock/images/Help/HelpImage/add.jpg" alt="add.jpg" width="16" height="16" border="0"></span><span style="font-size: 14pt; line-height: 115%;"><v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter">
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0">
+  <v:f eqn="sum @0 1 0">
+  <v:f eqn="sum 0 0 @1">
+  <v:f eqn="prod @2 1 2">
+  <v:f eqn="prod @3 21600 pixelWidth">
+  <v:f eqn="prod @3 21600 pixelHeight">
+  <v:f eqn="sum @0 0 1">
+  <v:f eqn="prod @6 1 2">
+  <v:f eqn="prod @7 21600 pixelWidth">
+  <v:f eqn="sum @8 21600 0">
+  <v:f eqn="prod @7 21600 pixelHeight">
+  <v:f eqn="sum @10 21600 0">
+ </v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect">
+ <o:lock v:ext="edit" aspectratio="t">
+</o:lock></v:path></v:stroke></v:shapetype><v:shape id="Picture_x0020_12" o:spid="_x0000_i1025" type="#_x0000_t75" style="width:12pt;height:12pt;visibility:visible;mso-wrap-style:square">
+ <v:imagedata src="file:///F:\Users\roya\AppData\Local\Temp\msohtmlclip1\01\clip_image001.png" o:title="add">
+</v:imagedata></v:shape></span><span dir="RTL"></span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><span dir="RTL"></span>&nbsp;در همین قسمت از نرم افزار هم یک درخواست تنظیم
+کنید.</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p><p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><img src="/HelpNewClock/images/Help/HelpImage/Clip_3.jpg" alt="Clip_3.jpg" width="800" height="329" border="0"><br></font></span></p><p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><br></font></span></p><p class="MsoNormal" align="right" style="text-align:right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"></span></font></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">طراحی این قسمت کمی از نظر ظاهری با طراحی ای که
+در قسمت " گزارش کارکرد ماهیانه " مشاهده کردید متفاوت است ، اما از
+لحاظ عملکرد کاملا مشابه همان قسمت است.<o:p></o:p></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><br></span></p><p></p></div><p></p>', NULL, N'DashboardUser', NULL)
+INSERT [dbo].[NW_Help] ([Help_ID], [Help_ParantID], [Help_FaName], [Help_EnName], [Help_FaHTMLContent], [Help_EnHTMLContent], [Help_FormKey], [Help_LevelOrder]) VALUES (CAST(4 AS Numeric(18, 0)), CAST(8 AS Numeric(18, 0)), N'کارتابل درخواست ها', NULL, N'<p class="MsoNormal" align="right" style="text-align:right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">این قسمت نرم افزار در دسترس مدیران است.</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">درخواست های پرسنل تحت مدیریت شما به این قسمت فرستاده
+میشوند تا توسط شما بررسی شوند.</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">درخواست های میتوانند به وسیله ی بازه ی تاریخ
+مشخص شده&nbsp; و یا با فیلتر های دیگری که در
+تصویر مشاهده میکنید تفکیک شوند .</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p><p class="MsoNormal" align="right" style="text-align:right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"></span></font></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">برای این کار باید بازه ی مشخصی از تاریخ را
+تعیین کنید وفیلتر ها را انتخاب کنید و سپس گزینه ی "اعمال شرایط " را
+کلیک کنید.</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">برای انجام عملیات بر روی هر درخواست ابتدا باید
+آن را انتخاب کنید، تیک بزنید.<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">سپس میتوانید آن را تایید یا رد کنید.</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">نکته : درخواست رد شده امکان تایید را ندارد ,
+همینطور بلعکس درخواستی که تایید شد را نمیتوان رد کرد.</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><img src="/HelpNewClock/images/Help/HelpImage/Clip_4.jpg" alt="Clip_4.jpg" width="745" height="266" border="0"><br></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><br></font></span></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"></span></font></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">اگر در تصویر بالا دقت کنید ، اولین ستون گزینه
+ی همه است<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">این گزینه جهت راحتی شما برای انتخواب همه ی
+درخواست ها طراحی شده است<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">سطرهای انتخواب شده تغییر رنگ داده میشود.</font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">&nbsp;</font><o:p></o:p></span></p><p></p><p></p>', NULL, N'DashboardManager', NULL)
+INSERT [dbo].[NW_Help] ([Help_ID], [Help_ParantID], [Help_FaName], [Help_EnName], [Help_FaHTMLContent], [Help_EnHTMLContent], [Help_FormKey], [Help_LevelOrder]) VALUES (CAST(5 AS Numeric(18, 0)), CAST(8 AS Numeric(18, 0)), N'ثبت تردد', NULL, N'<p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">این قسمت در دسترس اپراتور یا مدیران قرار
+میگیرد.<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">شما میتوانید در این قسمت به تمام اطلاعات مربوط
+به تردد پرسنل دسترسی داشته باشید</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">برای پیدا کردن فرد مورد نظر،میتوانید کد پرسنلی
+یا نام فرد راجستجو کنید و بر روی نام فرد مورد نظر کلیک کنید<o:p></o:p></font></span></p><p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><img src="/HelpNewClock/images/Help/HelpImage/Clip_5.jpg" alt="Clip_5.jpg" width="595" height="360" border="0"><br></font></span></p><p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><br></font></span></p><p class="MsoNormal" align="right" style="text-align:right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"></span></font></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">علاوه بر این باید ، ستون های سال و ماه &nbsp;را هم تنظیم کرده تا بازه ی زمانی مشخصی را
+مشاهده کنید و سپس بر روی گزینه ی نمایش کلیک کنید تا اطلاعات نمایش داده شوند.</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><br></font></span></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"></span></font></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">در خصوص تردد روزانه ، همان طور که در تصویر
+پایین مشاهده میکنید<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">باید از ستون "نوع تردد" گزینه ی مورد
+نظر خود را انتخاب کنید.<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">سپس بازه ی تاریخ را انتخاب کنید.&nbsp;</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p><p></p><p class="MsoNormal" align="right"><font face="Tahoma"><img src="/HelpNewClock/images/Help/HelpImage/Clip_28.jpg" alt="Clip_28.jpg" width="700" height="476" border="0"><br></font></p><p class="MsoNormal" align="right"><font face="Tahoma"><br></font></p><p class="MsoNormal" align="right"></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">مرخصی های ساعتی هم به همین صورت با این تفاوت
+که نوع تردد هایشان تفاوت دارد و تاریخ یک روز را انتخاب میکنید ، سپس بازه ی زمان
+مورد نظر خود را تنظیم میکنید .<o:p></o:p></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><br></font></span></p><p></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><img src="/HelpNewClock/images/Help/HelpImage/Clip_29.jpg" alt="Clip_29.jpg" width="700" height="540" border="0"><br></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><br></font></span></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"></span></font></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">شما میتوانید سطرهایی را که نمایش داده شده اند
+را &nbsp;ویرایش&nbsp;<img src="/HelpNewClock/images/Help/HelpImage/edit.jpg" alt="edit.jpg" width="16" height="16" border="0"></span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">&nbsp;و حذف&nbsp;<img src="/HelpNewClock/images/Help/HelpImage/remove.jpg" alt="remove.jpg" width="16" height="16" border="0"></span><span style="font-size: 14pt; line-height: 115%;"><v:shape id="Picture_x0020_23" o:spid="_x0000_i1029" type="#_x0000_t75" style="width:12pt;height:12pt;visibility:visible;
+ mso-wrap-style:square">
+ <v:imagedata src="file:///F:\Users\roya\AppData\Local\Temp\msohtmlclip1\01\clip_image002.png" o:title="remove">
+</v:imagedata></v:shape></span><span dir="RTL"></span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><span dir="RTL"></span> کنید </span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">برای این کار کافی است<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">بر روی سطر مورد نظر کلیک کنید تا انتخاب شود،
+سپس بر روی گزینه ی حذف یا ویرایش کلیک کنید.</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">پس از اعمال تغییرات لازم گزینه ی &nbsp;ثبت&nbsp;<img src="/HelpNewClock/images/Help/HelpImage/save.jpg" alt="save.jpg" width="16" height="16" border="0"></span><span style="font-size: 14pt; line-height: 115%;"><v:shape id="Picture_x0020_24" o:spid="_x0000_i1028" type="#_x0000_t75" style="width:12pt;height:12pt;visibility:visible;
+ mso-wrap-style:square">
+ <v:imagedata src="file:///F:\Users\roya\AppData\Local\Temp\msohtmlclip1\01\clip_image003.png" o:title="save">
+</v:imagedata></v:shape></span><span dir="RTL"></span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><span dir="RTL"></span> را انتخاب کنید و یا حتی انصراف&nbsp;<img src="/HelpNewClock/images/Help/HelpImage/cancel.jpg" alt="cancel.jpg" width="16" height="16" border="0"></span><span style="font-size: 14pt; line-height: 115%;"><v:shape id="Picture_x0020_25" o:spid="_x0000_i1027" type="#_x0000_t75" style="width:12pt;height:12pt;
+ visibility:visible;mso-wrap-style:square">
+ <v:imagedata src="file:///F:\Users\roya\AppData\Local\Temp\msohtmlclip1\01\clip_image004.png" o:title="cancel">
+</v:imagedata></v:shape></span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">دهید که در این صورت هیچ تغییری انجام نمیشود .</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">برای ایجاد سطر جدید گزینه ی &nbsp;جدید <img src="/HelpNewClock/images/Help/HelpImage/add.jpg" alt="add.jpg" width="16" height="16" border="0"></span><span style="font-size: 14pt; line-height: 115%;"><v:shape id="Picture_x0020_21" o:spid="_x0000_i1026" type="#_x0000_t75" style="width:12pt;height:12pt;visibility:visible;
+ mso-wrap-style:square">
+ <v:imagedata src="file:///F:\Users\roya\AppData\Local\Temp\msohtmlclip1\01\clip_image005.png" o:title="add">
+</v:imagedata></v:shape></span><span dir="RTL"></span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><span dir="RTL"></span>&nbsp;را انتخاب کنید که میبایست ستون های لازم را پر
+کنید مانند نوع تردد &nbsp;،&nbsp; تاریخ&nbsp; ،
+ساعت&nbsp; ، شماره ی برگه و توضیحات( اختیاری</span><span style="font-size: 14pt; line-height: 115%;">&nbsp;</span><span style="font-size: 14pt; line-height: 115%;">).</span></font></p><font face="Tahoma"><span dir="RTL"></span>
+
+</font><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">بعد از این که گزینه ی ثبت <img src="/HelpNewClock/images/Help/HelpImage/save.jpg" alt="save.jpg" width="16" height="16" border="0"></span><span style="font-size: 14pt; line-height: 115%;"><v:shape id="Picture_x0020_2" o:spid="_x0000_i1025" type="#_x0000_t75" style="width:12pt;height:12pt;
+ visibility:visible;mso-wrap-style:square">
+ <v:imagedata src="file:///F:\Users\roya\AppData\Local\Temp\msohtmlclip1\01\clip_image003.png" o:title="save">
+</v:imagedata></v:shape></span><span dir="RTL"></span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><span dir="RTL"></span>&nbsp;را کلیک کردید نرم افزار یک لیست از ترددهای آن
+روز که برای فرد مورد نظر وجود دارد را نشان میدهد که با توجه به سطرهای موجود
+نسبت به ثبت سطر جدید تصمیم بگیرید.<o:p></o:p></span></font></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><img src="/HelpNewClock/images/Help/HelpImage/Clip_7.jpg" alt="Clip_7.jpg" width="625" height="414" border="0"><br></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><br></font></span></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"></span></font></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">در تصویر بالا نرم افزار برای اعمال &nbsp;دستور شما نیاز به تایید دارد تا دستور شما
+اعمال شود.<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">درصورت عدم تایید هم هیچ تغییری انجام نمیشود. </span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%; color: red;"><font face="Tahoma">ثبت تردد نیاز به تایید مدیر یا فرد
+دیگری را ندارد ، لذا در فرآیند ثبت دقت کنید.</font><font face="Times New Roman, serif"><o:p></o:p></font></span></p><p></p><p></p><p></p>', NULL, N'TrafficRequestOperator', NULL)
+INSERT [dbo].[NW_Help] ([Help_ID], [Help_ParantID], [Help_FaName], [Help_EnName], [Help_FaHTMLContent], [Help_EnHTMLContent], [Help_FormKey], [Help_LevelOrder]) VALUES (CAST(6 AS Numeric(18, 0)), CAST(8 AS Numeric(18, 0)), N'مدیر جانشین', NULL, N'<p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">این قسمت در دسترس مدیران است و جهت اختصاص دادن
+یک مدیر جانشین است<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">شما میتوانید به راحتی برای یکی از پست های مدیریتی
+خود، در زمانی مشخص جانشین تعیین کنید.</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">شما برای انتخاب فرد جانشین از نظر این که آن فرد
+چه نقشی را در سیستم دارا است ، محدودیتی ندارید!</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">یعنی میتوانید هرکدام از پرسنل موجود را انتخاب
+کنید.</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p><p class="MsoNormal" align="right" style="text-align:right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"></span></font></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">جانشین شما در مدت زمانی که شما تعیین کرده اید
+تمام دسترسی هایی که شما در سیستم داشته اید را خواهد داشت ، و به او این امکان
+داده میشود که&nbsp; کارهای شما را انجام دهد.</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">در این مدت دسترسی خود شما از سیستم قطع نخواهد
+شد .<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">شما برای هر یک از پست های مدیریتی خود فقط یک
+جانشین میتوانید تعیین کنید.</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">توجه کنید که هر مدیر میتواند فقط برای خودش
+جانشین تعیین کند ، مثلا فردی که به عنوان جانشین شما انتخاب میشود نمیتواند مجددا
+برای شما جانشین انتخاب کند.</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><br></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><img src="/HelpNewClock/images/Help/HelpImage/Clip_9.jpg" alt="Clip_9.jpg" width="668" height="299" border="0"><br></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><br></font></span></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"></span></font></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">برای انتخاب پستی که میخواهید به جانشین بدهید
+باید طبق تصویر بالا به گرزینه ی "پست" مراجعه کنید.</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">بعد از مشخص کردن پرسنل ، پست و تاریخ گزینه ی
+ثبت&nbsp;<img src="/HelpNewClock/images/Help/HelpImage/save.jpg" alt="save.jpg" width="16" height="16" border="0"></span><span style="font-size: 14pt; line-height: 115%;"><v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter">
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0">
+  <v:f eqn="sum @0 1 0">
+  <v:f eqn="sum 0 0 @1">
+  <v:f eqn="prod @2 1 2">
+  <v:f eqn="prod @3 21600 pixelWidth">
+  <v:f eqn="prod @3 21600 pixelHeight">
+  <v:f eqn="sum @0 0 1">
+  <v:f eqn="prod @6 1 2">
+  <v:f eqn="prod @7 21600 pixelWidth">
+  <v:f eqn="sum @8 21600 0">
+  <v:f eqn="prod @7 21600 pixelHeight">
+  <v:f eqn="sum @10 21600 0">
+ </v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect">
+ <o:lock v:ext="edit" aspectratio="t">
+</o:lock></v:path></v:stroke></v:shapetype><v:shape id="Picture_x0020_30" o:spid="_x0000_i1026" type="#_x0000_t75" style="width:12pt;height:12pt;visibility:visible;mso-wrap-style:square">
+ <v:imagedata src="file:///F:\Users\roya\AppData\Local\Temp\msohtmlclip1\01\clip_image001.png" o:title="save">
+</v:imagedata></v:shape></span><span dir="RTL"></span><span dir="RTL"></span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><span dir="RTL"></span><span dir="RTL"></span> را
+بزنید تا تغییرات شما اعمال شود.</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">بعد از این که جانشین ثبت شد ، در جدولی در همین
+صفحه نمایش داده میشود ، در همان جدول گزینه ی حذف<img src="/HelpNewClock/images/Help/HelpImage/remove.jpg" alt="remove.jpg" width="16" height="16" border="0"></span><span style="font-size: 14pt; line-height: 115%;"><v:shape id="Picture_x0020_33" o:spid="_x0000_i1025" type="#_x0000_t75" style="width:12pt;height:12pt;visibility:visible;mso-wrap-style:square">
+ <v:imagedata src="file:///F:\Users\roya\AppData\Local\Temp\msohtmlclip1\01\clip_image002.png" o:title="remove">
+</v:imagedata></v:shape></span><span dir="RTL"></span><span dir="RTL"></span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><span dir="RTL"></span><span dir="RTL"></span>
+طراحی شده است تا به راحتی جانشین را حذف کنید .</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">در صورت حذف کردن آن تمام دسترسی های داده شده
+لغو میشود.</font><o:p></o:p></span></p><p></p><p></p>', NULL, N'InsteadMan', NULL)
+INSERT [dbo].[NW_Help] ([Help_ID], [Help_ParantID], [Help_FaName], [Help_EnName], [Help_FaHTMLContent], [Help_EnHTMLContent], [Help_FormKey], [Help_LevelOrder]) VALUES (CAST(7 AS Numeric(18, 0)), CAST(8 AS Numeric(18, 0)), N'تغییر کلمه عبور', NULL, N'<p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">در این قسمت عملیات مربوط به تغییر رمزعبور صفحه
+ی شخصی شما انجام میشود<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">رمز شما میتواند متشکل از اعداد ، علایم یا حروف
+باشد.<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">برای تغییر رمزی که الان روی صفحه ی شخصی شما
+هست ابتدا رمز فعلی را وارد کنید سپس رمز جدید را دو مرتبه تکرار کنید </span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">سپس بر روی گزینه ی ثبت کلیک کنید.</font></span></p><p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><br></font></span></p><p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><img src="/HelpNewClock/images/Help/HelpImage/Clip_27.jpg" alt="Clip_27.jpg" width="600" height="335" border="0">&nbsp;<o:p></o:p></font></span></p><p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><br></font></span></p><p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL" style="font-size:14.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
+major-bidi;mso-bidi-language:FA"><br></span></p>', NULL, N'ChangePasswordUser', NULL)
+INSERT [dbo].[NW_Help] ([Help_ID], [Help_ParantID], [Help_FaName], [Help_EnName], [Help_FaHTMLContent], [Help_EnHTMLContent], [Help_FormKey], [Help_LevelOrder]) VALUES (CAST(8 AS Numeric(18, 0)), CAST(1 AS Numeric(18, 0)), N'بخش کاربران', NULL, N'<p class="MsoNormal" align="right" style="text-align:right"><br></p><span dir="RTL"></span><p></p>', NULL, N'UserPages', NULL)
+INSERT [dbo].[NW_Help] ([Help_ID], [Help_ParantID], [Help_FaName], [Help_EnName], [Help_FaHTMLContent], [Help_EnHTMLContent], [Help_FormKey], [Help_LevelOrder]) VALUES (CAST(9 AS Numeric(18, 0)), CAST(1 AS Numeric(18, 0)), N'بخش مدیریت', NULL, NULL, NULL, N'AdminPages', NULL)
+INSERT [dbo].[NW_Help] ([Help_ID], [Help_ParantID], [Help_FaName], [Help_EnName], [Help_FaHTMLContent], [Help_EnHTMLContent], [Help_FormKey], [Help_LevelOrder]) VALUES (CAST(10 AS Numeric(18, 0)), CAST(9 AS Numeric(18, 0)), N'تعریف کاربران', NULL, N'<p class="MsoNormal" align="right" style="text-align:right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">این قسمت مربوط به نام کاربری و رمز عبوری است
+که سیستم ، کاربران را به وسیله ی آن میشناسد</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">شما میتوانید ، با جستجو کردن یک شخص به وسیله ی
+نام یا کد پرسنلی او نسبت به ویرایش&nbsp;<img src="/HelpNewClock/images/Help/HelpImage/edit.jpg" alt="edit.jpg" width="16" height="16" border="0"></span><span style="font-size: 14pt; line-height: 115%;"><v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter">
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0">
+  <v:f eqn="sum @0 1 0">
+  <v:f eqn="sum 0 0 @1">
+  <v:f eqn="prod @2 1 2">
+  <v:f eqn="prod @3 21600 pixelWidth">
+  <v:f eqn="prod @3 21600 pixelHeight">
+  <v:f eqn="sum @0 0 1">
+  <v:f eqn="prod @6 1 2">
+  <v:f eqn="prod @7 21600 pixelWidth">
+  <v:f eqn="sum @8 21600 0">
+  <v:f eqn="prod @7 21600 pixelHeight">
+  <v:f eqn="sum @10 21600 0">
+ </v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect">
+ <o:lock v:ext="edit" aspectratio="t">
+</o:lock></v:path></v:stroke></v:shapetype><v:shape id="Picture_x0020_16" o:spid="_x0000_i1026" type="#_x0000_t75" style="width:16.5pt;height:16.5pt;visibility:visible;mso-wrap-style:square">
+ <v:imagedata src="file:///F:\Users\roya\AppData\Local\Temp\msohtmlclip1\01\clip_image001.png" o:title="edit">
+</v:imagedata></v:shape></span><span dir="RTL"></span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><span dir="RTL"></span> یا حذف <img src="/HelpNewClock/images/Help/HelpImage/remove.jpg" alt="remove.jpg" width="16" height="16" border="0"></span><span style="font-size: 14pt; line-height: 115%;"><v:shape id="Picture_x0020_17" o:spid="_x0000_i1025" type="#_x0000_t75" style="width:12pt;height:12pt;
+ visibility:visible;mso-wrap-style:square">
+ <v:imagedata src="file:///F:\Users\roya\AppData\Local\Temp\msohtmlclip1\01\clip_image002.png" o:title="remove">
+</v:imagedata></v:shape></span><span dir="RTL"></span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><span dir="RTL"></span>&nbsp;کد پرسنلی و رمز عبور اقدام کنید.</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p><p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><img src="/HelpNewClock/images/Help/HelpImage/Clip_11.jpg" alt="Clip_11.jpg" width="515" height="409" border="0"><br></font></span></p><p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><br></font></span></p><p class="MsoNormal" align="right" style="text-align:right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"></span></font></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">همچنین میتوانید برای افرادی که نام کاربری
+ندارند نیز با گزینه ی جدید <img src="/HelpNewClock/images/Help/HelpImage/add.jpg" alt="add.jpg" width="16" height="16" border="0"></span><span style="font-size: 14pt; line-height: 115%;"><v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter">
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0">
+  <v:f eqn="sum @0 1 0">
+  <v:f eqn="sum 0 0 @1">
+  <v:f eqn="prod @2 1 2">
+  <v:f eqn="prod @3 21600 pixelWidth">
+  <v:f eqn="prod @3 21600 pixelHeight">
+  <v:f eqn="sum @0 0 1">
+  <v:f eqn="prod @6 1 2">
+  <v:f eqn="prod @7 21600 pixelWidth">
+  <v:f eqn="sum @8 21600 0">
+  <v:f eqn="prod @7 21600 pixelHeight">
+  <v:f eqn="sum @10 21600 0">
+ </v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect">
+ <o:lock v:ext="edit" aspectratio="t">
+</o:lock></v:path></v:stroke></v:shapetype><v:shape id="Picture_x0020_18" o:spid="_x0000_i1027" type="#_x0000_t75" style="width:12pt;height:12pt;visibility:visible;mso-wrap-style:square">
+ <v:imagedata src="file:///F:\Users\roya\AppData\Local\Temp\msohtmlclip1\01\clip_image001.png" o:title="add">
+</v:imagedata></v:shape></span><span dir="RTL"></span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><span dir="RTL"></span>&nbsp;نام کاربری و رمز عبور اختصاص دهید البته فقط با
+حروف لاتین و اعداد.</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">اگر برای فردی نام کاربری و رمز عبور بسازید اما
+او را به صورت کاربر پیش فرض تعریف نکرده باشید</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">سیستم رمز و نام کاربری او را میشناسد اما صفحه ای
+نخواهد داشت !</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">برای این که تغییرات اعمال شده ذخیره شود گزینه
+ی " ثبت <img src="/HelpNewClock/images/Help/HelpImage/save.jpg" alt="save.jpg" width="16" height="16" border="0"></span><span style="font-size: 14pt; line-height: 115%;"><v:shape id="Picture_x0020_32" o:spid="_x0000_i1026" type="#_x0000_t75" style="width:12pt;height:12pt;visibility:visible;mso-wrap-style:square">
+ <v:imagedata src="file:///F:\Users\roya\AppData\Local\Temp\msohtmlclip1\01\clip_image002.png" o:title="save">
+</v:imagedata></v:shape></span><span dir="RTL"></span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><span dir="RTL"></span>&nbsp;" و برای عدم اعمال هم گزینه ی "
+انصراف<img src="/HelpNewClock/images/Help/HelpImage/cancel.jpg" alt="cancel.jpg" width="16" height="16" border="0">&nbsp;</span><span style="font-size: 14pt; line-height: 115%;"><v:shape id="Picture_x0020_33" o:spid="_x0000_i1025" type="#_x0000_t75" style="width:12pt;height:12pt;
+ visibility:visible;mso-wrap-style:square"><v:imagedata src="file:///F:\Users\roya\AppData\Local\Temp\msohtmlclip1\01\clip_image003.png" o:title="cancel"></v:imagedata></v:shape></span><span dir="RTL"></span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><span dir="RTL"></span>&nbsp;" را کلیک کنید.</span></font><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></p><p></p>', NULL, N'DefinePersonnel', NULL)
+INSERT [dbo].[NW_Help] ([Help_ID], [Help_ParantID], [Help_FaName], [Help_EnName], [Help_FaHTMLContent], [Help_EnHTMLContent], [Help_FormKey], [Help_LevelOrder]) VALUES (CAST(11 AS Numeric(18, 0)), CAST(9 AS Numeric(18, 0)), N'تعریف مدیر و اپراتور', NULL, N'<p class="MsoNormal" align="right" style="text-align:right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">این قسمت مربوط به تخصیص دادن پست و نقش یک
+کارمند در سیستم است</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">توجه داشته باشید که وقتی یک شخص را به صورت پیش
+فرض در سیستم ثبت میکنید ، پست او هم به صورت پیش فرض " کارمند " ثبت
+میشود.</font></span></p><p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">ابتدا به وسیله ی جستجو ( کد پرسنلی یا نام )
+فرد مورد نظر را پیدا کنید ، برای مشاهده ی نتایج مشابه بر روی فلش آبی رنگی <img src="/HelpNewClock/images/Help/HelpImage/Clip_18-2.jpg" alt="Clip_18-2.jpg" width="18" height="20" border="0"></span><span style="font-size: 14pt; line-height: 115%;"><v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter">
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0">
+  <v:f eqn="sum @0 1 0">
+  <v:f eqn="sum 0 0 @1">
+  <v:f eqn="prod @2 1 2">
+  <v:f eqn="prod @3 21600 pixelWidth">
+  <v:f eqn="prod @3 21600 pixelHeight">
+  <v:f eqn="sum @0 0 1">
+  <v:f eqn="prod @6 1 2">
+  <v:f eqn="prod @7 21600 pixelWidth">
+  <v:f eqn="sum @8 21600 0">
+  <v:f eqn="prod @7 21600 pixelHeight">
+  <v:f eqn="sum @10 21600 0">
+ </v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect">
+ <o:lock v:ext="edit" aspectratio="t">
+</o:lock></v:path></v:stroke></v:shapetype><v:shape id="Picture_x0020_4" o:spid="_x0000_i1025" type="#_x0000_t75" style="width:13.5pt;height:15pt;visibility:visible;mso-wrap-style:square">
+ <v:imagedata src="file:///F:\Users\roya\AppData\Local\Temp\msohtmlclip1\01\clip_image001.jpg" o:title="Clip_18-2">
+</v:imagedata></v:shape></span><span dir="RTL"></span><span dir="RTL" style="font-size: 14pt; line-height: 115%;"><span dir="RTL"></span>&nbsp;<span lang="FA">که در کنار ستون "نتایج
+جستجو" قرار دارد کلیک کنید.</span></span>&nbsp;</font></span></p><p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><img src="/HelpNewClock/images/Help/HelpImage/Clip_31.jpg" alt="Clip_31.jpg" width="725" height="418" border="0"><br></font></span></p><p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><br></font></span></p><p class="MsoNormal" align="right" style="text-align:right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"></span></font></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">روبه روی نام شخص پست او نیز نمایش داده میشود.<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">با انتخاب گزینه ی " پست جدید <img src="/HelpNewClock/images/Help/HelpImage/add.jpg" alt="add.jpg" width="16" height="16" border="0"></span><span style="font-size: 14pt; line-height: 115%;"><v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter">
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0">
+  <v:f eqn="sum @0 1 0">
+  <v:f eqn="sum 0 0 @1">
+  <v:f eqn="prod @2 1 2">
+  <v:f eqn="prod @3 21600 pixelWidth">
+  <v:f eqn="prod @3 21600 pixelHeight">
+  <v:f eqn="sum @0 0 1">
+  <v:f eqn="prod @6 1 2">
+  <v:f eqn="prod @7 21600 pixelWidth">
+  <v:f eqn="sum @8 21600 0">
+  <v:f eqn="prod @7 21600 pixelHeight">
+  <v:f eqn="sum @10 21600 0">
+ </v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect">
+ <o:lock v:ext="edit" aspectratio="t">
+</o:lock></v:path></v:stroke></v:shapetype><v:shape id="Picture_x0020_34" o:spid="_x0000_i1028" type="#_x0000_t75" style="width:12pt;height:12pt;visibility:visible;mso-wrap-style:square">
+ <v:imagedata src="file:///F:\Users\roya\AppData\Local\Temp\msohtmlclip1\01\clip_image001.png" o:title="add">
+</v:imagedata></v:shape></span><span dir="RTL"></span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><span dir="RTL"></span>&nbsp;" پنجره ای با عنوان "پست های پرسنل"
+باز میشود</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">در همینجا شما میتوانید پست جدیدی را برای آن
+فرد &nbsp;ثبت <img src="/HelpNewClock/images/Help/HelpImage/save.jpg" alt="save.jpg" width="16" height="16" border="0"></span><span style="font-size: 14pt; line-height: 115%;"><v:shape id="Picture_x0020_35" o:spid="_x0000_i1027" type="#_x0000_t75" style="width:12pt;height:12pt;visibility:visible;
+ mso-wrap-style:square">
+ <v:imagedata src="file:///F:\Users\roya\AppData\Local\Temp\msohtmlclip1\01\clip_image002.png" o:title="save">
+</v:imagedata></v:shape></span><span dir="RTL"></span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><span dir="RTL"></span>&nbsp;، ویرایش <img src="/HelpNewClock/images/Help/HelpImage/edit.jpg" alt="edit.jpg" width="16" height="16" border="0"></span><span style="font-size: 14pt; line-height: 115%;"><v:shape id="Picture_x0020_36" o:spid="_x0000_i1026" type="#_x0000_t75" style="width:16.5pt;height:16.5pt;visibility:visible;
+ mso-wrap-style:square">
+ <v:imagedata src="file:///F:\Users\roya\AppData\Local\Temp\msohtmlclip1\01\clip_image003.png" o:title="edit">
+</v:imagedata></v:shape></span><span dir="RTL"></span><span dir="RTL" style="font-size: 14pt; line-height: 115%;"><span dir="RTL"></span>&nbsp;<span lang="FA">&nbsp;یا حذف <img src="/HelpNewClock/images/Help/HelpImage/remove.jpg" alt="remove.jpg" width="16" height="16" border="0"></span></span><span style="font-size: 14pt; line-height: 115%;"><v:shape id="Picture_x0020_37" o:spid="_x0000_i1025" type="#_x0000_t75" style="width:12pt;height:12pt;visibility:visible;
+ mso-wrap-style:square">
+ <v:imagedata src="file:///F:\Users\roya\AppData\Local\Temp\msohtmlclip1\01\clip_image004.png" o:title="remove">
+</v:imagedata></v:shape></span><span dir="RTL"></span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><span dir="RTL"></span>&nbsp;کنید.</span></font></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><img src="/HelpNewClock/images/Help/HelpImage/Clip_32.jpg" alt="Clip_32.jpg" width="750" height="434" border="0"><br></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><br></font></span></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"></span></font></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">عنوان یک پست توسط شما باید تعیین گردد.</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">وقتی شخص مورد نظر را انتخاب کردید و پستش را هم
+مشخص کردید گزینه ی " نمایش " را کلیک کنید تا اطلاعات مربوطه نمایش
+داده شود.</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">پس ازنمایش اطلاعات فرد از قسمت
+"وضعیت" میتوانید انتخاب کنید که آن فرد در چه نقشی در سیستم داشته باشد<span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><img src="/HelpNewClock/images/Help/HelpImage/Clip_33.jpg" alt="Clip_33.jpg" width="268" height="307" border="0"><br></font></span></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"></span></font></p><h1 align="right"><span lang="FA" dir="RTL"><font face="Tahoma">مدیر واحد:<o:p></o:p></font></span></h1>
+
+<p class="MsoNormal"><o:p><font face="Tahoma">&nbsp;</font></o:p></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">این نقش به سه قسمت تایید اولیه , ثانویه و
+نهایی تقسیم میشود<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right"></p><h1><font face="Tahoma"><span class="Heading2Char"><span lang="AR-SA" dir="RTL" style="line-height: 115%;"><font size="4">تاییداولیه:</font></span></span></font></h1><p></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">فردی که این نقش را در سیستم دارد تعدادی پرسنل
+تحت مدیریت او هستند و در جریان تایید درخواست ها در مرحله اول قرار دارد ، یعنی
+او اولین نفری است که درخواست پرسنل را در کارتابل خود میبیند .<o:p></o:p></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><br></font></span></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"></span></font></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">چنان چه برای تایید یک درخواست تایید اولیه کافی
+باشد , باید گزینه ی " تایید کننده نهایی " را تیک بزنید.<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">در صورتی که خود مدیر اجازه ی تایید درخواست های
+شخصی خود را داشته باشد باید گزینه ی "حق تایید درخواست شخصی " را تیک
+بزنید.<o:p></o:p></font></span></p>
+
+<h2 align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">تایید
+ثانویه:</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></h2>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">فردی که در این پست ایفای نقش میکند تعدادی از
+پرسنل تحت مدیریت او هستند و در جریان تایید درخواست های پرسنل در مرحله ی دوم
+قرارا دارد ، در صورتی که یک درخواست مورد تایید در مرحلۀی اولیه قرار گیرد ( و
+تایید کننده اولیه تیک تایید نهایی را نداشته باشد ) به صورت خودکار نرم افزار
+درخواست را برای این فرد ارسال میکند و در کارتابل او دیده میشود تا مورد برسی
+قرار گیرد.<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">چنانچه برای تایید یک درخواست تایید مدیر اولیه
+و&nbsp;<span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">سپس</span>&nbsp;مدیر ثانویه کافی باشد ، می بایست تیک "تایید کننده نهایی "را
+برای مدیر ثانویه فعال کنید.<o:p></o:p></font></span></p>
+
+<h2 align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">تایید
+نهایی:<o:p></o:p></font></span></h2>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">فردی که در این پست ایفای نقش میکند تعدادی از
+پرسنل تحت مدیریت او هستند، و درخواست های پرسنل پس از تایید به ترتیب مدیر اولیه
+و ثانویه به کارتابل وی فرستاده میشود تا بررسی شود، تایید وی برای به منزله ی
+تایید نهایی است .<o:p></o:p></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><br></font></span></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"></span></font></p><h2 align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">پیش کارت
+ها:</font></span></h2>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">در قسمت بعدی تنظیمات مربوط به " پیش
+کارتها " و " مقررات مجوز اضافه کاری" را مشاهده میکنید</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">پیش کارت عنوان هایی هست که یک کاربر میتواند
+برای درخواست های خود انتخواب کند.</font></span></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">در این قسمت شما می توانید دسترسی یک مدیر را به
+پیش کارت های درخواست را تایین کنید.<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">به عبارت ساده تر،تعیین میکنید یک مدیر کدام پیش
+کارت ها را در "کاتابل درخواست ها" ببیند<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">یعنی اگر برای یک مدیر فقط پیش کارت "مرخصی
+ساعتی استحقاقی" را انتخاب کنید<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">او در کارتابل خود فقط درخواست های "مرخصی
+ساعتی استحقاقی" پرسنل خود را مشاهده میکند.<o:p></o:p></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><img src="/HelpNewClock/images/Help/HelpImage/Clip_34.jpg" alt="Clip_34.jpg" width="504" height="151" border="0"><br></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><br></font></span></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"></span></font></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">برای تخصیص دادن یک پیش کارت بر روی آن کلیک
+کنید و سپس فلش آبی رنگ را کلیک کنید</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><img src="/HelpNewClock/images/Help/HelpImage/Select.jpg" alt="Select.jpg" width="24" height="24" border="0"><br></font></span></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"></span></font></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">پیش کارت از جدول سمت راست به جدول سمت چپ منتقل
+میشود و به این معنی است که پیش کارت مورد نظر شما به مدیر مربوطه اختصاص داده شده.</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">برای تسهیل در انتخاب پیش کارت ها شما میتوانید
+بر روی گزینه ی فلش آبیِ رنگ را کلیک کنید که شکل آن در پایین نمایش داده شده است.<o:p></o:p></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><img src="/HelpNewClock/images/Help/HelpImage/select%20all.jpg" alt="select all.jpg" width="24" height="24" border="0"><br></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><span lang="AR-SA" dir="RTL" style="font-size: 14pt; line-height: 115%;">با این کار تمام پیش کارت ها به لیست سمت چپ منتقل
+میشوند.</span><o:p></o:p></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><span lang="AR-SA" dir="RTL" style="font-size: 14pt; line-height: 115%;"></span></font></span></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%; color: rgb(192, 0, 0);">نکته</span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"> :<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">مسیری که درخواست ها برای تایید، بین مدیرها طی
+میکنند به دقت زیادی نیاز دارد<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">اگر دسترسی پیش کارتی برای به یک مدیر داده شد ،
+باید دقت داشته باشد که آیا مسیری برای این پیش کارت وجود دارد تا به مدیر مربوطه
+برسد؟<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">به عنوان مثال ، شما به یک مدیرثانویه&nbsp; پیش کارت "ماموریت ساعتی " را داده
+اید اما همین پیش کارت&nbsp; را به مدیراولیه ای
+که پیش از وی باید آن را مشاهده و بررسی کند ، نداده اید!<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">در این صورت نه مدیراولیه درخواست را مشاهده
+میکند نه مدیر ثانویه ، چون یک در خواست فقط در صورتی به مرحله ی بالاتر میرود که
+در مرحله ی اولیه ، و کلا در مرحله ی فعلی تایید شده باشد.</font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">&nbsp;<o:p></o:p></font></span></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"></span></font></p><h2 align="right"><font face="Tahoma"><span lang="AR-SA" dir="RTL" style="font-size: 14pt; line-height: 115%;">مقررات مجور
+اضافه کاری:</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></h2>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span lang="AR-SA" dir="RTL" style="font-size: 14pt; line-height: 115%;">قمست " مقررات مجور اضافه کاری " </span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">به شما این اجازه را میدهد که سقف
+زمانی را که یک مدیر میتواند در مورد مجوزهای</span><span lang="AR-SA" dir="RTL" style="font-size: 14pt; line-height: 115%;">&nbsp; "</span><span lang="AR-SA" dir="RTL" style="font-size: 14pt; line-height: 115%;">اجازه تایید مجوز اضافه کاری" و
+"اجازه ثبت اضافه کار دستوری"
+تصمیم بگیرد را مشخص کنید.</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p><p class="MsoNormal" align="right"><span lang="AR-SA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><img src="/HelpNewClock/images/Help/HelpImage/Clip_35.jpg" alt="Clip_35.jpg" width="573" height="171" border="0"><br></font></span></p><p class="MsoNormal" align="right"><span lang="AR-SA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><br></font></span></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="AR-SA" dir="RTL" style="font-size: 14pt; line-height: 115%;"></span></font></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">علامت نزدن هر مجوز به معنی
+عدم تخصیص آن مجوز است. </span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span lang="AR-SA" dir="RTL" style="font-size: 14pt; line-height: 115%;">توجه داشته باشید که برای ثبت و اعمال شرایطی که تا
+الان تنظیم کرده اید باید گزینه ی " ثبت <img src="/HelpNewClock/images/Help/HelpImage/save.jpg" alt="save.jpg" width="16" height="16" border="0"></span><span style="font-size: 14pt; line-height: 115%;"><v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+</v:shapetype></span><span lang="AR-SA" dir="RTL" style="font-size: 14pt; line-height: 115%;">" را کلیک کنید تا فرمان های شما ثبت شود.</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p><p class="MsoNormal" align="right"><span lang="AR-SA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><br></font></span></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="AR-SA" dir="RTL" style="font-size: 14pt; line-height: 115%;"></span></font></p><h2 align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">فیلتر نمایش:</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></h2>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">در این قسمت شما میتوانید تمامی پرسنل را به
+تفکیک نقش هایی که در سیستم دارند مشاهده کنید<o:p></o:p></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><img src="/HelpNewClock/images/Help/HelpImage/Clip_36.jpg" alt="Clip_36.jpg" width="606" height="236" border="0"><br></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><br></font></span></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"></span></font></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">برای این کار کافی است هر یک از نقش هایی را که
+میخواهید تیک بزنید و سپس گزینه ی نمایش را کلیک کنید.</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">پس از این که لیست پرسنل نمایش داده شد ،
+میتوانید با کلیک بر روی گزینه ی حذف <img src="/HelpNewClock/images/Help/HelpImage/remove.jpg" alt="remove.jpg" width="16" height="16" border="0"></span><span style="font-size: 14pt; line-height: 115%;"><v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter">
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0">
+  <v:f eqn="sum @0 1 0">
+  <v:f eqn="sum 0 0 @1">
+  <v:f eqn="prod @2 1 2">
+  <v:f eqn="prod @3 21600 pixelWidth">
+  <v:f eqn="prod @3 21600 pixelHeight">
+  <v:f eqn="sum @0 0 1">
+  <v:f eqn="prod @6 1 2">
+  <v:f eqn="prod @7 21600 pixelWidth">
+  <v:f eqn="sum @8 21600 0">
+  <v:f eqn="prod @7 21600 pixelHeight">
+  <v:f eqn="sum @10 21600 0">
+ </v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect">
+ <o:lock v:ext="edit" aspectratio="t">
+</o:lock></v:path></v:stroke></v:shapetype><v:shape id="Picture_x0020_28" o:spid="_x0000_i1025" type="#_x0000_t75" style="width:12pt;height:12pt;visibility:visible;mso-wrap-style:square">
+ <v:imagedata src="file:///F:\Users\roya\AppData\Local\Temp\msohtmlclip1\01\clip_image001.png" o:title="remove">
+</v:imagedata></v:shape></span><span dir="RTL"></span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><span dir="RTL"></span>&nbsp;مجوزهایی را که این کاربر را از سیستم حذف کنید
+، با این عمل تمام دسترسی های شخص به سیستم قطع خواهد شد البته فقط در پستی که حذف
+کردید!</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><br></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><br></span></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p class="MsoNormal" align="right" style="text-align:right"><span style="font-size:14.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-ascii-theme-font:major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:
+major-bidi;mso-bidi-language:FA"><o:p></o:p></span></p>', NULL, N'DefineAdminOperator', NULL)
+INSERT [dbo].[NW_Help] ([Help_ID], [Help_ParantID], [Help_FaName], [Help_EnName], [Help_FaHTMLContent], [Help_EnHTMLContent], [Help_FormKey], [Help_LevelOrder]) VALUES (CAST(12 AS Numeric(18, 0)), CAST(9 AS Numeric(18, 0)), N'تعریف پرسنل تحت مدیریت', NULL, N'<p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">در این قسمت شما میتوانید تنظیم کنید که یک مدیر
+چه بخش و پرسنلی&nbsp; را تحت مدیریت خود داشته
+باشد.<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">برای این کار ابتدا لازم است شخص مورد نظر را در
+قسمت جستجوی پرسنل با استفاده از کد پرسنلی یا نام ، بیابید<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">لیست نتایج جستجو<img src="/HelpNewClock/images/Help/HelpImage/Clip_18-2.jpg" alt="Clip_18-2.jpg" width="18" height="20" border="0"> </span><span style="font-size: 14pt; line-height: 115%;"><v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter">
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0">
+  <v:f eqn="sum @0 1 0">
+  <v:f eqn="sum 0 0 @1">
+  <v:f eqn="prod @2 1 2">
+  <v:f eqn="prod @3 21600 pixelWidth">
+  <v:f eqn="prod @3 21600 pixelHeight">
+  <v:f eqn="sum @0 0 1">
+  <v:f eqn="prod @6 1 2">
+  <v:f eqn="prod @7 21600 pixelWidth">
+  <v:f eqn="sum @8 21600 0">
+  <v:f eqn="prod @7 21600 pixelHeight">
+  <v:f eqn="sum @10 21600 0">
+ </v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect">
+ <o:lock v:ext="edit" aspectratio="t">
+</o:lock></v:path></v:stroke></v:shapetype><v:shape id="Picture_x0020_4" o:spid="_x0000_i1027" type="#_x0000_t75" style="width:13.5pt;height:15pt;visibility:visible;mso-wrap-style:square">
+ <v:imagedata src="file:///F:\Users\roya\AppData\Local\Temp\msohtmlclip1\01\clip_image001.jpg" o:title="Clip_18-2">
+</v:imagedata></v:shape></span><span dir="RTL"></span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><span dir="RTL"></span>، نتایج مشابه جستجوی شما را نشان
+میدهد.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">شما میتوانید پرسنل یا بخش را تحت مدیریت یک
+مدیر درآورید .<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">ابتدا تخصیص یک بخش را بررسی میکنیم</font></span></p><p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><img src="/HelpNewClock/images/Help/HelpImage/Clip_37.jpg" alt="Clip_37.jpg" width="733" height="514" border="0"><br></font></span></p><p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><br></font></span></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">در جدول بخش ها شما میتوانید کد بخش یا اسم بخش
+مورد نظر راجستجو میکنید ، پس از نمایش آن بر روی بخش کلیک کنید سپس گزینه ی اضافه
+<img src="/HelpNewClock/images/Help/HelpImage/add.jpg" alt="add.jpg" width="16" height="16" border="0"></span><span style="font-size: 14pt; line-height: 115%;"><v:shape id="Picture_x0020_29" o:spid="_x0000_i1026" type="#_x0000_t75" style="width:12pt;height:12pt;visibility:visible;
+ mso-wrap-style:square">
+ <v:imagedata src="file:///F:\Users\roya\AppData\Local\Temp\msohtmlclip1\01\clip_image002.png" o:title="add">
+</v:imagedata></v:shape></span><span dir="RTL"></span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><span dir="RTL"></span>&nbsp;که در پایین جدول قرار دارد را کلیک کنید.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">توجه کنید که هر بخش دارای پرسنل تعریف شده ی
+خود است و لازم نیست برای هر بخش به دنبال پرسنلش بگردید ، چنانچه پرسنل خاصی را
+مورد نظر دارید<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">به همین صورت عمل میکنیم ، ابتدا در جدول پرسنل
+نام یا کد پرسنل را جستجو کنید سپس بر روی گزینه ی اضافه <img src="/HelpNewClock/images/Help/HelpImage/add.jpg" alt="add.jpg" width="16" height="16" border="0"></span><span style="font-size: 14pt; line-height: 115%;"><v:shape id="Picture_x0020_30" o:spid="_x0000_i1025" type="#_x0000_t75" style="width:12pt;height:12pt;visibility:visible;
+ mso-wrap-style:square">
+ <v:imagedata src="file:///F:\Users\roya\AppData\Local\Temp\msohtmlclip1\01\clip_image002.png" o:title="add">
+</v:imagedata></v:shape></span><span dir="RTL"></span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><span dir="RTL"></span>&nbsp;کلیک کنید.<o:p></o:p></span></font></p><p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><br></font></span></p><p class="MsoNormal" align="right" style="text-align:right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"></span></font></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">جدولی در پایین صحه طراحی شده است با عنوان
+"گزینه های انتخاب شده"</font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">&nbsp;<img src="/HelpNewClock/images/Help/HelpImage/Clip_38.jpg" alt="Clip_38.jpg" width="650" height="105" border="0"><o:p></o:p></font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><br></font></span></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"></span></font></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">بخش ها و پرسنلی را که انتخاب کردید در این جدول
+اضافه میشود و همه ی بخش ها و پرسنلی را که مدیر مورد نظر شما تحت مدیریت دارد در
+این جدول نشان داده میشود.</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">در این جدول گزینه ای وجود دارد به نام
+"زیر بخش" ، در صورتی که بخش مورد نظر شما دارای زیر بخش باشد با تیک
+زدن این گزینه بخش انتخاب شده به همراه زیربخش هایی که دارد تحت مدیریت فرد قرار
+میگیرد.</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span dir="RTL"></span><span dir="RTL" style="font-size: 14pt; line-height: 115%;"><span dir="RTL"></span>&nbsp;<span lang="FA">برای این کار باید گزینه ی ویرایش
+<img src="/HelpNewClock/images/Help/HelpImage/edit.jpg" alt="edit.jpg" width="16" height="16" border="0"></span></span><span style="font-size: 14pt; line-height: 115%;"><v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter">
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0">
+  <v:f eqn="sum @0 1 0">
+  <v:f eqn="sum 0 0 @1">
+  <v:f eqn="prod @2 1 2">
+  <v:f eqn="prod @3 21600 pixelWidth">
+  <v:f eqn="prod @3 21600 pixelHeight">
+  <v:f eqn="sum @0 0 1">
+  <v:f eqn="prod @6 1 2">
+  <v:f eqn="prod @7 21600 pixelWidth">
+  <v:f eqn="sum @8 21600 0">
+  <v:f eqn="prod @7 21600 pixelHeight">
+  <v:f eqn="sum @10 21600 0">
+ </v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect">
+ <o:lock v:ext="edit" aspectratio="t">
+</o:lock></v:path></v:stroke></v:shapetype><v:shape id="Picture_x0020_39" o:spid="_x0000_i1027" type="#_x0000_t75" style="width:16.5pt;height:16.5pt;visibility:visible;mso-wrap-style:square">
+ <v:imagedata src="file:///F:\Users\roya\AppData\Local\Temp\msohtmlclip1\01\clip_image001.png" o:title="edit">
+</v:imagedata></v:shape></span><span dir="RTL"></span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><span dir="RTL"></span>&nbsp;را انتخواب کنید وسپس ثبت <img src="/HelpNewClock/images/Help/HelpImage/save.jpg" alt="save.jpg" width="16" height="16" border="0"></span><span style="font-size: 14pt; line-height: 115%;"><v:shape id="Picture_x0020_7" o:spid="_x0000_i1026" type="#_x0000_t75" style="width:12pt;height:12pt;visibility:visible;
+ mso-wrap-style:square">
+ <v:imagedata src="file:///F:\Users\roya\AppData\Local\Temp\msohtmlclip1\01\clip_image002.png" o:title="save">
+</v:imagedata></v:shape></span><span dir="RTL"></span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><span dir="RTL"></span>&nbsp;کنید .</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">و در صورتی که بخواهید بخشی یا پرسنلی را از مدیریت
+فردی خارج کنید کافی است گزینه ی حذف <img src="/HelpNewClock/images/Help/HelpImage/remove.jpg" alt="remove.jpg" width="16" height="16" border="0"></span><span style="font-size: 14pt; line-height: 115%;"><v:shape id="Picture_x0020_40" o:spid="_x0000_i1025" type="#_x0000_t75" style="width:12pt;height:12pt;visibility:visible;mso-wrap-style:square">
+ <v:imagedata src="file:///F:\Users\roya\AppData\Local\Temp\msohtmlclip1\01\clip_image003.png" o:title="remove">
+</v:imagedata></v:shape></span><span dir="RTL"></span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><span dir="RTL"></span>&nbsp;را کلیک کنید.</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size:
+14.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-ascii-theme-font:
+major-bidi;mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;
+mso-bidi-language:FA"><br></span></p><p></p><p></p>', NULL, N'DefineManagerPersonnel', NULL)
+INSERT [dbo].[NW_Help] ([Help_ID], [Help_ParantID], [Help_FaName], [Help_EnName], [Help_FaHTMLContent], [Help_EnHTMLContent], [Help_FormKey], [Help_LevelOrder]) VALUES (CAST(13 AS Numeric(18, 0)), CAST(9 AS Numeric(18, 0)), N'دسترسی نقش ها', NULL, N'<p class="MsoNormal" align="right" style="text-align:right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">در این قسمت شما میتوانید دسترسی ها و امکاناتی
+را که در نرم افزار وجود دارد را معیین کنید</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p><p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><img src="/HelpNewClock/images/Help/HelpImage/Clip_39.jpg" alt="Clip_39.jpg" width="642" height="215" border="0"><br></font></span></p><p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><br></font></span></p><p class="MsoNormal" align="right" style="text-align:right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"></span></font></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">به صورت کلی تنها صفحاتی برای نقش ها( ستون های
+جدول ) قابل دسترسی هستند ، که تیک خورده</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">ودر غیر این صورت خاموش میباشند و دسترسی به
+انها ممکن نیست.<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">در کنار ستون "نام صفحه" علامت + را
+مشاهده میکنید با کلیک کردن بر روی این علامت </span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">جزئیات</span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"> مربوط به آن صفحه نمایش داده میشود</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">چنانچه صفحه دارای گزینه های </span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">جزئی تری</span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"> برای تنظیم کردن باشد به صورت لیست نمایش داده میشود</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p><p class="MsoNormal" align="right"><font face="Tahoma"><img src="/HelpNewClock/images/Help/HelpImage/Clip_40.jpg" alt="Clip_40.jpg" width="600" height="254" border="0"><br></font></p><p class="MsoNormal" align="right"><font face="Tahoma"><br></font></p><p class="MsoNormal" align="right"></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">ستون "نام کنترل" به ابزارهایی اشاره
+میکند که آن صفحه دارا میباشد.</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">برای تنظیم این ابزارها باید گزینه ی ویرایش <img src="/HelpNewClock/images/Help/HelpImage/edit.jpg" alt="edit.jpg" width="16" height="16" border="0"></span><span style="font-size: 14pt; line-height: 115%;"><v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter">
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0">
+  <v:f eqn="sum @0 1 0">
+  <v:f eqn="sum 0 0 @1">
+  <v:f eqn="prod @2 1 2">
+  <v:f eqn="prod @3 21600 pixelWidth">
+  <v:f eqn="prod @3 21600 pixelHeight">
+  <v:f eqn="sum @0 0 1">
+  <v:f eqn="prod @6 1 2">
+  <v:f eqn="prod @7 21600 pixelWidth">
+  <v:f eqn="sum @8 21600 0">
+  <v:f eqn="prod @7 21600 pixelHeight">
+  <v:f eqn="sum @10 21600 0">
+ </v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect">
+ <o:lock v:ext="edit" aspectratio="t">
+</o:lock></v:path></v:stroke></v:shapetype><v:shape id="Picture_x0020_14" o:spid="_x0000_i1027" type="#_x0000_t75" style="width:16.5pt;height:16.5pt;visibility:visible;mso-wrap-style:square">
+ <v:imagedata src="file:///F:\Users\roya\AppData\Local\Temp\msohtmlclip1\01\clip_image001.png" o:title="edit">
+</v:imagedata></v:shape></span><span dir="RTL"></span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><span dir="RTL"></span>&nbsp;را انتخاب کنید، شما میتوانید تمام تیک هایی که
+دسترسی ها را کنترل میکنند به صورت دلخواه تنظیم کنید و سپس تغییرات را ثبت <img src="/HelpNewClock/images/Help/HelpImage/save.jpg" alt="save.jpg" width="16" height="16" border="0"></span><span style="font-size: 14pt; line-height: 115%;"><v:shape id="Picture_x0020_17" o:spid="_x0000_i1026" type="#_x0000_t75" style="width:12pt;height:12pt;visibility:visible;
+ mso-wrap-style:square">
+ <v:imagedata src="file:///F:\Users\roya\AppData\Local\Temp\msohtmlclip1\01\clip_image002.png" o:title="save">
+</v:imagedata></v:shape></span><span dir="RTL"></span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><span dir="RTL"></span>&nbsp;و یا انصراف&nbsp;<img src="/HelpNewClock/images/Help/HelpImage/remove.jpg" alt="remove.jpg" width="16" height="16" border="0"></span><span style="font-size: 14pt; line-height: 115%;"><v:shape id="Picture_x0020_18" o:spid="_x0000_i1025" type="#_x0000_t75" style="width:12pt;height:12pt;visibility:visible;mso-wrap-style:square">
+ <v:imagedata src="file:///F:\Users\roya\AppData\Local\Temp\msohtmlclip1\01\clip_image003.png" o:title="remove">
+</v:imagedata></v:shape></span><span dir="RTL"></span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><span dir="RTL"></span> دهید.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">بخش ثبت تردد باید توسط اپراتور یا مدیر کنترل
+میشود .<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">و همینطور کارتابل درخواست ها ، که باید توسط
+مدیر کنترل میشود .</font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">
+
+</font></span></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">نکته :</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">حالت "تعریف نشده" حالتی است که شما
+وضعیتی را برای پست یک پرسنل مشخص نکرده اید.</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><br></font></span></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"></span></font></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%; color: red;">نکته :</span><span style="font-size: 14pt; line-height: 115%; color: red;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">تنظیم کردن دسترسی ها نیاز به شناخت و دقت
+فراوانی دارد ، زیرا در صورت اختصاص دادن دسترسی های سطح بالا مانند "ثبت
+تردد" به کاربران عادی ، عملکرد سیستم را دچار اشتباه میکنید!&nbsp;</font></span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></p><p></p><p></p><p></p><p></p>', NULL, N'AdminAccessRoleNavbar', NULL)
+INSERT [dbo].[NW_Help] ([Help_ID], [Help_ParantID], [Help_FaName], [Help_EnName], [Help_FaHTMLContent], [Help_EnHTMLContent], [Help_FormKey], [Help_LevelOrder]) VALUES (CAST(14 AS Numeric(18, 0)), CAST(9 AS Numeric(18, 0)), N'تعریف کاربران پیش فرض', NULL, N'<p class="MsoNormal" align="right" style="text-align:right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">در این قسمت نرم افزار امکان این را به شما
+میدهد که برای پرسنلی که در سیستم ثبت شده اند اما صفحه ی کاربری ندارند , به صورت
+پیش فرض این صفحه را درست کنید.</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right" style="text-align:right"><font face="Tahoma"><span dir="RTL"></span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><span dir="RTL"></span>&nbsp;عمل ساختن صفحه کاربری میتواند به صورت جمعی یا
+تک نفره انجام شود<o:p></o:p></span></font></p><p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><img src="/HelpNewClock/images/Help/HelpImage/Clip_30.jpg" alt="Clip_30.jpg" width="610" height="470" border="0"><br></font></span></p><p class="MsoNormal" align="right" style="text-align:right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma"><br></font></span></p><p class="MsoNormal" align="right" style="text-align:right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"></span></font></p><p class="MsoNormal" align="right"></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">برای انتخاب گروهی نیز ، شما میتوانید با انتخاب
+گزینه ی " انتخاب پرسنل با نام کاربری " تمام افرادی راکه &nbsp;نام کاربری دارند انتخاب کنید</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">و یا با انتخاب گزینه ی " انتخاب پرسنل
+بدون نام کاربری " تمام افرادی را انتخب کنید که در سیستم نام کاربری ندارند.<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">با انتخاب شماره صفحاتی که در پایین جدول نمایش
+داده شده است ، میتوانید ادامه ی لیست پرسنل را مشاهده کنید.<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">به صورت تک نفره میتوانید فرد را با کد پرسنلی ،
+نام یا نام کاربری اش جستجو کنید و به صورت انفرادی انتخابش کنید.</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">پس از انتخاب کردن و تیک زدن افراد مورد نظر ،
+روی گزینه ی " ثبت کاربر پیش فرض </span><span style="font-size: 14pt; line-height: 115%;"><v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter">
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0">
+  <v:f eqn="sum @0 1 0">
+  <v:f eqn="sum 0 0 @1">
+  <v:f eqn="prod @2 1 2">
+  <v:f eqn="prod @3 21600 pixelWidth">
+  <v:f eqn="prod @3 21600 pixelHeight">
+  <v:f eqn="sum @0 0 1">
+  <v:f eqn="prod @6 1 2">
+  <v:f eqn="prod @7 21600 pixelWidth">
+  <v:f eqn="sum @8 21600 0">
+  <v:f eqn="prod @7 21600 pixelHeight">
+  <v:f eqn="sum @10 21600 0">
+ </v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect">
+ <o:lock v:ext="edit" aspectratio="t">
+</o:lock></v:path></v:stroke></v:shapetype><v:shape id="Picture_x0020_9" o:spid="_x0000_i1025" type="#_x0000_t75" style="width:12pt;height:12pt;visibility:visible;mso-wrap-style:square">
+ <v:imagedata src="file:///F:\Users\roya\AppData\Local\Temp\msohtmlclip1\01\clip_image001.png" o:title="save">
+</v:imagedata></v:shape></span><span dir="RTL"></span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><span dir="RTL"></span>&nbsp;" کلیک کنید .</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;">با این کار مشخصات افراد در سیستم شناخته میشوند
+, و با نام کاربری خود و رمز عبور</span><span style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">که هر دو به صورت پیش فرض شماره ی پرسنلی خود
+فرد بدون صفرهای سمت چپ است ، میتواند&nbsp;
+وارد سیستم شود.</font></span></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">&nbsp;</font></span><span style="font-size:14.0pt;line-height:115%;
+font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-ascii-theme-font:major-bidi;
+mso-hansi-theme-font:major-bidi;mso-bidi-theme-font:major-bidi;mso-bidi-language:
+FA"><o:p></o:p></span></p><p></p><p></p>', NULL, N'DefineDefultUser', NULL)
+INSERT [dbo].[NW_Help] ([Help_ID], [Help_ParantID], [Help_FaName], [Help_EnName], [Help_FaHTMLContent], [Help_EnHTMLContent], [Help_FormKey], [Help_LevelOrder]) VALUES (CAST(19 AS Numeric(18, 0)), CAST(8 AS Numeric(18, 0)), N'انتخاب پست', NULL, N'<p class="MsoNormal" align="right" style="text-align: right;"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 21px;"><font face="Tahoma">درصورت تخصیص داده شدن چند پست به یک فرد میبایست ابتدا پست مورد نظر انتخاب شود<o:p></o:p></font></span></p><p class="MsoNormal" align="right" style="text-align: right;"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 21px;"><font face="Tahoma">&nbsp;( چون دسترسی های هر پست به صورت متفاوتی تعیین شده ) .<o:p></o:p></font></span></p><p class="MsoNormal" align="right" style="text-align: right;"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 21px;"><font face="Tahoma"><img src="/HelpNewClock/images/Help/HelpImage/Clip_24.jpg" alt="Clip_24.jpg" width="439" height="113" border="0"><br></font></span></p><p class="MsoNormal" align="right" style="text-align: right;"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 21px;"><font face="Tahoma"><br></font></span></p><p class="MsoNormal" align="right" style="text-align: right;"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 21px;"></span></font></p><p class="MsoNormal" align="right"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 21px;">پس از انتخاب پست و ورود به سیستم با انتخاب گزینه ی تغییر پست که در بالای صفحه طراحی شده ، میتوانید بین پست ها جا به جا شوید</span><span style="font-size: 14pt; line-height: 21px;"><o:p></o:p></span></font></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 21px;"><font face="Tahoma"><img src="/HelpNewClock/images/Help/HelpImage/Clip_25.jpg" alt="Clip_25.jpg" width="28" height="28" border="0">&nbsp; &nbsp;<span style="font-size: 14pt;">(تغییر پست)</span></font></span></p>', NULL, N'SelectPost', NULL)
+INSERT [dbo].[NW_Help] ([Help_ID], [Help_ParantID], [Help_FaName], [Help_EnName], [Help_FaHTMLContent], [Help_EnHTMLContent], [Help_FormKey], [Help_LevelOrder]) VALUES (CAST(20 AS Numeric(18, 0)), CAST(1 AS Numeric(18, 0)), N'ورود به سیستم', NULL, N'<p class="MsoNormal" align="right" style="text-align: right;"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 21px;"><font face="Tahoma">وارد شدن و خارج شدن از سیستم ( صفحه ی کاربری ) :<o:p></o:p></font></span></p><p class="MsoNormal" align="right" style="text-align: right;"><font face="Tahoma"><span style="font-size: 14pt; line-height: 21px;"><v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f"><v:stroke joinstyle="miter"><v:formulas><v:f eqn="if lineDrawn pixelLineWidth 0"><v:f eqn="sum @0 1 0"><v:f eqn="sum 0 0 @1"><v:f eqn="prod @2 1 2"><v:f eqn="prod @3 21600 pixelWidth"><v:f eqn="prod @3 21600 pixelHeight"><v:f eqn="sum @0 0 1"><v:f eqn="prod @6 1 2"><v:f eqn="prod @7 21600 pixelWidth"><v:f eqn="sum @8 21600 0"><v:f eqn="prod @7 21600 pixelHeight"><v:f eqn="sum @10 21600 0"></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:formulas><v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"><o:lock v:ext="edit" aspectratio="t"></o:lock></v:path></v:stroke></v:shapetype><v:shape id="Picture_x0020_4" o:spid="_x0000_i1025" type="#_x0000_t75" style="width: 216.75pt; height: 116.25pt; visibility: visible;"><v:imagedata src="file:///F:\Users\roya\AppData\Local\Temp\msohtmlclip1\01\clip_image001.jpg" o:title="login"></v:imagedata></v:shape></span><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 21px;"><o:p></o:p></span></font></p><p class="MsoNormal" align="right" style="text-align: right;"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 21px;"><o:p><font face="Tahoma"><img src="/HelpNewClock/images/Help/HelpImage/login.jpg" alt="login.jpg" width="332" height="231" border="0">&nbsp;</font></o:p></span></p><p class="MsoNormal" align="right" style="text-align: right;"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 21px;"><o:p><font face="Tahoma"><br></font></o:p></span></p><p class="MsoNormal" align="right" style="text-align: right;"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 21px;"><font face="Tahoma">صفحه ی کاربری شما جایی است که تمام اطلاعات مربوط به کارکرد شما در آن وجود دارد<o:p></o:p></font></span></p><p class="MsoNormal" align="right" style="text-align: right;"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 21px;">در این صفحه بسته به جایگاه شما و نقش شما در سیستم اختیاراتی به شما داده میشود که با آنها اشنا میشویم.</span><span style="font-size: 14pt; line-height: 21px;"><o:p></o:p></span></font></p><p class="MsoNormal" align="right" style="text-align: right;"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 21px;">با وارد کردن شماره پرسنلی (بدون صفر های سمت چپ) &nbsp;وکلمه عبور میتوانید به صفحه کاربری خود دسترسی پیدا کنید.</span><span style="font-size: 14pt; line-height: 21px;"><o:p></o:p></span></font></p><p class="MsoNormal" align="right" style="text-align: right;"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 21px;"><font face="Tahoma">نکته : کلمه عبور به صورت پیش فرض شماره پرسنلی فرد بدون صفرهای سمت چپ میباشد.</font></span></p><p class="MsoNormal" align="right" style="text-align: right;"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 21px;"></span></font></p><p class="MsoNormal" align="right"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 115%;"><font face="Tahoma">نکته : برای ورود به قسمت مدیریت سیستم شماره و
+رمز جداگانه ای تعریف شده است.<o:p></o:p></font></span></p><p></p><p class="MsoNormal" align="right" style="text-align: right;"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 21px;"><font face="Tahoma"><br></font></span></p><p class="MsoNormal" align="right" style="text-align: right;"><font face="Tahoma"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 21px;"></span></font></p><p class="MsoNormal" align="right" style="font-size: medium; line-height: normal;"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 21px;"><font face="Tahoma">پس از ورود به صفحه با کلیک کردن بر روی گزینه ی خروج میتوانید از سیستم خارج میشوید (تصویر گزینه ی خروج در زیر نمایش داده شده است)<span style="font-size: 14pt;"><o:p></o:p></span></font></span></p><p class="MsoNormal" align="right" style="font-size: medium; line-height: normal;"><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 21px;"><font face="Tahoma"><img src="/HelpNewClock/images/Help/HelpImage/Clip_26.jpg" alt="Clip_26.jpg" width="36" height="36" border="0"><br></font></span></p><div><span lang="FA" dir="RTL" style="font-size: 14pt; line-height: 21px;"><br></span></div><p></p>', NULL, N'Login', NULL)
+SET IDENTITY_INSERT [dbo].[NW_Help] OFF
+/****** Object:  Table [dbo].[NW_AssignReportParameter]    Script Date: 05/29/2013 16:20:28 ******/
+SET IDENTITY_INSERT [dbo].[NW_AssignReportParameter] ON
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(1 AS Numeric(18, 0)), CAST(1 AS Numeric(18, 0)), CAST(2 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(2 AS Numeric(18, 0)), CAST(1 AS Numeric(18, 0)), CAST(4 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(7 AS Numeric(18, 0)), CAST(5 AS Numeric(18, 0)), CAST(3 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(8 AS Numeric(18, 0)), CAST(5 AS Numeric(18, 0)), CAST(4 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(9 AS Numeric(18, 0)), CAST(6 AS Numeric(18, 0)), CAST(3 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(10 AS Numeric(18, 0)), CAST(6 AS Numeric(18, 0)), CAST(4 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(11 AS Numeric(18, 0)), CAST(8 AS Numeric(18, 0)), CAST(3 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(20 AS Numeric(18, 0)), CAST(8 AS Numeric(18, 0)), CAST(4 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(21 AS Numeric(18, 0)), CAST(9 AS Numeric(18, 0)), CAST(1 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(22 AS Numeric(18, 0)), CAST(9 AS Numeric(18, 0)), CAST(4 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(23 AS Numeric(18, 0)), CAST(11 AS Numeric(18, 0)), CAST(3 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(24 AS Numeric(18, 0)), CAST(11 AS Numeric(18, 0)), CAST(4 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(25 AS Numeric(18, 0)), CAST(11 AS Numeric(18, 0)), CAST(7 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(26 AS Numeric(18, 0)), CAST(13 AS Numeric(18, 0)), CAST(3 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(27 AS Numeric(18, 0)), CAST(13 AS Numeric(18, 0)), CAST(4 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(28 AS Numeric(18, 0)), CAST(13 AS Numeric(18, 0)), CAST(6 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(29 AS Numeric(18, 0)), CAST(14 AS Numeric(18, 0)), CAST(4 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(31 AS Numeric(18, 0)), CAST(18 AS Numeric(18, 0)), CAST(3 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(32 AS Numeric(18, 0)), CAST(18 AS Numeric(18, 0)), CAST(4 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(33 AS Numeric(18, 0)), CAST(19 AS Numeric(18, 0)), CAST(2 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(34 AS Numeric(18, 0)), CAST(19 AS Numeric(18, 0)), CAST(4 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(41 AS Numeric(18, 0)), CAST(21 AS Numeric(18, 0)), CAST(3 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(42 AS Numeric(18, 0)), CAST(21 AS Numeric(18, 0)), CAST(4 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(43 AS Numeric(18, 0)), CAST(22 AS Numeric(18, 0)), CAST(3 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(44 AS Numeric(18, 0)), CAST(22 AS Numeric(18, 0)), CAST(4 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(45 AS Numeric(18, 0)), CAST(23 AS Numeric(18, 0)), CAST(3 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(46 AS Numeric(18, 0)), CAST(23 AS Numeric(18, 0)), CAST(4 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(47 AS Numeric(18, 0)), CAST(24 AS Numeric(18, 0)), CAST(3 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(48 AS Numeric(18, 0)), CAST(24 AS Numeric(18, 0)), CAST(4 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(49 AS Numeric(18, 0)), CAST(26 AS Numeric(18, 0)), CAST(3 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(50 AS Numeric(18, 0)), CAST(26 AS Numeric(18, 0)), CAST(4 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(51 AS Numeric(18, 0)), CAST(27 AS Numeric(18, 0)), CAST(3 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(52 AS Numeric(18, 0)), CAST(27 AS Numeric(18, 0)), CAST(4 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(53 AS Numeric(18, 0)), CAST(29 AS Numeric(18, 0)), CAST(3 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(54 AS Numeric(18, 0)), CAST(29 AS Numeric(18, 0)), CAST(4 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(55 AS Numeric(18, 0)), CAST(30 AS Numeric(18, 0)), CAST(2 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(56 AS Numeric(18, 0)), CAST(30 AS Numeric(18, 0)), CAST(4 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(57 AS Numeric(18, 0)), CAST(31 AS Numeric(18, 0)), CAST(3 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(59 AS Numeric(18, 0)), CAST(31 AS Numeric(18, 0)), CAST(4 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(60 AS Numeric(18, 0)), CAST(32 AS Numeric(18, 0)), CAST(3 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(61 AS Numeric(18, 0)), CAST(32 AS Numeric(18, 0)), CAST(4 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(62 AS Numeric(18, 0)), CAST(33 AS Numeric(18, 0)), CAST(3 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(63 AS Numeric(18, 0)), CAST(33 AS Numeric(18, 0)), CAST(4 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(64 AS Numeric(18, 0)), CAST(34 AS Numeric(18, 0)), CAST(3 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(65 AS Numeric(18, 0)), CAST(34 AS Numeric(18, 0)), CAST(4 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(66 AS Numeric(18, 0)), CAST(34 AS Numeric(18, 0)), CAST(11 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(67 AS Numeric(18, 0)), CAST(34 AS Numeric(18, 0)), CAST(10 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(68 AS Numeric(18, 0)), CAST(16 AS Numeric(18, 0)), CAST(4 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(69 AS Numeric(18, 0)), CAST(16 AS Numeric(18, 0)), CAST(12 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(70 AS Numeric(18, 0)), CAST(37 AS Numeric(18, 0)), CAST(3 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(71 AS Numeric(18, 0)), CAST(37 AS Numeric(18, 0)), CAST(4 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(72 AS Numeric(18, 0)), CAST(38 AS Numeric(18, 0)), CAST(3 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(73 AS Numeric(18, 0)), CAST(38 AS Numeric(18, 0)), CAST(4 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(74 AS Numeric(18, 0)), CAST(40 AS Numeric(18, 0)), CAST(2 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(75 AS Numeric(18, 0)), CAST(40 AS Numeric(18, 0)), CAST(4 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(76 AS Numeric(18, 0)), CAST(23 AS Numeric(18, 0)), CAST(14 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(77 AS Numeric(18, 0)), CAST(24 AS Numeric(18, 0)), CAST(9 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(78 AS Numeric(18, 0)), CAST(29 AS Numeric(18, 0)), CAST(9 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(79 AS Numeric(18, 0)), CAST(21 AS Numeric(18, 0)), CAST(10 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(80 AS Numeric(18, 0)), CAST(8 AS Numeric(18, 0)), CAST(9 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(81 AS Numeric(18, 0)), CAST(26 AS Numeric(18, 0)), CAST(9 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(82 AS Numeric(18, 0)), CAST(42 AS Numeric(18, 0)), CAST(3 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(83 AS Numeric(18, 0)), CAST(42 AS Numeric(18, 0)), CAST(4 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(84 AS Numeric(18, 0)), CAST(42 AS Numeric(18, 0)), CAST(9 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(85 AS Numeric(18, 0)), CAST(43 AS Numeric(18, 0)), CAST(3 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(86 AS Numeric(18, 0)), CAST(43 AS Numeric(18, 0)), CAST(4 AS Numeric(18, 0)))
+INSERT [dbo].[NW_AssignReportParameter] ([AssignReportParameter_ID], [AssignReportParameter_ReportID], [AssignReportParameter_ReportParameterID]) VALUES (CAST(87 AS Numeric(18, 0)), CAST(43 AS Numeric(18, 0)), CAST(9 AS Numeric(18, 0)))
+SET IDENTITY_INSERT [dbo].[NW_AssignReportParameter] OFF
+
+UPDATE [dbo].[pishcard] SET [Pish_activeWeb] = 'True' ,[IsPermit] = 'False',[IsDaily] = 'False' WHERE [Pish_Code]=0
+UPDATE [dbo].[pishcard] SET [Pish_activeWeb] = 'True' ,[IsPermit] = 'True',[IsDaily] = 'False' WHERE [Pish_Code]=3
+UPDATE [dbo].[pishcard] SET [Pish_activeWeb] = 'True' ,[IsPermit] = 'True',[IsDaily] = 'False' WHERE [Pish_Code]=21
+UPDATE [dbo].[pishcard] SET [Pish_activeWeb] = 'True' ,[IsPermit] = 'True',[IsDaily] = 'False' WHERE [Pish_Code]=22
+UPDATE [dbo].[pishcard] SET [Pish_activeWeb] = 'True' ,[IsPermit] = 'True',[IsDaily] = 'False' WHERE [Pish_Code]=23
+UPDATE [dbo].[pishcard] SET [Pish_activeWeb] = 'True' ,[IsPermit] = 'False',[IsDaily] = 'True' WHERE [Pish_Code]=41
+UPDATE [dbo].[pishcard] SET [Pish_activeWeb] = 'True' ,[IsPermit] = 'False',[IsDaily] = 'True' WHERE [Pish_Code]=42
+UPDATE [dbo].[pishcard] SET [Pish_activeWeb] = 'True' ,[IsPermit] = 'True',[IsDaily] = 'False' WHERE [Pish_Code]=51
+UPDATE [dbo].[pishcard] SET [Pish_activeWeb] = 'True' ,[IsPermit] = 'False',[IsDaily] = 'True' WHERE [Pish_Code]=61
+
+if((select COUNT(*) from nw_weblogin where lgn_UserName='admin') <1)
+begin
+insert into nw_weblogin (lgn_barcode,lgn_username,lgn_password) values ('admin','admin','G')
+end

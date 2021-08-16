@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AtlasModelStoreContainer" CdmEntityContainer="AtlasEntities">
+    <EntitySetMapping Name="TA_Person">
+      <EntityTypeMapping TypeName="AtlasModel.TA_Person">
+        <MappingFragment StoreEntitySet="TA_Person">
+          <ScalarProperty Name="Prs_ID" ColumnName="Prs_ID" />
+          <ScalarProperty Name="Prs_Barcode" ColumnName="Prs_Barcode" />
+          <ScalarProperty Name="Prs__Param" ColumnName="Prs__Param" />
+          <ScalarProperty Name="Prs_Active" ColumnName="Prs_Active" />
+          <ScalarProperty Name="Prs_CardNum" ColumnName="Prs_CardNum" />
+          <ScalarProperty Name="Prs_DepartmentId" ColumnName="Prs_DepartmentId" />
+          <ScalarProperty Name="Prs_EmploymentNum" ColumnName="Prs_EmploymentNum" />
+          <ScalarProperty Name="Prs_EmploymentDate" ColumnName="Prs_EmploymentDate" />
+          <ScalarProperty Name="Prs_ControlStationId" ColumnName="Prs_ControlStationId" />
+          <ScalarProperty Name="Prs_EndEmploymentDate" ColumnName="Prs_EndEmploymentDate" />
+          <ScalarProperty Name="Prs_EmployId" ColumnName="Prs_EmployId" />
+          <ScalarProperty Name="Prs_Sex" ColumnName="Prs_Sex" />
+          <ScalarProperty Name="Prs_Education" ColumnName="Prs_Education" />
+          <ScalarProperty Name="Prs_FirstName" ColumnName="Prs_FirstName" />
+          <ScalarProperty Name="Prs_MaritalStatus" ColumnName="Prs_MaritalStatus" />
+          <ScalarProperty Name="Prs_LastName" ColumnName="Prs_LastName" />
+          <ScalarProperty Name="Prs_PrsDtlID" ColumnName="Prs_PrsDtlID" />
+          <ScalarProperty Name="Prs_UIValidationGroupID" ColumnName="Prs_UIValidationGroupID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TA_PersonDetail">
+      <EntityTypeMapping TypeName="AtlasModel.TA_PersonDetail">
+        <MappingFragment StoreEntitySet="TA_PersonDetail">
+          <ScalarProperty Name="PrsDtl_ID" ColumnName="PrsDtl_ID" />
+          <ScalarProperty Name="PrsDtl_MeliCode" ColumnName="PrsDtl_MeliCode" />
+          <ScalarProperty Name="PrsDtl_ShomareShenasname" ColumnName="PrsDtl_ShomareShenasname" />
+          <ScalarProperty Name="PrsDtl_BirthCertificate" ColumnName="PrsDtl_BirthCertificate" />
+          <ScalarProperty Name="PrsDtl_Status" ColumnName="PrsDtl_Status" />
+          <ScalarProperty Name="PrsDtl_FatherName" ColumnName="PrsDtl_FatherName" />
+          <ScalarProperty Name="PrsDtl_MilitaryStatus" ColumnName="PrsDtl_MilitaryStatus" />
+          <ScalarProperty Name="PrsDtl_PlaceIssued" ColumnName="PrsDtl_PlaceIssued" />
+          <ScalarProperty Name="PrsDtl_Tel" ColumnName="PrsDtl_Tel" />
+          <ScalarProperty Name="PrsDtl_Address" ColumnName="PrsDtl_Address" />
+          <ScalarProperty Name="PrsDtl_BirthPlace" ColumnName="PrsDtl_BirthPlace" />
+          <ScalarProperty Name="PrsDtl_BirthDate" ColumnName="PrsDtl_BirthDate" />
+          <ScalarProperty Name="PrsDtl_R1" ColumnName="PrsDtl_R1" />
+          <ScalarProperty Name="PrsDtl_R2" ColumnName="PrsDtl_R2" />
+          <ScalarProperty Name="PrsDtl_R3" ColumnName="PrsDtl_R3" />
+          <ScalarProperty Name="PrsDtl_R4" ColumnName="PrsDtl_R4" />
+          <ScalarProperty Name="PrsDtl_R5" ColumnName="PrsDtl_R5" />
+          <ScalarProperty Name="PrsDtl_R6" ColumnName="PrsDtl_R6" />
+          <ScalarProperty Name="PrsDtl_R7" ColumnName="PrsDtl_R7" />
+          <ScalarProperty Name="PrsDtl_R8" ColumnName="PrsDtl_R8" />
+          <ScalarProperty Name="PrsDtl_R9" ColumnName="PrsDtl_R9" />
+          <ScalarProperty Name="PrsDtl_R10" ColumnName="PrsDtl_R10" />
+          <ScalarProperty Name="PrsDtl_R11" ColumnName="PrsDtl_R11" />
+          <ScalarProperty Name="PrsDtl_R12" ColumnName="PrsDtl_R12" />
+          <ScalarProperty Name="PrsDtl_R13" ColumnName="PrsDtl_R13" />
+          <ScalarProperty Name="PrsDtl_R14" ColumnName="PrsDtl_R14" />
+          <ScalarProperty Name="PrsDtl_R15" ColumnName="PrsDtl_R15" />
+          <ScalarProperty Name="PrsDtl_R16" ColumnName="PrsDtl_R16" />
+          <ScalarProperty Name="PrsDtl_R17" ColumnName="PrsDtl_R17" />
+          <ScalarProperty Name="PrsDtl_R18" ColumnName="PrsDtl_R18" />
+          <ScalarProperty Name="PrsDtl_R19" ColumnName="PrsDtl_R19" />
+          <ScalarProperty Name="PrsDtl_R20" ColumnName="PrsDtl_R20" />
+          <ScalarProperty Name="PrsDtl_Image" ColumnName="PrsDtl_Image" />
+          <ScalarProperty Name="PrsDtl_EmailAddress" ColumnName="PrsDtl_EmailAddress" />
+          <ScalarProperty Name="PrsDtl_MobileNumber" ColumnName="PrsDtl_MobileNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

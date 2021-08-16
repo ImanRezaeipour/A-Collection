@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AtlasModelStoreContainer" CdmEntityContainer="AtlasEntities">
+    <EntitySetMapping Name="TA_Person">
+      <EntityTypeMapping TypeName="AtlasModel.TA_Person">
+        <MappingFragment StoreEntitySet="TA_Person">
+          <ScalarProperty Name="Prs_ID" ColumnName="Prs_ID" />
+          <ScalarProperty Name="Prs_Barcode" ColumnName="Prs_Barcode" />
+          <ScalarProperty Name="Prs__Param" ColumnName="Prs__Param" />
+          <ScalarProperty Name="Prs_Active" ColumnName="Prs_Active" />
+          <ScalarProperty Name="Prs_CardNum" ColumnName="Prs_CardNum" />
+          <ScalarProperty Name="Prs_DepartmentId" ColumnName="Prs_DepartmentId" />
+          <ScalarProperty Name="Prs_EmploymentNum" ColumnName="Prs_EmploymentNum" />
+          <ScalarProperty Name="Prs_EmploymentDate" ColumnName="Prs_EmploymentDate" />
+          <ScalarProperty Name="Prs_ControlStationId" ColumnName="Prs_ControlStationId" />
+          <ScalarProperty Name="Prs_EndEmploymentDate" ColumnName="Prs_EndEmploymentDate" />
+          <ScalarProperty Name="Prs_EmployId" ColumnName="Prs_EmployId" />
+          <ScalarProperty Name="Prs_Sex" ColumnName="Prs_Sex" />
+          <ScalarProperty Name="Prs_Education" ColumnName="Prs_Education" />
+          <ScalarProperty Name="Prs_FirstName" ColumnName="Prs_FirstName" />
+          <ScalarProperty Name="Prs_MaritalStatus" ColumnName="Prs_MaritalStatus" />
+          <ScalarProperty Name="Prs_LastName" ColumnName="Prs_LastName" />
+          <ScalarProperty Name="Prs_PrsDtlID" ColumnName="Prs_PrsDtlID" />
+          <ScalarProperty Name="Prs_UIValidationGroupID" ColumnName="Prs_UIValidationGroupID" />
+          <ScalarProperty Name="prs_IsDeleted" ColumnName="prs_IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TA_SecurityUser">
+      <EntityTypeMapping TypeName="AtlasModel.TA_SecurityUser">
+        <MappingFragment StoreEntitySet="TA_SecurityUser">
+          <ScalarProperty Name="user_ID" ColumnName="user_ID" />
+          <ScalarProperty Name="user_PersonID" ColumnName="user_PersonID" />
+          <ScalarProperty Name="user_RoleID" ColumnName="user_RoleID" />
+          <ScalarProperty Name="user_DomainID" ColumnName="user_DomainID" />
+          <ScalarProperty Name="user_UserName" ColumnName="user_UserName" />
+          <ScalarProperty Name="user_Password" ColumnName="user_Password" />
+          <ScalarProperty Name="user_Active" ColumnName="user_Active" />
+          <ScalarProperty Name="user_LastActivityDate" ColumnName="user_LastActivityDate" />
+          <ScalarProperty Name="user_IsADAuthenticateActive" ColumnName="user_IsADAuthenticateActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

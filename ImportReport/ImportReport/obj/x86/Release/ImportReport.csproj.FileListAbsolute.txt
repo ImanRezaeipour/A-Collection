@@ -1,0 +1,13 @@
+C:\Users\Iman\Documents\ImportReport\ImportReport\bin\Release\ImportReport.exe.config
+C:\Users\Iman\Documents\ImportReport\ImportReport\bin\Release\ImportReport.exe
+C:\Users\Iman\Documents\ImportReport\ImportReport\bin\Release\ImportReport.pdb
+C:\Users\Iman\Documents\ImportReport\ImportReport\obj\x86\Release\ImportReport.FrmMain.resources
+C:\Users\Iman\Documents\ImportReport\ImportReport\obj\x86\Release\ImportReport.Properties.Resources.resources
+C:\Users\Iman\Documents\ImportReport\ImportReport\obj\x86\Release\ImportReport.csproj.GenerateResource.Cache
+C:\Users\Iman\Documents\ImportReport\ImportReport\obj\x86\Release\ImportReport.exe
+C:\Users\Iman\Documents\ImportReport\ImportReport\obj\x86\Release\ImportReport.pdb
+C:\Users\Iman\Documents\ImportReport\ImportReport\bin\Release\ImportReport.exe.manifest
+C:\Users\Iman\Documents\ImportReport\ImportReport\bin\Release\ImportReport.application
+C:\Users\Iman\Documents\ImportReport\ImportReport\obj\x86\Release\ImportReport.csprojResolveAssemblyReference.cache
+C:\Users\Iman\Documents\ImportReport\ImportReport\obj\x86\Release\ImportReport.exe.manifest
+C:\Users\Iman\Documents\ImportReport\ImportReport\obj\x86\Release\ImportReport.application

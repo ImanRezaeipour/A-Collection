@@ -1,0 +1,20 @@
+c:\users\rezaei\documents\visual studio 2010\Projects\ADService\ADService\bin\Debug\ADService.exe
+c:\users\rezaei\documents\visual studio 2010\Projects\ADService\ADService\bin\Debug\ADService.pdb
+c:\users\rezaei\documents\visual studio 2010\Projects\ADService\ADService\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\rezaei\documents\visual studio 2010\Projects\ADService\ADService\obj\x86\Debug\ADService.Form1.resources
+c:\users\rezaei\documents\visual studio 2010\Projects\ADService\ADService\obj\x86\Debug\ADService.Properties.Resources.resources
+c:\users\rezaei\documents\visual studio 2010\Projects\ADService\ADService\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\rezaei\documents\visual studio 2010\Projects\ADService\ADService\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\rezaei\documents\visual studio 2010\Projects\ADService\ADService\obj\x86\Debug\ADService.exe
+c:\users\rezaei\documents\visual studio 2010\Projects\ADService\ADService\obj\x86\Debug\ADService.pdb
+D:\ADService\ADService\obj\x86\Debug\ADService.exe
+D:\ADService\ADService\obj\x86\Debug\ADService.pdb
+D:\ADService\ADService\bin\Debug\ADService.exe
+D:\ADService\ADService\bin\Debug\ADService.pdb
+D:\ADService\ADService\obj\x86\Debug\ADService.csprojResolveAssemblyReference.cache
+D:\ADService\ADService\obj\x86\Debug\ADService.Form1.resources
+D:\ADService\ADService\obj\x86\Debug\ADService.Properties.Resources.resources
+D:\ADService\ADService\obj\x86\Debug\ADService.csproj.GenerateResource.Cache
+D:\ADService\ADService\bin\Debug\ADService.exe.config
+D:\ADService\ADService\bin\Debug\EntityFramework.dll
+D:\ADService\ADService\bin\Debug\EntityFramework.xml

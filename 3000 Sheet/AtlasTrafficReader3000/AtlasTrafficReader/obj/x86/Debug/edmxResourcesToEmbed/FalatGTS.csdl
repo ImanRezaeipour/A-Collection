@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FalatGTSModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="FalatGTSEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+    <EntitySet Name="TA_BaseTraffic" EntityType="FalatGTSModel.TA_BaseTraffic" />
+    <EntitySet Name="TA_Person" EntityType="FalatGTSModel.TA_Person" />
+    <AssociationSet Name="FK_TA_BaseTrafic_TA_Person" Association="FalatGTSModel.FK_TA_BaseTrafic_TA_Person">
+      <End Role="TA_Person" EntitySet="TA_Person" />
+      <End Role="TA_BaseTraffic" EntitySet="TA_BaseTraffic" />
+    </AssociationSet>
+    <FunctionImport Name="UpdateCFP">
+      <Parameter Name="prsID" Mode="In" Type="Decimal" />
+      <Parameter Name="Date" Mode="In" Type="DateTime" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="TA_BaseTraffic">
+    <Key>
+      <PropertyRef Name="BasicTraffic_ID" />
+    </Key>
+    <Property Name="BasicTraffic_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="BasicTraffic_PrecardId" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="BasicTraffic_PersonID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="BasicTraffic_Date" Type="DateTime" Nullable="false" />
+    <Property Name="BasicTraffic_Time" Type="Int32" Nullable="false" />
+    <Property Name="BasicTraffic_Used" Type="Boolean" />
+    <Property Name="BasicTraffic_Active" Type="Boolean" />
+    <Property Name="BasicTraffic_Manual" Type="Boolean" />
+    <Property Name="BasicTraffic_State" Type="Boolean" />
+    <Property Name="BasicTraffic_ReportsListId" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="BasicTraffic_OperatorPersonID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="BasicTraffic_Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="BasicTraffic_ClockCustomCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TA_Person" Relationship="FalatGTSModel.FK_TA_BaseTrafic_TA_Person" FromRole="TA_BaseTraffic" ToRole="TA_Person" />
+  </EntityType>
+  <EntityType Name="TA_Person">
+    <Key>
+      <PropertyRef Name="Prs_ID" />
+    </Key>
+    <Property Name="Prs_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="Prs_Barcode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Prs__Param" Type="Int32" />
+    <Property Name="Prs_Active" Type="Boolean" />
+    <Property Name="Prs_CardNum" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Prs_DepartmentId" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Prs_EmploymentNum" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Prs_EmploymentDate" Type="DateTime" />
+    <Property Name="Prs_ControlStationId" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Prs_EndEmploymentDate" Type="DateTime" />
+    <Property Name="Prs_EmployId" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Prs_Sex" Type="Boolean" />
+    <Property Name="Prs_Education" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Prs_FirstName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Prs_MaritalStatus" Type="Int32" />
+    <Property Name="Prs_LastName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Prs_PrsDtlID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Prs_UIValidationGroupID" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="TA_BaseTraffic" Relationship="FalatGTSModel.FK_TA_BaseTrafic_TA_Person" FromRole="TA_Person" ToRole="TA_BaseTraffic" />
+  </EntityType>
+  <Association Name="FK_TA_BaseTrafic_TA_Person">
+    <End Role="TA_Person" Type="FalatGTSModel.TA_Person" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TA_BaseTraffic" Type="FalatGTSModel.TA_BaseTraffic" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TA_Person">
+        <PropertyRef Name="Prs_ID" />
+      </Principal>
+      <Dependent Role="TA_BaseTraffic">
+        <PropertyRef Name="BasicTraffic_PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

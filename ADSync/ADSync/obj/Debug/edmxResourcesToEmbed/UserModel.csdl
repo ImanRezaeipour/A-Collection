@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AtlasModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="AtlasEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TA_Person" EntityType="AtlasModel.TA_Person" />
+    <EntitySet Name="TA_SecurityUser" EntityType="AtlasModel.TA_SecurityUser" />
+    <AssociationSet Name="FK_TA_SecurityUser_TA_Person" Association="AtlasModel.FK_TA_SecurityUser_TA_Person">
+      <End Role="TA_Person" EntitySet="TA_Person" />
+      <End Role="TA_SecurityUser" EntitySet="TA_SecurityUser" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="TA_Person">
+    <Key>
+      <PropertyRef Name="Prs_ID" />
+    </Key>
+    <Property Name="Prs_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Prs_Barcode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Prs__Param" Type="Int32" />
+    <Property Name="Prs_Active" Type="Boolean" />
+    <Property Name="Prs_CardNum" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Prs_DepartmentId" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Prs_EmploymentNum" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Prs_EmploymentDate" Type="DateTime" Precision="3" />
+    <Property Name="Prs_ControlStationId" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Prs_EndEmploymentDate" Type="DateTime" Precision="3" />
+    <Property Name="Prs_EmployId" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Prs_Sex" Type="Boolean" />
+    <Property Name="Prs_Education" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Prs_FirstName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Prs_MaritalStatus" Type="Int32" />
+    <Property Name="Prs_LastName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Prs_PrsDtlID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Prs_UIValidationGroupID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="prs_IsDeleted" Type="Boolean" />
+    <NavigationProperty Name="TA_SecurityUser" Relationship="AtlasModel.FK_TA_SecurityUser_TA_Person" FromRole="TA_Person" ToRole="TA_SecurityUser" />
+  </EntityType>
+  <EntityType Name="TA_SecurityUser">
+    <Key>
+      <PropertyRef Name="user_ID" />
+    </Key>
+    <Property Name="user_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_PersonID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="user_RoleID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="user_DomainID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="user_UserName" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="user_Password" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="user_Active" Type="Boolean" Nullable="false" />
+    <Property Name="user_LastActivityDate" Type="DateTime" Precision="3" />
+    <Property Name="user_IsADAuthenticateActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="TA_Person" Relationship="AtlasModel.FK_TA_SecurityUser_TA_Person" FromRole="TA_SecurityUser" ToRole="TA_Person" />
+  </EntityType>
+  <Association Name="FK_TA_SecurityUser_TA_Person">
+    <End Role="TA_Person" Type="AtlasModel.TA_Person" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TA_SecurityUser" Type="AtlasModel.TA_SecurityUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TA_Person">
+        <PropertyRef Name="Prs_ID" />
+      </Principal>
+      <Dependent Role="TA_SecurityUser">
+        <PropertyRef Name="user_PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

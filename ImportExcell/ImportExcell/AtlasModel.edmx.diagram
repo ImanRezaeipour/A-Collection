@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cbc0129d92e6472ca3f47a302c13eb4a" Name="Diagram1" ZoomLevel="75">
+        <EntityTypeShape EntityType="AtlasModel.TA_Person" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtlasModel.TA_PersonDetail" Width="1.5" PointX="0.75" PointY="7" />
+        <AssociationConnector Association="AtlasModel.FK_TA_Person_TA_PersonDetail" />
+        <EntityTypeShape EntityType="AtlasModel.TA_Department" Width="1.5" PointX="3.375" PointY="4.75" />
+        <EntityTypeShape EntityType="AtlasModel.TA_EmploymentType" Width="1.5" PointX="0.75" PointY="12.5" />
+        <EntityTypeShape EntityType="AtlasModel.TA_Grade" Width="1.5" PointX="3.375" PointY="1" />
+        <AssociationConnector Association="AtlasModel.FK_TA_Person_TA_EmploymentType" />
+        <AssociationConnector Association="AtlasModel.FK_TA_Grade_TA_Grade" />
+        <AssociationConnector Association="AtlasModel.FK_TA_Grade_TA_Grade1" />
+        <AssociationConnector Association="AtlasModel.FK_TA_Person_TA_Grade" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

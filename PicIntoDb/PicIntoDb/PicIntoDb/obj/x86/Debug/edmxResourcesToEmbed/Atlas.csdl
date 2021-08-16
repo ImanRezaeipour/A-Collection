@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AtlasModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="AtlasEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TA_Person" EntityType="AtlasModel.TA_Person" />
+    <EntitySet Name="TA_PersonDetail" EntityType="AtlasModel.TA_PersonDetail" />
+    <AssociationSet Name="FK_TA_Person_TA_PersonDetail" Association="AtlasModel.FK_TA_Person_TA_PersonDetail">
+      <End Role="TA_PersonDetail" EntitySet="TA_PersonDetail" />
+      <End Role="TA_Person" EntitySet="TA_Person" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="TA_Person">
+    <Key>
+      <PropertyRef Name="Prs_ID" />
+    </Key>
+    <Property Name="Prs_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Prs_Barcode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Prs__Param" Type="Int32" />
+    <Property Name="Prs_Active" Type="Boolean" />
+    <Property Name="Prs_CardNum" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Prs_DepartmentId" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Prs_EmploymentNum" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Prs_EmploymentDate" Type="DateTime" />
+    <Property Name="Prs_ControlStationId" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Prs_EndEmploymentDate" Type="DateTime" />
+    <Property Name="Prs_EmployId" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Prs_Sex" Type="Boolean" />
+    <Property Name="Prs_Education" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Prs_FirstName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Prs_MaritalStatus" Type="Int32" />
+    <Property Name="Prs_LastName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Prs_PrsDtlID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Prs_UIValidationGroupID" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="TA_PersonDetail" Relationship="AtlasModel.FK_TA_Person_TA_PersonDetail" FromRole="TA_Person" ToRole="TA_PersonDetail" />
+  </EntityType>
+  <EntityType Name="TA_PersonDetail">
+    <Key>
+      <PropertyRef Name="PrsDtl_ID" />
+    </Key>
+    <Property Name="PrsDtl_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="PrsDtl_MeliCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PrsDtl_ShomareShenasname" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PrsDtl_BirthCertificate" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PrsDtl_Status" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PrsDtl_FatherName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="PrsDtl_MilitaryStatus" Type="Int32" />
+    <Property Name="PrsDtl_PlaceIssued" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="PrsDtl_Tel" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PrsDtl_Address" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="PrsDtl_BirthPlace" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="PrsDtl_BirthDate" Type="DateTime" />
+    <Property Name="PrsDtl_R1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PrsDtl_R2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PrsDtl_R3" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PrsDtl_R4" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PrsDtl_R5" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PrsDtl_R6" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PrsDtl_R7" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PrsDtl_R8" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PrsDtl_R9" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PrsDtl_R10" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PrsDtl_R11" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PrsDtl_R12" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PrsDtl_R13" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PrsDtl_R14" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PrsDtl_R15" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PrsDtl_R16" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="PrsDtl_R17" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="PrsDtl_R18" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="PrsDtl_R19" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="PrsDtl_R20" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="PrsDtl_Image" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="PrsDtl_EmailAddress" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="PrsDtl_MobileNumber" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TA_Person" Relationship="AtlasModel.FK_TA_Person_TA_PersonDetail" FromRole="TA_PersonDetail" ToRole="TA_Person" />
+  </EntityType>
+  <Association Name="FK_TA_Person_TA_PersonDetail">
+    <End Role="TA_PersonDetail" Type="AtlasModel.TA_PersonDetail" Multiplicity="0..1" />
+    <End Role="TA_Person" Type="AtlasModel.TA_Person" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TA_PersonDetail">
+        <PropertyRef Name="PrsDtl_ID" />
+      </Principal>
+      <Dependent Role="TA_Person">
+        <PropertyRef Name="Prs_PrsDtlID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AtlasModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="AtlasModelStoreContainer">
+          <EntitySet Name="TA_Person" EntityType="AtlasModel.Store.TA_Person" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TA_SecurityUser" EntityType="AtlasModel.Store.TA_SecurityUser" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_TA_SecurityUser_TA_Person" Association="AtlasModel.Store.FK_TA_SecurityUser_TA_Person">
+            <End Role="TA_Person" EntitySet="TA_Person" />
+            <End Role="TA_SecurityUser" EntitySet="TA_SecurityUser" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="TA_Person">
+          <Key>
+            <PropertyRef Name="Prs_ID" />
+          </Key>
+          <Property Name="Prs_ID" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Prs_Barcode" Type="nvarchar" MaxLength="50" />
+          <Property Name="Prs__Param" Type="int" />
+          <Property Name="Prs_Active" Type="bit" />
+          <Property Name="Prs_CardNum" Type="nvarchar" MaxLength="50" />
+          <Property Name="Prs_DepartmentId" Type="numeric" />
+          <Property Name="Prs_EmploymentNum" Type="nvarchar" MaxLength="50" />
+          <Property Name="Prs_EmploymentDate" Type="datetime" />
+          <Property Name="Prs_ControlStationId" Type="numeric" />
+          <Property Name="Prs_EndEmploymentDate" Type="datetime" />
+          <Property Name="Prs_EmployId" Type="numeric" />
+          <Property Name="Prs_Sex" Type="bit" />
+          <Property Name="Prs_Education" Type="nvarchar" MaxLength="50" />
+          <Property Name="Prs_FirstName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Prs_MaritalStatus" Type="int" />
+          <Property Name="Prs_LastName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Prs_PrsDtlID" Type="numeric" />
+          <Property Name="Prs_UIValidationGroupID" Type="numeric" />
+          <Property Name="prs_IsDeleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="TA_SecurityUser">
+          <Key>
+            <PropertyRef Name="user_ID" />
+          </Key>
+          <Property Name="user_ID" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="user_PersonID" Type="numeric" />
+          <Property Name="user_RoleID" Type="numeric" />
+          <Property Name="user_DomainID" Type="numeric" />
+          <Property Name="user_UserName" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="user_Password" Type="nvarchar" MaxLength="200" />
+          <Property Name="user_Active" Type="bit" Nullable="false" />
+          <Property Name="user_LastActivityDate" Type="datetime" />
+          <Property Name="user_IsADAuthenticateActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_TA_SecurityUser_TA_Person">
+          <End Role="TA_Person" Type="AtlasModel.Store.TA_Person" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TA_SecurityUser" Type="AtlasModel.Store.TA_SecurityUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TA_Person">
+              <PropertyRef Name="Prs_ID" />
+            </Principal>
+            <Dependent Role="TA_SecurityUser">
+              <PropertyRef Name="user_PersonID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AtlasModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="AtlasEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TA_Person" EntityType="AtlasModel.TA_Person" />
+          <EntitySet Name="TA_SecurityUser" EntityType="AtlasModel.TA_SecurityUser" />
+          <AssociationSet Name="FK_TA_SecurityUser_TA_Person" Association="AtlasModel.FK_TA_SecurityUser_TA_Person">
+            <End Role="TA_Person" EntitySet="TA_Person" />
+            <End Role="TA_SecurityUser" EntitySet="TA_SecurityUser" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="TA_Person">
+          <Key>
+            <PropertyRef Name="Prs_ID" />
+          </Key>
+          <Property Name="Prs_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Prs_Barcode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Prs__Param" Type="Int32" />
+          <Property Name="Prs_Active" Type="Boolean" />
+          <Property Name="Prs_CardNum" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Prs_DepartmentId" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Prs_EmploymentNum" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Prs_EmploymentDate" Type="DateTime" Precision="3" />
+          <Property Name="Prs_ControlStationId" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Prs_EndEmploymentDate" Type="DateTime" Precision="3" />
+          <Property Name="Prs_EmployId" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Prs_Sex" Type="Boolean" />
+          <Property Name="Prs_Education" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Prs_FirstName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Prs_MaritalStatus" Type="Int32" />
+          <Property Name="Prs_LastName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Prs_PrsDtlID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Prs_UIValidationGroupID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="prs_IsDeleted" Type="Boolean" />
+          <NavigationProperty Name="TA_SecurityUser" Relationship="AtlasModel.FK_TA_SecurityUser_TA_Person" FromRole="TA_Person" ToRole="TA_SecurityUser" />
+        </EntityType>
+        <EntityType Name="TA_SecurityUser">
+          <Key>
+            <PropertyRef Name="user_ID" />
+          </Key>
+          <Property Name="user_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="user_PersonID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="user_RoleID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="user_DomainID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="user_UserName" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="user_Password" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="user_Active" Type="Boolean" Nullable="false" />
+          <Property Name="user_LastActivityDate" Type="DateTime" Precision="3" />
+          <Property Name="user_IsADAuthenticateActive" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="TA_Person" Relationship="AtlasModel.FK_TA_SecurityUser_TA_Person" FromRole="TA_SecurityUser" ToRole="TA_Person" />
+        </EntityType>
+        <Association Name="FK_TA_SecurityUser_TA_Person">
+          <End Role="TA_Person" Type="AtlasModel.TA_Person" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TA_SecurityUser" Type="AtlasModel.TA_SecurityUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TA_Person">
+              <PropertyRef Name="Prs_ID" />
+            </Principal>
+            <Dependent Role="TA_SecurityUser">
+              <PropertyRef Name="user_PersonID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AtlasModelStoreContainer" CdmEntityContainer="AtlasEntities">
+          <EntitySetMapping Name="TA_Person">
+            <EntityTypeMapping TypeName="AtlasModel.TA_Person">
+              <MappingFragment StoreEntitySet="TA_Person">
+                <ScalarProperty Name="Prs_ID" ColumnName="Prs_ID" />
+                <ScalarProperty Name="Prs_Barcode" ColumnName="Prs_Barcode" />
+                <ScalarProperty Name="Prs__Param" ColumnName="Prs__Param" />
+                <ScalarProperty Name="Prs_Active" ColumnName="Prs_Active" />
+                <ScalarProperty Name="Prs_CardNum" ColumnName="Prs_CardNum" />
+                <ScalarProperty Name="Prs_DepartmentId" ColumnName="Prs_DepartmentId" />
+                <ScalarProperty Name="Prs_EmploymentNum" ColumnName="Prs_EmploymentNum" />
+                <ScalarProperty Name="Prs_EmploymentDate" ColumnName="Prs_EmploymentDate" />
+                <ScalarProperty Name="Prs_ControlStationId" ColumnName="Prs_ControlStationId" />
+                <ScalarProperty Name="Prs_EndEmploymentDate" ColumnName="Prs_EndEmploymentDate" />
+                <ScalarProperty Name="Prs_EmployId" ColumnName="Prs_EmployId" />
+                <ScalarProperty Name="Prs_Sex" ColumnName="Prs_Sex" />
+                <ScalarProperty Name="Prs_Education" ColumnName="Prs_Education" />
+                <ScalarProperty Name="Prs_FirstName" ColumnName="Prs_FirstName" />
+                <ScalarProperty Name="Prs_MaritalStatus" ColumnName="Prs_MaritalStatus" />
+                <ScalarProperty Name="Prs_LastName" ColumnName="Prs_LastName" />
+                <ScalarProperty Name="Prs_PrsDtlID" ColumnName="Prs_PrsDtlID" />
+                <ScalarProperty Name="Prs_UIValidationGroupID" ColumnName="Prs_UIValidationGroupID" />
+                <ScalarProperty Name="prs_IsDeleted" ColumnName="prs_IsDeleted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TA_SecurityUser">
+            <EntityTypeMapping TypeName="AtlasModel.TA_SecurityUser">
+              <MappingFragment StoreEntitySet="TA_SecurityUser">
+                <ScalarProperty Name="user_ID" ColumnName="user_ID" />
+                <ScalarProperty Name="user_PersonID" ColumnName="user_PersonID" />
+                <ScalarProperty Name="user_RoleID" ColumnName="user_RoleID" />
+                <ScalarProperty Name="user_DomainID" ColumnName="user_DomainID" />
+                <ScalarProperty Name="user_UserName" ColumnName="user_UserName" />
+                <ScalarProperty Name="user_Password" ColumnName="user_Password" />
+                <ScalarProperty Name="user_Active" ColumnName="user_Active" />
+                <ScalarProperty Name="user_LastActivityDate" ColumnName="user_LastActivityDate" />
+                <ScalarProperty Name="user_IsADAuthenticateActive" ColumnName="user_IsADAuthenticateActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

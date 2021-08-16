@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AtlasModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="AtlasModelStoreContainer">
+    <EntitySet Name="TA_Person" EntityType="AtlasModel.Store.TA_Person" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TA_PersonDetail" EntityType="AtlasModel.Store.TA_PersonDetail" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_TA_Person_TA_PersonDetail" Association="AtlasModel.Store.FK_TA_Person_TA_PersonDetail">
+      <End Role="TA_PersonDetail" EntitySet="TA_PersonDetail" />
+      <End Role="TA_Person" EntitySet="TA_Person" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="TA_Person">
+    <Key>
+      <PropertyRef Name="Prs_ID" />
+    </Key>
+    <Property Name="Prs_ID" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Prs_Barcode" Type="nvarchar" MaxLength="50" />
+    <Property Name="Prs__Param" Type="int" />
+    <Property Name="Prs_Active" Type="bit" />
+    <Property Name="Prs_CardNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="Prs_DepartmentId" Type="numeric" />
+    <Property Name="Prs_EmploymentNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="Prs_EmploymentDate" Type="datetime" />
+    <Property Name="Prs_ControlStationId" Type="numeric" />
+    <Property Name="Prs_EndEmploymentDate" Type="datetime" />
+    <Property Name="Prs_EmployId" Type="numeric" />
+    <Property Name="Prs_Sex" Type="bit" />
+    <Property Name="Prs_Education" Type="nvarchar" MaxLength="50" />
+    <Property Name="Prs_FirstName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Prs_MaritalStatus" Type="int" />
+    <Property Name="Prs_LastName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Prs_PrsDtlID" Type="numeric" />
+    <Property Name="Prs_UIValidationGroupID" Type="numeric" />
+  </EntityType>
+  <EntityType Name="TA_PersonDetail">
+    <Key>
+      <PropertyRef Name="PrsDtl_ID" />
+    </Key>
+    <Property Name="PrsDtl_ID" Type="numeric" Nullable="false" />
+    <Property Name="PrsDtl_MeliCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrsDtl_ShomareShenasname" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrsDtl_BirthCertificate" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrsDtl_Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrsDtl_FatherName" Type="nvarchar" MaxLength="100" />
+    <Property Name="PrsDtl_MilitaryStatus" Type="int" />
+    <Property Name="PrsDtl_PlaceIssued" Type="nvarchar" MaxLength="100" />
+    <Property Name="PrsDtl_Tel" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrsDtl_Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="PrsDtl_BirthPlace" Type="nvarchar" MaxLength="100" />
+    <Property Name="PrsDtl_BirthDate" Type="datetime" />
+    <Property Name="PrsDtl_R1" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrsDtl_R2" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrsDtl_R3" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrsDtl_R4" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrsDtl_R5" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrsDtl_R6" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrsDtl_R7" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrsDtl_R8" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrsDtl_R9" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrsDtl_R10" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrsDtl_R11" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrsDtl_R12" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrsDtl_R13" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrsDtl_R14" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrsDtl_R15" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrsDtl_R16" Type="numeric" />
+    <Property Name="PrsDtl_R17" Type="numeric" />
+    <Property Name="PrsDtl_R18" Type="numeric" />
+    <Property Name="PrsDtl_R19" Type="numeric" />
+    <Property Name="PrsDtl_R20" Type="numeric" />
+    <Property Name="PrsDtl_Image" Type="nvarchar(max)" />
+    <Property Name="PrsDtl_EmailAddress" Type="nvarchar" MaxLength="200" />
+    <Property Name="PrsDtl_MobileNumber" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <Association Name="FK_TA_Person_TA_PersonDetail">
+    <End Role="TA_PersonDetail" Type="AtlasModel.Store.TA_PersonDetail" Multiplicity="0..1" />
+    <End Role="TA_Person" Type="AtlasModel.Store.TA_Person" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TA_PersonDetail">
+        <PropertyRef Name="PrsDtl_ID" />
+      </Principal>
+      <Dependent Role="TA_Person">
+        <PropertyRef Name="Prs_PrsDtlID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,32 @@
+c:\users\iman\documents\visual studio 2012\Projects\AtlasSetup\AtlasSetup\bin\Debug\AtlasSetup.exe
+c:\users\iman\documents\visual studio 2012\Projects\AtlasSetup\AtlasSetup\bin\Debug\AtlasSetup.pdb
+c:\users\iman\documents\visual studio 2012\Projects\AtlasSetup\AtlasSetup\obj\Debug\AtlasSetup.csprojResolveAssemblyReference.cache
+c:\users\iman\documents\visual studio 2012\Projects\AtlasSetup\AtlasSetup\obj\Debug\AtlasSetup.Properties.Resources.resources
+c:\users\iman\documents\visual studio 2012\Projects\AtlasSetup\AtlasSetup\obj\Debug\AtlasSetup.csproj.GenerateResource.Cache
+c:\users\iman\documents\visual studio 2012\Projects\AtlasSetup\AtlasSetup\obj\Debug\AtlasSetup.exe
+c:\users\iman\documents\visual studio 2012\Projects\AtlasSetup\AtlasSetup\obj\Debug\AtlasSetup.pdb
+c:\users\iman\documents\visual studio 2012\Projects\AtlasSetup\AtlasSetup\obj\Debug\AtlasSetup.MainForm.resources
+c:\users\iman\documents\visual studio 2012\Projects\AtlasSetup\AtlasSetup\bin\Debug\AtlasSetup.exe.config
+c:\users\iman\documents\visual studio 2012\Projects\AtlasSetup\AtlasSetup\bin\Debug\SmartThreadPool.dll
+c:\users\iman\documents\visual studio 2012\Projects\AtlasSetup\AtlasSetup\bin\Debug\SmartThreadPool.pdb
+C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\AtlasSetup.exe.config
+C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\obj\Debug\AtlasSetup.exe
+C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\obj\Debug\AtlasSetup.pdb
+C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\AtlasSetup.exe
+C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\AtlasSetup.pdb
+C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\bin\Debug\SmartThreadPool.pdb
+C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\obj\Debug\AtlasSetup.csprojResolveAssemblyReference.cache
+C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\obj\Debug\AtlasSetup.MainForm.resources
+C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\obj\Debug\AtlasSetup.Properties.Resources.resources
+C:\Users\Iman\Documents\AtlasSetup\AtlasSetup\obj\Debug\AtlasSetup.csproj.GenerateResource.Cache
+L:\AtlasSetup\AtlasSetup\bin\Debug\AtlasSetup.exe.config
+L:\AtlasSetup\AtlasSetup\obj\Debug\AtlasSetup.exe
+L:\AtlasSetup\AtlasSetup\obj\Debug\AtlasSetup.pdb
+L:\AtlasSetup\AtlasSetup\bin\Debug\AtlasSetup.exe
+L:\AtlasSetup\AtlasSetup\bin\Debug\AtlasSetup.pdb
+L:\AtlasSetup\AtlasSetup\bin\Debug\SmartThreadPool.dll
+L:\AtlasSetup\AtlasSetup\bin\Debug\SmartThreadPool.pdb
+L:\AtlasSetup\AtlasSetup\obj\Debug\AtlasSetup.csprojResolveAssemblyReference.cache
+L:\AtlasSetup\AtlasSetup\obj\Debug\AtlasSetup.MainForm.resources
+L:\AtlasSetup\AtlasSetup\obj\Debug\AtlasSetup.Properties.Resources.resources
+L:\AtlasSetup\AtlasSetup\obj\Debug\AtlasSetup.csproj.GenerateResource.Cache
